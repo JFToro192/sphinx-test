@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1.3. GIS data modelling &mdash; GIS4Schools  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.4. GeoPackage" href="1_4.html" />
+    <link rel="prev" title="1.2. Coordinate reference Systems" href="1_2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #55a1c9" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/G4S-p1-hor.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="part1.html">1. Data visualization with QGIS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1_1.html">1.1. Introduction to GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_2.html">1.2. Coordinate reference Systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_2.html#projections">1.2.1. Projections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_2.html#epsg">1.2.2. EPSG</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.3. GIS data modelling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#raster-data">1.3.1. Raster data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vector-data">1.3.2. Vector data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_4.html">1.4. GeoPackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_5.html">1.5. Introduction to QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_6.html">1.6. QGIS interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_7.html">1.7. Managing GeoPackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_8.html">1.8. QGIS visualization for vectors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_8.html#single-symbol-style">1.8.1. Single symbol style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_8.html#categorized-style">1.8.2. Categorized style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_8.html#feature-labels">1.8.3. Feature labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_8.html#graduated-style">1.8.4. Graduated style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_8.html#saving-and-loading-style">1.8.5. Saving and loading style</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_9.html">1.9. QGIS visualization for rasters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_9.html#singleband-gray">1.9.1. Singleband gray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_9.html#singleband-pseudocolor">1.9.2. Singleband-pseudocolor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_9.html#paletted-unique-values">1.9.3. Paletted/unique values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_10.html">1.10. Printing maps with QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_11.html">1.11. Atlases</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../part2/part2.html">2. GIS and Analysis Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_1.html">2.1. Introduction to Geospatial Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_2.html">2.2. Accessing OGC services with QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_2.html#wms-wmts">2.2.1. WMS/WMTS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_2.html#wfs">2.2.2. WFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_2.html#wcs">2.2.3. WCS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_3.html">2.3. Extending QGIS functionalities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id1">2.3.1. Processing toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id3">2.3.2. Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_4.html">2.4. Vector processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#map-digitizing">2.4.1. Map digitizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#attribute-table-selection-editing-and-field-calculator">2.4.2. Attribute table: selection, editing and field calculator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#join">2.4.3. Join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#geoprocessing-tools-for-vector-data-dissolve">2.4.4. Geoprocessing tools for vector data: dissolve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#geoprocessing-tools-for-vector-data-intersection">2.4.5. Geoprocessing tools for vector data: intersection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#geoprocessing-tools-for-vector-data-buffer">2.4.6. Geoprocessing tools for vector data: buffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_4.html#rasterization">2.4.7. Rasterization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_5.html">2.5. Raster processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#reprojection">2.5.1. Reprojection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#removing-nodata">2.5.2. Removing NoData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#raster-calculator">2.5.3. Raster calculator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#vectorization">2.5.4. Vectorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#clip-raster-with-a-mask-clip-raster-by-extent">2.5.5. Clip raster with a mask, clip raster by extent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_5.html#overlay-statistics">2.5.6. Overlay statistics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/2_6.html">2.6. Graphical modeler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../part3/part3.html">3. GIS and Analysis Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part3/3_1.html">3.1. Introduction to Geospatial Web Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../part4/part4.html">4. GIS and Analysis Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part4/4_1.html">4.1. Introduction to Geospatial Web Services</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+<a href="credits.html">Credits</a>
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GIS4Schools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="part1.html"><span class="section-number">1. </span>Data visualization with QGIS</a> &raquo;</li>
+        
+      <li><span class="section-number">1.3. </span>GIS data modelling</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/part1/1_3.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gis-data-modelling">
+<h1><span class="section-number">1.3. </span>GIS data modelling<a class="headerlink" href="#gis-data-modelling" title="Permalink to this headline">¶</a></h1>
+<p>Once the mathematical procedures to link data with their geographic locations are defined, it is critical to GIS to identify models that encode this information in a computer environment. These models, known as <a class="reference external" href="https://gsp.humboldt.edu/OLM/Courses/GSP_216_Online/lesson3-1/data-models.html" rel="noopener noreferrer" target="_blank">GIS data models</a> (or geospatial data models), are a set of constructs and abstractions for describing and representing geographic entities in a digital system. Basically, GIS data models reshape these entities into discrete geographic objects (<a class="reference internal" href="#id4"><span class="std std-ref">vector models</span></a>) or continuous surfaces (<a class="reference internal" href="#id1"><span class="std std-ref">raster models</span></a>) and fit both numerical and/or textual attributes with coordinates into computer files. The structure of these models is independent of specific data items and, in most cases, of the particular GIS application that is used to manipulate them.</p>
+<p>GIS data models are often interchangeable so that the same geographic entity or phenomenon may be represented by different models. As an example, topographic relief of mountains may be portrayed as a continuous surface or as a series of lines (discrete objects) representing contours of equal elevation. Conversions between models entail some costs both computationally and in data accuracy but GIS software provides functions to perform automatically such conversions.</p>
+<p>The right data model to use strictly depends on the specific application. What is important to keep in mind is that there is no single data model that is best for all circumstances. Nowadays, GIS software is able to incorporate multiple data models and so can be applied to a wide range of different applications.</p>
+<div class="section" id="raster-data">
+<span id="id1"></span><h2><span class="section-number">1.3.1. </span>Raster data<a class="headerlink" href="#raster-data" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://wiki.gis.com/wiki/index.php/Raster_data_model" rel="noopener noreferrer" target="_blank">Raster data models</a> describe geographic entities as a matrix of pixels or grid cells. The entities of interest are represented by numeric values associated with each cell, and the coordinates of the cell center (or one of its corners) are encoded together with values in the raster data file (<a class="reference internal" href="#id2"><span class="std std-numref">Fig. 1.3.1.1</span></a>). The cell value can represent a wide variety of information. This includes categories as well as the magnitude of a measurable variable. As an example, categories could represent the land cover class or the soil type which is present at a cell location. Magnitudes might instead represent temperature, surface elevation above sea level but also the intensity of light radiation as seen by a digital camera. Cell values can contain either positive or negative integers or floating-point values. Integer values are suitable to represent categories while floating-point values best represent continuous geographic phenomena in which values change gradually over broad areas. Cells can also contain NoData values to represent the absence of data in those locations. Raster data can be encoded in many <a class="reference external" href="https://en.wikipedia.org/wiki/GIS_file_formats" rel="noopener noreferrer" target="_blank">file formats</a>. One of the most widely adopted raster data formats in GIS is the <a class="reference external" href="https://en.wikipedia.org/wiki/GeoTIFF" rel="noopener noreferrer" target="_blank">GeoTIFF</a>.</p>
+<p>Typically, raster cells are square and evenly spaced in the x and y directions. The spacing of cells is often referred to as <em>spatial resolution</em>. Spatial resolution is one of the major aspects to consider in working with raster data because it directly influences the accuracy in portraying geographic entities achieved by the raster data. The spatial resolution strongly influences (together with the extension of the mapped area) also the dimension in the computer memory of a raster data file. Specifically, the higher the spatial resolution (i.e. the smaller the cell) the better is the level of detail provided by the raster data while the data file dimension increases. However, mathematical <a class="reference internal" href="../part2/2_5.html#id1"><span class="std std-ref">operations on raster data</span></a> are generally computationally faster than, for example, vector data. This is due to the regular matrix format of raster data that can be easily handled by GIS software. Accordingly, the use of raster data is particularly suitable for mapping and analysing large portions of the Earth surface.</p>
+<div class="figure align-default" id="id7">
+<span id="id2"></span><img alt="../_images/1.3.1.1.png" src="../_images/1.3.1.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.3.1.1 </span><span class="caption-text">– Schematic of geographic entities representation using the raster data model</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Many raster data files, including digital <a class="reference external" href="https://en.wikipedia.org/wiki/Satellite_imagery" rel="noopener noreferrer" target="_blank">satellite images</a>, are made up of multiple matrices of pixels which are stored together into a single file. These matrices are referred to as <a class="reference external" href="https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/raster-bands.htm" rel="noopener noreferrer" target="_blank">raster bands</a> or channels. In the case of satellite images, bands can be seen as a collection of images taken simultaneously over the same geographic area. Special satellite sensors, called <a class="reference external" href="https://en.wikipedia.org/wiki/Spectral_imaging" rel="noopener noreferrer" target="_blank">multispectral cameras</a>, measure the intensity of radiation reflected by the Earth surface in multiple regions of the <a class="reference external" href="https://earthsky.org/space/what-is-the-electromagnetic-spectrum" rel="noopener noreferrer" target="_blank">electromagnetic spectrum</a> and store measures into multiple raster bands. Through the analysis of these multiple raster bands, it is possible to infer the physical characteristics of geographic entities in an area. This is one of the main principles of the discipline called <a class="reference external" href="https://en.wikipedia.org/wiki/Remote_sensing" rel="noopener noreferrer" target="_blank">Remote Sensing</a> that is among the most important GIS-related applications.</p>
+<p>An intuitive example of the application of raster bands from multiple regions of the electromagnetic spectrum is the <a class="reference external" href="https://en.wikipedia.org/wiki/Color_image" rel="noopener noreferrer" target="_blank">color imaging</a>.  Human eyes are able to detect radiation of three different regions of the spectrum corresponding to the <a class="reference external" href="https://en.wikipedia.org/wiki/Color" rel="noopener noreferrer" target="_blank">red, green and blue wavelengths</a>. Human brain combines this information into a single colour image. All the colours that are visible to humans are then created by mixing these primary colours channels. This principle is imitated by colour imaging, including digital display screens (<a class="reference internal" href="#id3"><span class="std std-numref">Fig. 1.3.1.2</span></a>). Multispectral satellite cameras are able to measure radiation also from regions of the electromagnetic spectrum that are not visible to human eyes. Through the combined analysis of multispectral satellite raster bands, it is possible to measure much more physical characteristics of Earth than the colour, such as <a class="reference external" href="https://www.nrcan.gc.ca/maps-tools-publications/satellite-imagery-air-photos/remote-sensing-tutorials/satellites-sensors/thermal-imaging/9319" rel="noopener noreferrer" target="_blank">surface thermal properties</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index" rel="noopener noreferrer" target="_blank">vegetation conditions</a> and the atmosphere composition. GIS offers extensive support to the analysis of multispectral raster data.</p>
+<div class="figure align-default" id="id8">
+<span id="id3"></span><img alt="../_images/1.3.1.2.png" src="../_images/1.3.1.2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.3.1.2 </span><span class="caption-text">– The principle of color imaging. Source: <a class="reference external" href="https://www.neonscience.org" rel="noopener noreferrer" target="_blank">https://www.neonscience.org</a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="vector-data">
+<span id="id4"></span><h2><span class="section-number">1.3.2. </span>Vector data<a class="headerlink" href="#vector-data" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://gsp.humboldt.edu/OLM/Courses/GSP_216_Online/lesson3-1/data-models.html" rel="noopener noreferrer" target="_blank">Vector data models</a> describe geographic entities as discrete objects such as points, lines, and polygons. Point objects are recorded as single coordinate pairs, lines as ordered series of coordinate pairs while polygons as one or more ordered series of coordinate pairs where the first and last pairs coincide (close segments). Vector data attributes such as numeric values, textual information and other non-spatial characteristics of each vector object are attached to the list of coordinate pairs and linked to each specific object (<a class="reference internal" href="#id6"><span class="std std-numref">Fig. 1.3.2.1</span></a>). Vector data models link spatial and non-spatial elements of the data through indexes and encode them into a vector data file.  Vector data can be encoded in many <a class="reference external" href="https://en.wikipedia.org/wiki/GIS_file_formats" rel="noopener noreferrer" target="_blank">file formats</a>. Some of the most popular and widely adopted vector data formats in GIS are, for example, the <a class="reference external" href="https://en.wikipedia.org/wiki/Shapefile" rel="noopener noreferrer" target="_blank">Shapefile</a> and the <a class="reference external" href="https://geojson.org" rel="noopener noreferrer" target="_blank">GeoJSON</a>.</p>
+<div class="figure align-default" id="id9">
+<span id="id6"></span><img alt="../_images/1.3.2.1.png" src="../_images/1.3.2.1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.3.2.1 </span><span class="caption-text">– Schematic of geographic entities representation using vector data model</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>Vector data provide a sharp and scalable representation of geographic entities with almost no loss of portraying accuracy because entities boundaries are outlined directly by their coordinate values. The intuitive representation of entities provided by vector data is generally simpler to handle by users than raster data. For this reason, GIS provides many drawing functionalities to manually edit and styling vector data on maps.</p>
+<p>The size in memory of vector data files depends mainly on the number of objects mapped in a single file and, for lines and polygons, also on the number of coordinate pairs (or vertices) that are used to describe each object. The amount and type of attributes associated with each object also influence the size. Specifically, the higher the number of vertices and attributes the better is the level of detail provided by the vector data while the data file dimension increases. Mathematical <a class="reference internal" href="../part2/2_4.html#id1"><span class="std std-ref">operations on vector data</span></a> are generally computationally slower than raster data. This is due to the sparse or irregular object format of vector data that has to be handled by GIS software. Accordingly, the use of vector data is particularly suitable for high-detail cartographic applications focusing on a finite amount of discrete objects or involving confined geographic areas.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="1_4.html" class="btn btn-neutral float-right" title="1.4. GeoPackage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="1_2.html" class="btn btn-neutral float-left" title="1.2. Coordinate reference Systems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, GIS GEOLab team.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
