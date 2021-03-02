@@ -1,5 +1,5 @@
-GIS and Analysis Tools
-======================
+Geospatial Data Management
+==========================
 
 .. toctree::
    :maxdepth: 2
