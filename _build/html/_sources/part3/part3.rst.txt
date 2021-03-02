@@ -1,5 +1,5 @@
-GIS and Analysis Tools
-======================
+Earth Observation & Imagery Analysis
+====================================
 
 .. toctree::
    :maxdepth: 2
