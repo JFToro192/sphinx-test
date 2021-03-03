@@ -2,7 +2,7 @@
 
 Hazard Mapping 
 =======================================
-In this section we will revisit some of the contents and tools introduced in previous chapters presenting two different scenarios hazard assessment.
+In this section we will revisit some of the contents and tools introduced in previous chapters presenting two different scenarios to perform a hazard assessment.
 
 This is a new paragraph.
 
@@ -18,20 +18,26 @@ The following statemens present the syntax for creating different type of boxes 
 
 ``:literal:`␠abc```
 
-+--------------------------+------------+-------+------------------------+
-| USGS dNBR classification | HEX Color  | Color | Label                  |
-| (Value <= dNBR)          |            |       | (Severity Level)       |
-+==========================+============+=======+========================+
-| -0.1                     | #29BD2E    |  ...  | Unburned               |
-+--------------------------+------------+-------+------------------------+
-| 0.27                     | #FFDE00    |  ...  | Low Severity           |
-+--------------------------+------------+-------+------------------------+
-| 0.44                     | #FF9100    |  ...  | Moderate-Low Severity  | 
-+--------------------------+------------+-------+------------------------+
-| 0.66                     | #E3003B    |  ...  | Moderate-High Severity |
-+--------------------------+------------+-------+------------------------+
-| 1.3                      | #9D00C4    |  ...  | High Severity          |
-+--------------------------+------------+-------+------------------------+
+:numref:`4.2.1.t` this is the table for the burn severity classification.
+
+.. _4.2.1.t:
+.. table:: USGS burn severity ranges classification
+   :align: center
+
+   +--------------------------+------------+-------+------------------------+
+   | USGS dNBR classification | HEX Color  | Color | Label                  |
+   | (Value <= dNBR)          |            |       | (Severity Level)       |
+   +==========================+============+=======+========================+
+   | -0.1                     | #29BD2E    |  ...  | Unburned               |
+   +--------------------------+------------+-------+------------------------+
+   | 0.27                     | #FFDE00    |  ...  | Low Severity           |
+   +--------------------------+------------+-------+------------------------+
+   | 0.44                     | #FF9100    |  ...  | Moderate-Low Severity  | 
+   +--------------------------+------------+-------+------------------------+
+   | 0.66                     | #E3003B    |  ...  | Moderate-High Severity |
+   +--------------------------+------------+-------+------------------------+
+   | 1.3                      | #9D00C4    |  ...  | High Severity          |
+   +--------------------------+------------+-------+------------------------+
 
 This is a math expression :math:`\alpha > \beta`
 
@@ -55,10 +61,21 @@ Here there is a new citation [1]_:
 
 .. [1] Bolstad, P. (2016). GIS fundamentals: A first text on geographic information systems. Eider (PressMinnesota).
 
+Layout of the AOI with the flood/fire event of that has been analysed in the exercise, classify buildings and roads by the impact. The layout should include the table with the number of affected buildings and length of the closed roads as well as all elements required by a complete map. 
+
+:numref:`4.2.1` presents the files structure to be used for both of the exercises to manage the different inputs and outputs.
+
+.. _4.2.1:
+.. figure:: /img/4/4.2.1.png
+   :scale: 80%
+   :align: center
+
+   QGIS project folders and layers structure
+
 Flood Mapping
 -------------
 
-.. _4.2.1:
+.. _4.2.1.1:
 .. figure:: /img/4/4.2.1.1.png
    :scale: 60%
    :align: center
@@ -83,7 +100,7 @@ The purpose of this practice is to guide you on assessing the post-fire burnt se
    * Disaster type: Wildfire
    * Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response
 
-.. _4.2.2:
+.. _4.2.2.1:
 .. figure:: /img/4/4.2.2.1.png
    :scale: 60%
    :align: center
@@ -116,7 +133,7 @@ The naming convention for the GHSL-POP datasets is defined as *“{Product Name}
 
 .. note:: ``NoData`` cells are assigned -200 as value.
 
-After following the steps as presented in :numref:`4.2.3.1`, you will find a web viewer visualizing the tiles for the GHSL-POP products.
+After following the steps as presented in :numref:`4.2.3.1`, you will find a web viewer visualizing the tiles for the GHSL-POP products. At this point you can click on the tiles of enclosing your area of interest and execute the download of the raster dataset.
 
 .. _4.2.3.2:
 .. figure:: /img/4/4.2.3.2.png
