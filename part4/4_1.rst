@@ -1,6 +1,6 @@
 .. _4.1:
 
-Introduction to Geospatial Web Services
+Copernicus EMS
 =======================================
 
 A possible way for enriching a GIS project is by using Geospatial Web Services and data that are stored on servers connected by means of the internet.

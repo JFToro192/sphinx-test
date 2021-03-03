@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>4.2. Introduction to Geospatial Web Services &mdash; GIS4Schools  documentation</title>
+  <title>4.2. Hazard Mapping &mdash; GIS4Schools  documentation</title>
   
 
   
@@ -33,6 +33,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -40,7 +41,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Credits" href="../credits.html" />
-    <link rel="prev" title="4.1. Introduction to Geospatial Web Services" href="4_1.html" /> 
+    <link rel="prev" title="4.1. Copernicus EMS" href="4_1.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -165,8 +166,13 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="part4.html">4. Geospatial Data Management</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="4_1.html">4.1. Introduction to Geospatial Web Services</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Introduction to Geospatial Web Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_1.html">4.1. Copernicus EMS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Hazard Mapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flood-mapping">4.2.1. Flood Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fire-mapping">4.2.2. Fire Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-useful-resources">4.2.3. Other Useful Resources</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -221,7 +227,7 @@
         
           <li><a href="part4.html"><span class="section-number">4. </span>Geospatial Data Management</a> &raquo;</li>
         
-      <li><span class="section-number">4.2. </span>Introduction to Geospatial Web Services</li>
+      <li><span class="section-number">4.2. </span>Hazard Mapping</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -240,65 +246,156 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduction-to-geospatial-web-services">
-<span id="id1"></span><h1><span class="section-number">4.2. </span>Introduction to Geospatial Web Services<a class="headerlink" href="#introduction-to-geospatial-web-services" title="Permalink to this headline">¶</a></h1>
-<p>A possible way for enriching a GIS project is by using Geospatial Web Services and data that are stored on servers connected by means of the internet.</p>
-<p>The general concept can be summarised as a distributed GIS and is represented in <a class="reference internal" href="../part2/2_1.html#id2"><span class="std std-numref">Fig. 2.1.1</span></a>. We have geospatial data of every type (maps; aerial, drone, satellite imagery; geolocalized temporal series) stored on distributed servers, we have users who can be equipped with different tools (desktops, laptops, tablets, smartphones, etc). In order to find data we need geospatial catalogues and, if we want also to process data, we may need processing tools, which again stay on distributed servers. The glue of this distributed GIS, which is also called the Geospatial Web, is the internet.</p>
-<div class="figure align-default" id="id6">
-<span id="id2"></span><img alt="../_images/2.1.1.png" src="../_images/2.1.1.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.1 </span><span class="caption-text">– The Geospatial Web</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+  <div class="section" id="hazard-mapping">
+<span id="id1"></span><h1><span class="section-number">4.2. </span>Hazard Mapping<a class="headerlink" href="#hazard-mapping" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will revisit some of the contents and tools introduced in previous chapters presenting two different scenarios hazard assessment.</p>
+<p>This is a new paragraph.</p>
+<p><strong>This is some random test meant to be bold</strong></p>
+<p>The following statemens present the syntax for creating different type of boxes to add comments to the documentation.</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$a = &#39;b&#39;;</span>
+</pre></div>
 </div>
-<p>Such a kind of system is based on the concept of Web Service, which is a software system designed to support interoperable machine to machine interaction over a network. As we are dealing with geospatial data, we are interested specifically in Geospatial Web Services, which allow geospatial data and functions to be interoperable.</p>
-<p><a class="reference external" href="https://www.isko.org/cyclo/interoperability.htm#1" rel="noopener noreferrer" target="_blank">Interoperability</a> is the capability to communicate, execute programs or transfer data among various systems with different hardware and software platforms, data structures and interfaces in a manner that requires the user to have little or no knowledge of the characteristics of those units and allow the usage of the exchanged information and data without special effort by either system, or without any special manipulation.</p>
-<p>In order to obtain interoperability, standards are needed. A distinction can be made between “de facto standards”, which are technical instructions used by a noteworthy number of people and/or organizations and “de jure standards”, which are technical instructions set by national and/or international standardization organizations. In the case of the Geospatial Information, we refer to <a class="reference external" href="https://www.iso.org/committee/54904.html" rel="noopener noreferrer" target="_blank">ISO TC 211</a> Standards and <a class="reference external" href="https://www.ogc.org/" rel="noopener noreferrer" target="_blank">OGC</a> (Open Geospatial Consortium) Standards.</p>
-<p>OGC Web Services expose geographical functionalities to web users through standard web protocols. The use of the <a class="reference external" href="https://en.wikipedia.org/wiki/XML" rel="noopener noreferrer" target="_blank">XML</a> (eXtensible Markup Language) allows the encoding of data, rules and functions in a format that is both human-readable and machine-readable.</p>
-<p>The functioning of OWS (OGC Web Services) can be summarised in four steps:</p>
-<ul class="simple">
-<li>the client contacts the server and queries it about its functionalities;</li>
-<li>the server sends back to the client an XML document containing the functionalities of the supported service;</li>
-<li>the client asks the server for data;</li>
-<li>the server provides the data as requested.</li>
-</ul>
-<p>The most important geospatial web services about data are:</p>
-<p><a class="reference external" href="https://www.ogc.org/standards/wms" rel="noopener noreferrer" target="_blank">WMS</a>/<a class="reference external" href="https://www.ogc.org/standards/wmts" rel="noopener noreferrer" target="_blank">WMTS</a>: Web Map Service/Web Map Tile Service, which serve map images in a <a class="reference external" href="https://en.wikipedia.org/wiki/Bitmap" rel="noopener noreferrer" target="_blank">bitmap</a> format (e.g. PNG, GIF, JPEG, etc.) and sometimes also in <a class="reference external" href="https://en.wikipedia.org/wiki/Vector_graphics" rel="noopener noreferrer" target="_blank">vector graphics</a> (points, lines, curves and text, which can be expressed in formats like <a class="reference external" href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" rel="noopener noreferrer" target="_blank">SVG</a>). The WMTS is an extension of the WMS which alleviates the CPU intensive on-the-fly rendering problem when transferring massive amounts of data by using pre-rendered map tiles.</p>
-<p>The WMS service is composed by three basic operations (beside some others optional):</p>
-<ul class="simple">
-<li>GetCapabilities: provides an XML description of the available data and the parameters related to the requests accepted by the service;</li>
-<li>GetMap: supplies the requested data;</li>
-<li>GetFeatureInfo: retrieves the underlying data, including geometry and attribute values, for a pixel location on a map (optional).</li>
-</ul>
-<p>The first two operations are shown in <a class="reference internal" href="../part2/2_1.html#id3"><span class="std std-numref">Fig. 2.1.2</span></a>.</p>
-<div class="figure align-default" id="id7">
-<span id="id3"></span><img alt="../_images/2.1.2.png" src="../_images/2.1.2.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2 </span><span class="caption-text">– GetCapabilities and GetMap operations</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p><cite>result = (1 + x) * 32</cite></p>
+<p><code class="docutils literal notranslate"><span class="pre">:literal:`␠abc`</span></code></p>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="38%" />
+<col width="17%" />
+<col width="10%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">USGS dNBR classification
+(Value &lt;= dNBR)</th>
+<th class="head">HEX Color</th>
+<th class="head">Color</th>
+<th class="head">Label
+(Severity Level)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>-0.1</td>
+<td>#29BD2E</td>
+<td>…</td>
+<td>Unburned</td>
+</tr>
+<tr class="row-odd"><td>0.27</td>
+<td>#FFDE00</td>
+<td>…</td>
+<td>Low Severity</td>
+</tr>
+<tr class="row-even"><td>0.44</td>
+<td>#FF9100</td>
+<td>…</td>
+<td>Moderate-Low Severity</td>
+</tr>
+<tr class="row-odd"><td>0.66</td>
+<td>#E3003B</td>
+<td>…</td>
+<td>Moderate-High Severity</td>
+</tr>
+<tr class="row-even"><td>1.3</td>
+<td>#9D00C4</td>
+<td>…</td>
+<td>High Severity</td>
+</tr>
+</tbody>
+</table>
+<p>This is a math expression <span class="math notranslate nohighlight">\(\alpha &gt; \beta\)</span></p>
+<div class="math notranslate nohighlight">
+\[n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k\]</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
 </div>
-<p>As an example of GetCapabilities, <a class="reference external" href="https://www.efas.eu/api/wms/?request=getcapabilities" rel="noopener noreferrer" target="_blank">https://www.efas.eu/api/wms/?request=getcapabilities</a> , where <a class="reference external" href="https://www.efas.eu/api/wms/" rel="noopener noreferrer" target="_blank">https://www.efas.eu/api/wms/</a> are the <a class="reference external" href="https://www.efas.eu/" rel="noopener noreferrer" target="_blank">EFAS</a> (European Flood Awareness System) WMS Services, returns an XML file which describes the characteristics of the WMS Services (<a class="reference internal" href="../part2/2_1.html#id4"><span class="std std-numref">Fig. 2.1.3</span></a>).</p>
-<div class="figure align-default" id="id8">
-<span id="id4"></span><img alt="../_images/2.1.3.png" src="../_images/2.1.3.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.3 </span><span class="caption-text">– The XML file returning after the GetCapabilities request: first rows</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
 </div>
-<p>Browsing the file, we find the description of the “Landslide Susceptibility” layer (<a class="reference internal" href="../part2/2_1.html#id5"><span class="std std-numref">Fig. 2.1.4</span></a>) which we will see more in detail in the next session.</p>
-<div class="figure align-default" id="id9">
-<span id="id5"></span><img alt="../_images/2.1.4.png" src="../_images/2.1.4.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.4 </span><span class="caption-text">– The XML file returning after the GetCapabilities request: Landslide Susceptibility layer</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
 </div>
-<p>More information about the WMS can be found in the <a class="reference external" href="https://docs.geoserver.org/stable/en/user/services/wms/reference.html" rel="noopener noreferrer" target="_blank">WMS Reference of Geoserver</a>.</p>
-<p><a class="reference external" href="https://www.ogc.org/standards/wfs" rel="noopener noreferrer" target="_blank">WFS</a>: Web Feature Service, which offers direct access to vector geographic information at the feature and feature property level, where a feature represents a physical entity, e.g. a building, a street, etc.  Data is generally transferred in an XML-based <a class="reference external" href="https://en.wikipedia.org/wiki/Geography_Markup_Language" rel="noopener noreferrer" target="_blank">GML</a> format, but other formats like shapefiles can also serve for transport.</p>
-<p>The WFS service is composed by the basic operations (beside some others optional):</p>
+<p>Here there is a new citation <a class="footnote-reference" href="#id5" id="id4">[1]</a>:</p>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[1]</a></td><td>Bolstad, P. (2016). GIS fundamentals: A first text on geographic information systems. Eider (PressMinnesota).</td></tr>
+</tbody>
+</table>
+<div class="section" id="flood-mapping">
+<h2><span class="section-number">4.2.1. </span>Flood Mapping<a class="headerlink" href="#flood-mapping" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id12">
+<span id="id6"></span><a class="reference internal image-reference" href="../_images/4.2.1.1.png"><img alt="../_images/4.2.1.1.png" src="../_images/4.2.1.1.png" style="width: 552.0px; height: 544.1999999999999px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.1.1 </span><span class="caption-text">Flood mapping exercise workflow</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="fire-mapping">
+<h2><span class="section-number">4.2.2. </span>Fire Mapping<a class="headerlink" href="#fire-mapping" title="Permalink to this headline">¶</a></h2>
+<p>In this section we will dedicate our attention on the processing of Sentinel-2 satellite imagery to build a hazard map assessing the damage from a fire event in the vicinity of an urban area.</p>
 <ul class="simple">
-<li>GetCapabilities: provides an XML description of the available data and the parameters related to the requests accepted by the service;</li>
-<li>DescribeFeatureType: requests a list of features and attributes for the given feature type, or list the feature types available;</li>
-<li>GetFeature: request a selection of features from the data source.</li>
+<li><strong>Overview</strong></li>
 </ul>
-<p>More information about the WFS can be found in the <a class="reference external" href="https://docs.geoserver.org/stable/en/user/services/wfs/index.html" rel="noopener noreferrer" target="_blank">WFS Reference of Geoserver</a>.</p>
-<p><a class="reference external" href="https://www.ogc.org/standards/wcs" rel="noopener noreferrer" target="_blank">WCS</a> - Web Coverage Service, which supports requests for coverage data (gridded and raster data). While a WMS returns only an image, the results of a WCS can be used for modeling and analysis. WCS also allows more complex querying, for instance only the extraction of a portion of the data.</p>
-<p>The WCS service is composed by the basic operations (beside some others optional):</p>
+<p>A wildfire is a rapidly spreading fire that also occur in woodland areas. Annual dry seasons or drought provide an ideal environment for biomass and dry conditions to combine. Ignition sources for wildfires can relate to natural events, such as lightning strikes or lava flow. Unfortunately, they can also be man-made, resulting from the burning of debris, unattended campfires and intentional arson.</p>
+<p>Wildfires can result in the loss of human life, wildlife, and impact directly, or indirectly, different ecological processes due to the removal of the vegetation layer (Petropoulos, Griffiths, &amp; Kalivas, 2014). Therefore, it is essential the assessment of the severity of the impacted areas. This practice aims at assessing an affected area using remote sensing tools. The methodology will benefit from the use of the open satellite imagery published at the Copernicus Sci-Hub. Here, using Sentinel-2 imagery, you will model the severity of a wildfire in the Campania Region in Italy (in the vicinity of Sarno). The severity assessment considers the comparison of pre- and post-event imagery by computing the Normalized Burnt Ratio (NBR) on each scenario.</p>
 <ul class="simple">
-<li>GetCapabilities: provides an XML description of the available data and the parameters related to the requests accepted by the service;</li>
-<li>DescribeCoverage: requests information about the coverage. It returns information such as the coordinate reference system, the metadata, the domain, the range and the available formats;</li>
-<li>GetCoverage: requests the extraction of a subset (based on height, time and range) from the coverage, encodes it in different data formats, and returns the resulting file in different ways.</li>
+<li><strong>Objective</strong></li>
 </ul>
-<p>More information about the WCS can be found in the <a class="reference external" href="https://docs.geoserver.org/stable/en/user/services/wcs/index.html" rel="noopener noreferrer" target="_blank">WCS Reference of Geoserver</a>.</p>
+<p>The purpose of this practice is to guide you on assessing the post-fire burnt severity.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Disaster type: Wildfire</li>
+<li>Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response</li>
+</ul>
+</div></blockquote>
+<div class="figure align-center" id="id13">
+<span id="id7"></span><a class="reference internal image-reference" href="../_images/4.2.2.1.png"><img alt="../_images/4.2.2.1.png" src="../_images/4.2.2.1.png" style="width: 420.0px; height: 743.4px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.1 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="other-useful-resources">
+<h2><span class="section-number">4.2.3. </span>Other Useful Resources<a class="headerlink" href="#other-useful-resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Global Human Settlement Layer</strong></li>
+</ul>
+<p>The <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/" rel="noopener noreferrer" target="_blank">Global Human Settlement Layer (GHSL)</a> project produces timely geospatial information of human presence on the planet. Through the used of spatial data mining technologies, the project harvests information with evidence-based analytics and knowledge. The information is exposed as built-up maps, population density maps and settlement maps. The GHSL profits from the use of heterogeneous data such as satellite imagery, census data, and volunteered geographic information.</p>
+<div class="figure align-center" id="id14">
+<span id="id8"></span><a class="reference internal image-reference" href="../_images/4.2.3.1.png"><img alt="../_images/4.2.3.1.png" src="../_images/4.2.3.1.png" style="width: 827.0px; height: 682.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.3.1 </span><span class="caption-text">–Global Human Settlement Layer website, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/</a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><strong>Global Human Settlement Layer (GHSL) - Population</strong></li>
+</ul>
+<p>The <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">Global Human Settlement Layer Population layer (GHSL-POP )</a> <a class="footnote-reference" href="#id11" id="id9">[2]</a> is a spatial raster dataset depicting the distribution and density of the population expressed in number of people by cell. The production of this imagery is possible through the disaggregation of census or administrative spatial data into cells. Values are expressed as decimals (Float) and represent the absolute number of inhabitants of the cell. The residential population targets the years 1975, 1990, 2000 and 2015. The GHSL-POP datasets can be described by:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Product name: GHS_POP_MT_GLOBE_R2019A</li>
+<li>Coordinate System: World Mollweide (EPSG:54009), WGS (EPSG:4326)</li>
+<li>Resolution available:  250m, 1km, 9 arcsec, 30 arcsec</li>
+</ul>
+</div></blockquote>
+<p>The naming convention for the GHSL-POP datasets is defined as <em>“{Product Name}_{Coordinate System}_{Resolution}_{Version}”</em> (e.g. GHS_POP_E2015_GLOBE_R2019A_4326_9SS_V1_0, that is the version 1 of GHSL-POP dataset for 2015 referred to WGS84 with a resolution of 9 arcsec).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">NoData</span></code> cells are assigned -200 as value.</p>
+</div>
+<p>After following the steps as presented in <a class="reference internal" href="#id8"><span class="std std-numref">Fig. 4.2.3.1</span></a>, you will find a web viewer visualizing the tiles for the GHSL-POP products.</p>
+<div class="figure align-center" id="id15">
+<span id="id10"></span><a class="reference internal image-reference" href="../_images/4.2.3.2.png"><img alt="../_images/4.2.3.2.png" src="../_images/4.2.3.2.png" style="width: 602.0px; height: 480.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.3.2 </span><span class="caption-text">–Global Human Settlement Layer Population Tiles Web Viewer, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php</a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id9">[2]</a></td><td>Schiavina, Marcello; Freire, Sergio; MacManus, Kytt (2019): GHS population grid multitemporal (1975, 1990, 2000, 2015) R2019A. European Commission, Joint Research Centre (JRC) DOI: 10.2905/42E8BE89-54FF-464E-BE7B-BF9E64DA5218 PID: <a class="reference external" href="http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f" rel="noopener noreferrer" target="_blank">http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f</a>.</td></tr>
+</tbody>
+</table>
+<p>Eventually this can become a single note or important comment to mention additional material.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Add the reference material for the lecture.</p>
+</div>
+</div>
 </div>
 
 
@@ -308,7 +405,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../credits.html" class="btn btn-neutral float-right" title="Credits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="4_1.html" class="btn btn-neutral float-left" title="4.1. Introduction to Geospatial Web Services" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="4_1.html" class="btn btn-neutral float-left" title="4.1. Copernicus EMS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
