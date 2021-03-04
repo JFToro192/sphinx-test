@@ -18,27 +18,6 @@ The following statemens present the syntax for creating different type of boxes 
 
 ``:literal:`␠abc```
 
-:numref:`4.2.1.t` this is the table for the burn severity classification.
-
-.. _4.2.1.t:
-.. table:: USGS burn severity ranges classification
-   :align: center
-
-   +--------------------------+------------+-------+------------------------+
-   | USGS dNBR classification | HEX Color  | Color | Label                  |
-   | (Value <= dNBR)          |            |       | (Severity Level)       |
-   +==========================+============+=======+========================+
-   | -0.1                     | #29BD2E    |  ...  | Unburned               |
-   +--------------------------+------------+-------+------------------------+
-   | 0.27                     | #FFDE00    |  ...  | Low Severity           |
-   +--------------------------+------------+-------+------------------------+
-   | 0.44                     | #FF9100    |  ...  | Moderate-Low Severity  | 
-   +--------------------------+------------+-------+------------------------+
-   | 0.66                     | #E3003B    |  ...  | Moderate-High Severity |
-   +--------------------------+------------+-------+------------------------+
-   | 1.3                      | #9D00C4    |  ...  | High Severity          |
-   +--------------------------+------------+-------+------------------------+
-
 This is a math expression :math:`\alpha > \beta`
 
 .. math::
@@ -67,7 +46,7 @@ Layout of the AOI with the flood/fire event of that has been analysed in the exe
 
 .. _4.2.1:
 .. figure:: /img/4/4.2.1.png
-   :scale: 80%
+   :scale: 100%
    :align: center
 
    QGIS project folders and layers structure
@@ -75,12 +54,92 @@ Layout of the AOI with the flood/fire event of that has been analysed in the exe
 Flood Mapping
 -------------
 
+* **Overview**
+
+Flood mapping helps to estimate the flood extent on a large scale. It is an important tool during different phases of an emergency giving support to coordinate recovery activities, rehabilitation and prevention measures for such events. In this practice, we will use Sentinel-imagery to determine the flood extent for a specific study case. The flood extent estimates will serve as well for carrying out a damage assessment.
+
+* **Objective**
+
+The purpose of this practice is to guide you on assessing the exposure of a human settlement in a flood event.
+   
+   *  Disaster type: Flood
+   *	Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response
+
+* **Test Site**
+
+   **TODO**: Add a Figure of the location
+
+* **Context**
+
+*“Since the first hours of the 3rd of October 2020 an intense weather perturbation affected the North of Italy, with heavy rain and strong winds. Both red and orange alerts were issued by the regional and National Civil Protection. The greatest damages are reported in the Liguria region, and in the northern and western part of Piedmont region where the amount of the precipitation recorded exceeds the historical rate since 1958. The heavy rainfall has caused the overflow of several rivers and flooding of many areas. The overflow of the Sesia river in the Piedmont region caused interruption of roads, the collapse of a bridge and the flooding of several areas. Two deaths have also been reported.”* (CEMS Rapid Mapping Activation: `EMRS-468 <https://emergency.copernicus.eu/mapping/list-of-components/EMSR468>`_)
+
+* **Applicability**
+
+   **TODO**:
+
+* **Methodology**
+   
+   **TODO**:
+
+* **Sentinel-2 Imagery**
+
+   * True colors band for the pre- and post event of the AOI.
+
+* **Strenghts and Limitations:**
+
+   **TODO**: Add strenghts and Limitations
+
+* **Workflow** 
+
 .. _4.2.1.1:
 .. figure:: /img/4/4.2.1.1.png
    :scale: 60%
    :align: center
 
    Flood mapping exercise workflow
+
+Before starting to do the exercise, it is worth to mention how it was possible to identify the study case and the Area of Interest (AOI). For this purpose, we reviewed the Rapid Maping list of activations published byt the Copernicus Emergency Management Service (CEMS) available in this `link <https://emergency.copernicus.eu/mapping/list-of-activations-rapid>`_. In :numref:`4.2.1.2`, you can find the different parameters set to query the activation of interest. Here, select ``Flood`` as event type **(1)** and ``Italy`` as the affected country **(2)**. After the list of activations is upated with the defined parameters select the activation with the code EMSR468 (named *Flood in Piedmont region, Italy*) by clicking on its title **(3)**.
+
+.. _4.2.1.2:
+.. figure:: /img/4/4.2.1.2.png
+   :scale: 100%
+   :align: center
+
+   Copernicus Rapid Mapping List of Activations - Flood events in Italy.
+
+.. note::
+
+   In case you would like to search a different activation, there are other parameters which can help you to limit the query.
+   
+   * **Title**: define logical operators (e.g. ``equal``, ``not equal``, ``contains``, etc. ) to search for specify keywords in the title of the activation.
+   * **Activation Status**: define the current status of the activation. ``Open`` (On-going) or ``closed`` (Production finished)
+   * **Event type**: select within a list of events the one of your interest.
+   * **Event Start/End date**: define a period to query the activations. 
+   * **Affected countries**: Select one or multiple countries to query the activations. To select multiple elements from the list hold the **ctrl** key.
+
+   Once introduced the parameters the website execute the query for the matching activations. If for any reason the table do not update, click on the apply button.
+   For more information about the rapid mapping activities refer to the `Online Manual for Rapid Mapping Products <https://emergency.copernicus.eu/mapping/ems/online-manual-rapid-mapping-products>`_.
+
+At this point, you should have reached the activation summary with details of the characteristics of the activation and the different products delivered for the activation (see :numref:`4.2.1.3`). In this case, the activation involved multiple locations but for the exercise we will dedicate our attention to the delineation products in Vercelli. Here, there is the possibility to filter the products according to the typology and the AOI. Select ``Vercelli`` **(1)** as your AOI and ``[EMSR468] Vercelli: Delineation Product, version 1, release 1, RTP`` **(2)** as your product of interest.
+
+.. _4.2.1.3:
+.. figure:: /img/4/4.2.1.3.png
+   :scale: 100%
+   :align: center
+
+   Copernicus EMS Rapid Mapping Flood in Piedmont Region, Italy (`EMRS468 <https://emergency.copernicus.eu/mapping/list-of-components/EMSR468>`_).
+
+Inside the product page, as seen in :numref:`4.2.1.4`, you will have the option for:
+
+   * selecting the maps delivered by CEMS in **PDF (1)** and **JPEG** format
+   * downloading the CEMS vector layers produced for the delineation product by selecting the **ZIP** file, accepting the disclaimers on the use of the prooducts, and ``download`` **(3)** the package.
+
+.. _4.2.1.4:
+.. figure:: /img/4/4.2.1.4.png
+   :scale: 100%
+   :align: center
+
+   Copernicus EMS Rapid Mapping, Delineation product, Flood in Piedmont Region, Italy. Vector Package Download (`Delineation EMRS468 <https://emergency.copernicus.eu/mapping/ems-product-component/EMSR468_AOI05_DEL_PRODUCT_r1_RTP01/1>`_).
 
 Fire Mapping
 ------------
@@ -100,8 +159,104 @@ The purpose of this practice is to guide you on assessing the post-fire burnt se
    * Disaster type: Wildfire
    * Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response
 
+* **Test Site**
+
+   **TODO**: Add a Figure of the location
+
+* **Context**
+
+*“On 15/09/2019, a forest fire affected the municipality of Sarno (Salerno) in Italy, in the area of the Monte Saretto. The fire spread over the mountain behind the town of Sarno and for this reason almost 200 people have been evacuated. After a first analysis of the event, over 90% of the Sarno pine forest has been affected.”* (CEMS Rapid Mapping Activation: `EMRS-394 <https://emergency.copernicus.eu/mapping/list-of-components/EMSR394>`_)
+
+* **Applicability**
+
+Burnt severity data and maps can aid the development of emergency rehabilitation and restoration plans, post-fire. The proposed methodology is recommended for assessing the burn severity of large areas affected by wildfires. The burn severity can also be used to estimate soil burn severity and the likelihood of future downstream impacts due to flooding landslides and soil erosion.
+
+Wildfires: Global Critical Issues:
+
+   * Loss of human life and property
+   * Land cover dynamics (on temporal and spatial scale), soil structure, composition and competition of species (Lhermitte et al., 2011)
+   * Air pollution
+   * Habitat loss
+   * Hydrological regime changes and increased risk of landslides and floods
+   * Increased frequency, duration and severity due to fire suppression methods and climate change
+
+The practice makes use of Sentinel-2 imagery. 
+
+Burn severity monitoring we will make use of Sentinel-2 Near Infrared (NIR) and Shortwave Infrared (SWI) bands. These bands have a spatial resolution of 20m.
+
+* **Methodology**
+   
+The practice makes use of Sentinel-2 imagery. 
+
+For burn severity monitoring we will make use of Sentinel-2 Near Infrared (NIR) and Shortwave Infrared (SWI) bands. These bands have a spatial resolution of 20m.
+
 .. _4.2.2.1:
 .. figure:: /img/4/4.2.2.1.png
+   :scale: 100%
+   :align: center
+   
+   --Illustration of fire intensity versus burn severity (Source: US Forest Service)
+
+A measurement to highlight burnt areas is the Normalized Burnt Ratio (NBR), which tries to identify the effects of a fire in an area (after the combustion process). The NBR is an index designed to expose burnt areas in large fire zones. 
+
+.. _4.2.2.2:
+.. figure:: /img/4/4.2.2.2.png
+   :scale: 100%
+   :align: center
+   
+   --Comparison of the spectral response of healthy vegetation and burned areas (Source: US Forest Service)
+
+The healthy vegetation shows a high reflectance in the NIR, and a low reflectance in the SWIR portion of the spectrum. On the other hand, there is the opposite behaviour in burnt areas. The NBR benefits from this difference in the spectrum to highlight a burnt area through the following relationship.
+
+When the NBR value is high it indicates a healthy vegetation. While low NBR values indicate bare ground and recently burnt areas. Non-burnt areas area generally attributed a value of zero.
+
+The difference between the pre-fire and post-fire NBR can be used to estimate the severity of the burnt area. This measurement is known as the Burn Severity. Higher values of this estimation indicate more severely damaged vegetation.
+
+Burn Severity values can vary from case to case, and so, if possible, interpretation in specific instances should also be carried out through field assessment; in order to obtain the best results. However, the United States Geological Survey (USGS) proposed a classification table to interpret the burn severity presented in :numref:`4.2.1.t`.
+
+.. _4.2.1.t:
+.. table:: USGS burn severity ranges classification
+   :align: center
+
+   +--------------------------+------------+-------+------------------------+
+   | USGS dNBR classification | HEX Color  | Color | Label                  |
+   | (Value <= dNBR)          |            |       | (Severity Level)       |
+   +==========================+============+=======+========================+
+   | -0.1                     | #29BD2E    |  ...  | Unburned               |
+   +--------------------------+------------+-------+------------------------+
+   | 0.27                     | #FFDE00    |  ...  | Low Severity           |
+   +--------------------------+------------+-------+------------------------+
+   | 0.44                     | #FF9100    |  ...  | Moderate-Low Severity  | 
+   +--------------------------+------------+-------+------------------------+
+   | 0.66                     | #E3003B    |  ...  | Moderate-High Severity |
+   +--------------------------+------------+-------+------------------------+
+   | 1.3                      | #9D00C4    |  ...  | High Severity          |
+   +--------------------------+------------+-------+------------------------+
+
+* **Sentinel-2 Imagery**
+
+The Sentinel-2 imagery required to develop this practice is:
+
+   * NIR and SWIR images for Sentinel-2 are the bands 8A and 12, correspondingly.
+   * The pre-event imagery was retrieved for the 03/09/2020.
+   * The post-event imagery was retrieved for the 14/09/2020.
+
+
+* **Strenghts and Limitations:**
+
+Strenghts:
+   
+   * The recommended workflow can be easily applied to different areas.
+
+Limitations:
+   
+   * Accuracy of the assessment can be determined through field assessment.
+   * The methodology is suitable to assess large areas.
+
+* **Workflow** 
+
+.. _4.2.2.3:
+.. figure:: /img/4/4.2.2.3.png
    :scale: 60%
    :align: center
    

@@ -257,9 +257,190 @@
 </div>
 <p><cite>result = (1 + x) * 32</cite></p>
 <p><code class="docutils literal notranslate"><span class="pre">:literal:`␠abc`</span></code></p>
-<p><a class="reference internal" href="#t"><span class="std std-numref">Table 4.2.1</span></a> this is the table for the burn severity classification.</p>
-<span id="t"></span><table border="1" class="docutils align-center" id="id13">
-<caption><span class="caption-number">Table 4.2.1 </span><span class="caption-text">USGS burn severity ranges classification</span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
+<p>This is a math expression <span class="math notranslate nohighlight">\(\alpha &gt; \beta\)</span></p>
+<div class="math notranslate nohighlight">
+\[n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k\]</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
+</div>
+<p>Here there is a new citation <a class="footnote-reference" href="#id5" id="id4">[1]</a>:</p>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[1]</a></td><td>Bolstad, P. (2016). GIS fundamentals: A first text on geographic information systems. Eider (PressMinnesota).</td></tr>
+</tbody>
+</table>
+<p>Layout of the AOI with the flood/fire event of that has been analysed in the exercise, classify buildings and roads by the impact. The layout should include the table with the number of affected buildings and length of the closed roads as well as all elements required by a complete map.</p>
+<p><a class="reference internal" href="#id6"><span class="std std-numref">Fig. 4.2.1</span></a> presents the files structure to be used for both of the exercises to manage the different inputs and outputs.</p>
+<div class="figure align-center" id="id18">
+<span id="id6"></span><a class="reference internal image-reference" href="../_images/4.2.1.png"><img alt="../_images/4.2.1.png" src="../_images/4.2.1.png" style="width: 494.0px; height: 276.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.1 </span><span class="caption-text">QGIS project folders and layers structure</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="flood-mapping">
+<h2><span class="section-number">4.2.1. </span>Flood Mapping<a class="headerlink" href="#flood-mapping" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Overview</strong></li>
+</ul>
+<p>Flood mapping helps to estimate the flood extent on a large scale. It is an important tool during different phases of an emergency giving support to coordinate recovery activities, rehabilitation and prevention measures for such events. In this practice, we will use Sentinel-imagery to determine the flood extent for a specific study case. The flood extent estimates will serve as well for carrying out a damage assessment.</p>
+<ul class="simple">
+<li><strong>Objective</strong></li>
+</ul>
+<p>The purpose of this practice is to guide you on assessing the exposure of a human settlement in a flood event.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Disaster type: Flood</li>
+<li>Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first"><strong>Test Site</strong></p>
+<blockquote>
+<div><p><strong>TODO</strong>: Add a Figure of the location</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Context</strong></p>
+</li>
+</ul>
+<p><em>“Since the first hours of the 3rd of October 2020 an intense weather perturbation affected the North of Italy, with heavy rain and strong winds. Both red and orange alerts were issued by the regional and National Civil Protection. The greatest damages are reported in the Liguria region, and in the northern and western part of Piedmont region where the amount of the precipitation recorded exceeds the historical rate since 1958. The heavy rainfall has caused the overflow of several rivers and flooding of many areas. The overflow of the Sesia river in the Piedmont region caused interruption of roads, the collapse of a bridge and the flooding of several areas. Two deaths have also been reported.”</em> (CEMS Rapid Mapping Activation: <a class="reference external" href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR468" rel="noopener noreferrer" target="_blank">EMRS-468</a>)</p>
+<ul>
+<li><p class="first"><strong>Applicability</strong></p>
+<blockquote>
+<div><p><strong>TODO</strong>:</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Methodology</strong></p>
+<blockquote>
+<div><p><strong>TODO</strong>:</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Sentinel-2 Imagery</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>True colors band for the pre- and post event of the AOI.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Strenghts and Limitations:</strong></p>
+<blockquote>
+<div><p><strong>TODO</strong>: Add strenghts and Limitations</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Workflow</strong></p>
+</li>
+</ul>
+<div class="figure align-center" id="id19">
+<span id="id7"></span><a class="reference internal image-reference" href="../_images/4.2.1.1.png"><img alt="../_images/4.2.1.1.png" src="../_images/4.2.1.1.png" style="width: 552.0px; height: 544.1999999999999px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.1.1 </span><span class="caption-text">Flood mapping exercise workflow</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+<p>Before starting to do the exercise, it is worth to mention how it was possible to identify the study case and the Area of Interest (AOI). For this purpose, we reviewed the Rapid Maping list of activations published byt the Copernicus Emergency Management Service (CEMS) available in this <a class="reference external" href="https://emergency.copernicus.eu/mapping/list-of-activations-rapid" rel="noopener noreferrer" target="_blank">link</a>. In <a class="reference internal" href="#id8"><span class="std std-numref">Fig. 4.2.1.2</span></a>, you can find the different parameters set to query the activation of interest. Here, select <code class="docutils literal notranslate"><span class="pre">Flood</span></code> as event type <strong>(1)</strong> and <code class="docutils literal notranslate"><span class="pre">Italy</span></code> as the affected country <strong>(2)</strong>. After the list of activations is upated with the defined parameters select the activation with the code EMSR468 (named <em>Flood in Piedmont region, Italy</em>) by clicking on its title <strong>(3)</strong>.</p>
+<div class="figure align-center" id="id20">
+<span id="id8"></span><a class="reference internal image-reference" href="../_images/4.2.1.2.png"><img alt="../_images/4.2.1.2.png" src="../_images/4.2.1.2.png" style="width: 658.0px; height: 672.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.1.2 </span><span class="caption-text">Copernicus Rapid Mapping List of Activations - Flood events in Italy.</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In case you would like to search a different activation, there are other parameters which can help you to limit the query.</p>
+<ul class="simple">
+<li><strong>Title</strong>: define logical operators (e.g. <code class="docutils literal notranslate"><span class="pre">equal</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">equal</span></code>, <code class="docutils literal notranslate"><span class="pre">contains</span></code>, etc. ) to search for specify keywords in the title of the activation.</li>
+<li><strong>Activation Status</strong>: define the current status of the activation. <code class="docutils literal notranslate"><span class="pre">Open</span></code> (On-going) or <code class="docutils literal notranslate"><span class="pre">closed</span></code> (Production finished)</li>
+<li><strong>Event type</strong>: select within a list of events the one of your interest.</li>
+<li><strong>Event Start/End date</strong>: define a period to query the activations.</li>
+<li><strong>Affected countries</strong>: Select one or multiple countries to query the activations. To select multiple elements from the list hold the <strong>ctrl</strong> key.</li>
+</ul>
+<p class="last">Once introduced the parameters the website execute the query for the matching activations. If for any reason the table do not update, click on the apply button.
+For more information about the rapid mapping activities refer to the <a class="reference external" href="https://emergency.copernicus.eu/mapping/ems/online-manual-rapid-mapping-products" rel="noopener noreferrer" target="_blank">Online Manual for Rapid Mapping Products</a>.</p>
+</div>
+<p>At this point, you should have reached the activation summary with details of the characteristics of the activation and the different products delivered for the activation (see <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 4.2.1.3</span></a>). In this case, the activation involved multiple locations but for the exercise we will dedicate our attention to the delineation products in Vercelli. Here, there is the possibility to filter the products according to the typology and the AOI. Select <code class="docutils literal notranslate"><span class="pre">Vercelli</span></code> <strong>(1)</strong> as your AOI and <code class="docutils literal notranslate"><span class="pre">[EMSR468]</span> <span class="pre">Vercelli:</span> <span class="pre">Delineation</span> <span class="pre">Product,</span> <span class="pre">version</span> <span class="pre">1,</span> <span class="pre">release</span> <span class="pre">1,</span> <span class="pre">RTP</span></code> <strong>(2)</strong> as your product of interest.</p>
+<div class="figure align-center" id="id21">
+<span id="id9"></span><a class="reference internal image-reference" href="../_images/4.2.1.3.png"><img alt="../_images/4.2.1.3.png" src="../_images/4.2.1.3.png" style="width: 637.0px; height: 653.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.1.3 </span><span class="caption-text">Copernicus EMS Rapid Mapping Flood in Piedmont Region, Italy (<a class="reference external" href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR468" rel="noopener noreferrer" target="_blank">EMRS468</a>).</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<p>Inside the product page, as seen in <a class="reference internal" href="#id10"><span class="std std-numref">Fig. 4.2.1.4</span></a>, you will have the option for:</p>
+<blockquote>
+<div><ul class="simple">
+<li>selecting the maps delivered by CEMS in <strong>PDF (1)</strong> and <strong>JPEG</strong> format</li>
+<li>downloading the CEMS vector layers produced for the delineation product by selecting the <strong>ZIP</strong> file, accepting the disclaimers on the use of the prooducts, and <code class="docutils literal notranslate"><span class="pre">download</span></code> <strong>(3)</strong> the package.</li>
+</ul>
+</div></blockquote>
+<div class="figure align-center" id="id22">
+<span id="id10"></span><a class="reference internal image-reference" href="../_images/4.2.1.4.png"><img alt="../_images/4.2.1.4.png" src="../_images/4.2.1.4.png" style="width: 750.0px; height: 660.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.1.4 </span><span class="caption-text">Copernicus EMS Rapid Mapping, Delineation product, Flood in Piedmont Region, Italy. Vector Package Download (<a class="reference external" href="https://emergency.copernicus.eu/mapping/ems-product-component/EMSR468_AOI05_DEL_PRODUCT_r1_RTP01/1" rel="noopener noreferrer" target="_blank">Delineation EMRS468</a>).</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="fire-mapping">
+<h2><span class="section-number">4.2.2. </span>Fire Mapping<a class="headerlink" href="#fire-mapping" title="Permalink to this headline">¶</a></h2>
+<p>In this section we will dedicate our attention on the processing of Sentinel-2 satellite imagery to build a hazard map assessing the damage from a fire event in the vicinity of an urban area.</p>
+<ul class="simple">
+<li><strong>Overview</strong></li>
+</ul>
+<p>A wildfire is a rapidly spreading fire that also occur in woodland areas. Annual dry seasons or drought provide an ideal environment for biomass and dry conditions to combine. Ignition sources for wildfires can relate to natural events, such as lightning strikes or lava flow. Unfortunately, they can also be man-made, resulting from the burning of debris, unattended campfires and intentional arson.</p>
+<p>Wildfires can result in the loss of human life, wildlife, and impact directly, or indirectly, different ecological processes due to the removal of the vegetation layer (Petropoulos, Griffiths, &amp; Kalivas, 2014). Therefore, it is essential the assessment of the severity of the impacted areas. This practice aims at assessing an affected area using remote sensing tools. The methodology will benefit from the use of the open satellite imagery published at the Copernicus Sci-Hub. Here, using Sentinel-2 imagery, you will model the severity of a wildfire in the Campania Region in Italy (in the vicinity of Sarno). The severity assessment considers the comparison of pre- and post-event imagery by computing the Normalized Burnt Ratio (NBR) on each scenario.</p>
+<ul class="simple">
+<li><strong>Objective</strong></li>
+</ul>
+<p>The purpose of this practice is to guide you on assessing the post-fire burnt severity.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Disaster type: Wildfire</li>
+<li>Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first"><strong>Test Site</strong></p>
+<blockquote>
+<div><p><strong>TODO</strong>: Add a Figure of the location</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Context</strong></p>
+</li>
+</ul>
+<p><em>“On 15/09/2019, a forest fire affected the municipality of Sarno (Salerno) in Italy, in the area of the Monte Saretto. The fire spread over the mountain behind the town of Sarno and for this reason almost 200 people have been evacuated. After a first analysis of the event, over 90% of the Sarno pine forest has been affected.”</em> (CEMS Rapid Mapping Activation: <a class="reference external" href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR394" rel="noopener noreferrer" target="_blank">EMRS-394</a>)</p>
+<ul class="simple">
+<li><strong>Applicability</strong></li>
+</ul>
+<p>Burnt severity data and maps can aid the development of emergency rehabilitation and restoration plans, post-fire. The proposed methodology is recommended for assessing the burn severity of large areas affected by wildfires. The burn severity can also be used to estimate soil burn severity and the likelihood of future downstream impacts due to flooding landslides and soil erosion.</p>
+<p>Wildfires: Global Critical Issues:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Loss of human life and property</li>
+<li>Land cover dynamics (on temporal and spatial scale), soil structure, composition and competition of species (Lhermitte et al., 2011)</li>
+<li>Air pollution</li>
+<li>Habitat loss</li>
+<li>Hydrological regime changes and increased risk of landslides and floods</li>
+<li>Increased frequency, duration and severity due to fire suppression methods and climate change</li>
+</ul>
+</div></blockquote>
+<p>The practice makes use of Sentinel-2 imagery.</p>
+<p>Burn severity monitoring we will make use of Sentinel-2 Near Infrared (NIR) and Shortwave Infrared (SWI) bands. These bands have a spatial resolution of 20m.</p>
+<ul class="simple">
+<li><strong>Methodology</strong></li>
+</ul>
+<p>The practice makes use of Sentinel-2 imagery.</p>
+<p>For burn severity monitoring we will make use of Sentinel-2 Near Infrared (NIR) and Shortwave Infrared (SWI) bands. These bands have a spatial resolution of 20m.</p>
+<div class="figure align-center" id="id23">
+<span id="id11"></span><a class="reference internal image-reference" href="../_images/4.2.2.1.png"><img alt="../_images/4.2.2.1.png" src="../_images/4.2.2.1.png" style="width: 423.0px; height: 191.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.1 </span><span class="caption-text">–Illustration of fire intensity versus burn severity (Source: US Forest Service)</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<p>A measurement to highlight burnt areas is the Normalized Burnt Ratio (NBR), which tries to identify the effects of a fire in an area (after the combustion process). The NBR is an index designed to expose burnt areas in large fire zones.</p>
+<div class="figure align-center" id="id24">
+<span id="id12"></span><a class="reference internal image-reference" href="../_images/4.2.2.2.png"><img alt="../_images/4.2.2.2.png" src="../_images/4.2.2.2.png" style="width: 500.0px; height: 248.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.2 </span><span class="caption-text">–Comparison of the spectral response of healthy vegetation and burned areas (Source: US Forest Service)</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+<p>The healthy vegetation shows a high reflectance in the NIR, and a low reflectance in the SWIR portion of the spectrum. On the other hand, there is the opposite behaviour in burnt areas. The NBR benefits from this difference in the spectrum to highlight a burnt area through the following relationship.</p>
+<p>When the NBR value is high it indicates a healthy vegetation. While low NBR values indicate bare ground and recently burnt areas. Non-burnt areas area generally attributed a value of zero.</p>
+<p>The difference between the pre-fire and post-fire NBR can be used to estimate the severity of the burnt area. This measurement is known as the Burn Severity. Higher values of this estimation indicate more severely damaged vegetation.</p>
+<p>Burn Severity values can vary from case to case, and so, if possible, interpretation in specific instances should also be carried out through field assessment; in order to obtain the best results. However, the United States Geological Survey (USGS) proposed a classification table to interpret the burn severity presented in <a class="reference internal" href="#t"><span class="std std-numref">Table 4.2.2.1</span></a>.</p>
+<span id="t"></span><table border="1" class="docutils align-center" id="id25">
+<caption><span class="caption-number">Table 4.2.2.1 </span><span class="caption-text">USGS burn severity ranges classification</span><a class="headerlink" href="#id25" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="38%" />
 <col width="17%" />
@@ -303,62 +484,39 @@
 </tr>
 </tbody>
 </table>
-<p>This is a math expression <span class="math notranslate nohighlight">\(\alpha &gt; \beta\)</span></p>
-<div class="math notranslate nohighlight">
-\[n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k\]</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
-</div>
-<div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
-</div>
-<p>Here there is a new citation <a class="footnote-reference" href="#id5" id="id4">[1]</a>:</p>
-<table class="docutils footnote" frame="void" id="id5" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[1]</a></td><td>Bolstad, P. (2016). GIS fundamentals: A first text on geographic information systems. Eider (PressMinnesota).</td></tr>
-</tbody>
-</table>
-<p>Layout of the AOI with the flood/fire event of that has been analysed in the exercise, classify buildings and roads by the impact. The layout should include the table with the number of affected buildings and length of the closed roads as well as all elements required by a complete map.</p>
-<p><a class="reference internal" href="#id6"><span class="std std-numref">Fig. 4.2.1</span></a> presents the files structure to be used for both of the exercises to manage the different inputs and outputs.</p>
-<div class="figure align-center" id="id14">
-<span id="id6"></span><a class="reference internal image-reference" href="../_images/4.2.1.png"><img alt="../_images/4.2.1.png" src="../_images/4.2.1.png" style="width: 395.20000000000005px; height: 220.8px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.1 </span><span class="caption-text">QGIS project folders and layers structure</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="flood-mapping">
-<h2><span class="section-number">4.2.1. </span>Flood Mapping<a class="headerlink" href="#flood-mapping" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id15">
-<span id="id7"></span><a class="reference internal image-reference" href="../_images/4.2.1.1.png"><img alt="../_images/4.2.1.1.png" src="../_images/4.2.1.1.png" style="width: 552.0px; height: 544.1999999999999px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.1.1 </span><span class="caption-text">Flood mapping exercise workflow</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="fire-mapping">
-<h2><span class="section-number">4.2.2. </span>Fire Mapping<a class="headerlink" href="#fire-mapping" title="Permalink to this headline">¶</a></h2>
-<p>In this section we will dedicate our attention on the processing of Sentinel-2 satellite imagery to build a hazard map assessing the damage from a fire event in the vicinity of an urban area.</p>
 <ul class="simple">
-<li><strong>Overview</strong></li>
+<li><strong>Sentinel-2 Imagery</strong></li>
 </ul>
-<p>A wildfire is a rapidly spreading fire that also occur in woodland areas. Annual dry seasons or drought provide an ideal environment for biomass and dry conditions to combine. Ignition sources for wildfires can relate to natural events, such as lightning strikes or lava flow. Unfortunately, they can also be man-made, resulting from the burning of debris, unattended campfires and intentional arson.</p>
-<p>Wildfires can result in the loss of human life, wildlife, and impact directly, or indirectly, different ecological processes due to the removal of the vegetation layer (Petropoulos, Griffiths, &amp; Kalivas, 2014). Therefore, it is essential the assessment of the severity of the impacted areas. This practice aims at assessing an affected area using remote sensing tools. The methodology will benefit from the use of the open satellite imagery published at the Copernicus Sci-Hub. Here, using Sentinel-2 imagery, you will model the severity of a wildfire in the Campania Region in Italy (in the vicinity of Sarno). The severity assessment considers the comparison of pre- and post-event imagery by computing the Normalized Burnt Ratio (NBR) on each scenario.</p>
-<ul class="simple">
-<li><strong>Objective</strong></li>
-</ul>
-<p>The purpose of this practice is to guide you on assessing the post-fire burnt severity.</p>
+<p>The Sentinel-2 imagery required to develop this practice is:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Disaster type: Wildfire</li>
-<li>Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response</li>
+<li>NIR and SWIR images for Sentinel-2 are the bands 8A and 12, correspondingly.</li>
+<li>The pre-event imagery was retrieved for the 03/09/2020.</li>
+<li>The post-event imagery was retrieved for the 14/09/2020.</li>
 </ul>
 </div></blockquote>
-<div class="figure align-center" id="id16">
-<span id="id8"></span><a class="reference internal image-reference" href="../_images/4.2.2.1.png"><img alt="../_images/4.2.2.1.png" src="../_images/4.2.2.1.png" style="width: 420.0px; height: 743.4px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.2.1 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<ul class="simple">
+<li><strong>Strenghts and Limitations:</strong></li>
+</ul>
+<p>Strenghts:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The recommended workflow can be easily applied to different areas.</li>
+</ul>
+</div></blockquote>
+<p>Limitations:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Accuracy of the assessment can be determined through field assessment.</li>
+<li>The methodology is suitable to assess large areas.</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><strong>Workflow</strong></li>
+</ul>
+<div class="figure align-center" id="id26">
+<span id="id13"></span><a class="reference internal image-reference" href="../_images/4.2.2.3.png"><img alt="../_images/4.2.2.3.png" src="../_images/4.2.2.3.png" style="width: 420.0px; height: 743.4px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.3 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="other-useful-resources">
@@ -367,14 +525,14 @@
 <li><strong>Global Human Settlement Layer</strong></li>
 </ul>
 <p>The <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/" rel="noopener noreferrer" target="_blank">Global Human Settlement Layer (GHSL)</a> project produces timely geospatial information of human presence on the planet. Through the used of spatial data mining technologies, the project harvests information with evidence-based analytics and knowledge. The information is exposed as built-up maps, population density maps and settlement maps. The GHSL profits from the use of heterogeneous data such as satellite imagery, census data, and volunteered geographic information.</p>
-<div class="figure align-center" id="id17">
-<span id="id9"></span><a class="reference internal image-reference" href="../_images/4.2.3.1.png"><img alt="../_images/4.2.3.1.png" src="../_images/4.2.3.1.png" style="width: 827.0px; height: 682.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.3.1 </span><span class="caption-text">–Global Human Settlement Layer website, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/</a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id27">
+<span id="id14"></span><a class="reference internal image-reference" href="../_images/4.2.3.1.png"><img alt="../_images/4.2.3.1.png" src="../_images/4.2.3.1.png" style="width: 827.0px; height: 682.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.3.1 </span><span class="caption-text">–Global Human Settlement Layer website, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/</a></span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><strong>Global Human Settlement Layer (GHSL) - Population</strong></li>
 </ul>
-<p>The <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">Global Human Settlement Layer Population layer (GHSL-POP )</a> <a class="footnote-reference" href="#id12" id="id10">[2]</a> is a spatial raster dataset depicting the distribution and density of the population expressed in number of people by cell. The production of this imagery is possible through the disaggregation of census or administrative spatial data into cells. Values are expressed as decimals (Float) and represent the absolute number of inhabitants of the cell. The residential population targets the years 1975, 1990, 2000 and 2015. The GHSL-POP datasets can be described by:</p>
+<p>The <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">Global Human Settlement Layer Population layer (GHSL-POP )</a> <a class="footnote-reference" href="#id17" id="id15">[2]</a> is a spatial raster dataset depicting the distribution and density of the population expressed in number of people by cell. The production of this imagery is possible through the disaggregation of census or administrative spatial data into cells. Values are expressed as decimals (Float) and represent the absolute number of inhabitants of the cell. The residential population targets the years 1975, 1990, 2000 and 2015. The GHSL-POP datasets can be described by:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Product name: GHS_POP_MT_GLOBE_R2019A</li>
@@ -387,15 +545,15 @@
 <p class="first admonition-title">Note</p>
 <p class="last"><code class="docutils literal notranslate"><span class="pre">NoData</span></code> cells are assigned -200 as value.</p>
 </div>
-<p>After following the steps as presented in <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 4.2.3.1</span></a>, you will find a web viewer visualizing the tiles for the GHSL-POP products. At this point you can click on the tiles of enclosing your area of interest and execute the download of the raster dataset.</p>
-<div class="figure align-center" id="id18">
-<span id="id11"></span><a class="reference internal image-reference" href="../_images/4.2.3.2.png"><img alt="../_images/4.2.3.2.png" src="../_images/4.2.3.2.png" style="width: 602.0px; height: 480.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.3.2 </span><span class="caption-text">–Global Human Settlement Layer Population Tiles Web Viewer, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php</a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p>After following the steps as presented in <a class="reference internal" href="#id14"><span class="std std-numref">Fig. 4.2.3.1</span></a>, you will find a web viewer visualizing the tiles for the GHSL-POP products. At this point you can click on the tiles of enclosing your area of interest and execute the download of the raster dataset.</p>
+<div class="figure align-center" id="id28">
+<span id="id16"></span><a class="reference internal image-reference" href="../_images/4.2.3.2.png"><img alt="../_images/4.2.3.2.png" src="../_images/4.2.3.2.png" style="width: 602.0px; height: 480.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.3.2 </span><span class="caption-text">–Global Human Settlement Layer Population Tiles Web Viewer, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php</a></span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </div>
-<table class="docutils footnote" frame="void" id="id12" rules="none">
+<table class="docutils footnote" frame="void" id="id17" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id10">[2]</a></td><td>Schiavina, Marcello; Freire, Sergio; MacManus, Kytt (2019): GHS population grid multitemporal (1975, 1990, 2000, 2015) R2019A. European Commission, Joint Research Centre (JRC) DOI: 10.2905/42E8BE89-54FF-464E-BE7B-BF9E64DA5218 PID: <a class="reference external" href="http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f" rel="noopener noreferrer" target="_blank">http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id15">[2]</a></td><td>Schiavina, Marcello; Freire, Sergio; MacManus, Kytt (2019): GHS population grid multitemporal (1975, 1990, 2000, 2015) R2019A. European Commission, Joint Research Centre (JRC) DOI: 10.2905/42E8BE89-54FF-464E-BE7B-BF9E64DA5218 PID: <a class="reference external" href="http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f" rel="noopener noreferrer" target="_blank">http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f</a>.</td></tr>
 </tbody>
 </table>
 <p>Eventually this can become a single note or important comment to mention additional material.</p>
