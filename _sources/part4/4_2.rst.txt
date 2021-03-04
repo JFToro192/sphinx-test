@@ -98,11 +98,12 @@ The purpose of this practice is to guide you on assessing the exposure of a huma
 
    Flood mapping exercise workflow
 
+* **Copernicus EMS - Rapid Mapping**
+
 Before starting to do the exercise, it is worth to mention how it was possible to identify the study case and the Area of Interest (AOI). For this purpose, we reviewed the Rapid Maping list of activations published byt the Copernicus Emergency Management Service (CEMS) available in this `link <https://emergency.copernicus.eu/mapping/list-of-activations-rapid>`_. In :numref:`4.2.1.2`, you can find the different parameters set to query the activation of interest. Here, select ``Flood`` as event type **(1)** and ``Italy`` as the affected country **(2)**. After the list of activations is upated with the defined parameters select the activation with the code EMSR468 (named *Flood in Piedmont region, Italy*) by clicking on its title **(3)**.
 
 .. _4.2.1.2:
 .. figure:: /img/4/4.2.1.2.png
-   :scale: 100%
    :align: center
 
    Copernicus Rapid Mapping List of Activations - Flood events in Italy.
@@ -124,7 +125,6 @@ At this point, you should have reached the activation summary with details of th
 
 .. _4.2.1.3:
 .. figure:: /img/4/4.2.1.3.png
-   :scale: 100%
    :align: center
 
    Copernicus EMS Rapid Mapping Flood in Piedmont Region, Italy (`EMRS468 <https://emergency.copernicus.eu/mapping/list-of-components/EMSR468>`_).
@@ -132,14 +132,90 @@ At this point, you should have reached the activation summary with details of th
 Inside the product page, as seen in :numref:`4.2.1.4`, you will have the option for:
 
    * selecting the maps delivered by CEMS in **PDF (1)** and **JPEG** format
-   * downloading the CEMS vector layers produced for the delineation product by selecting the **ZIP** file, accepting the disclaimers on the use of the prooducts, and ``download`` **(3)** the package.
+   * downloading the CEMS vector layers produced for the delineation product by selecting the **ZIP (2)** file, accepting the disclaimers on the use of the prooducts, and ``download`` **(3)** the package.
+
+Now, you can make use of the different layers produced for de AOI delineating the flooded area.
 
 .. _4.2.1.4:
 .. figure:: /img/4/4.2.1.4.png
-   :scale: 100%
    :align: center
 
    Copernicus EMS Rapid Mapping, Delineation product, Flood in Piedmont Region, Italy. Vector Package Download (`Delineation EMRS468 <https://emergency.copernicus.eu/mapping/ems-product-component/EMSR468_AOI05_DEL_PRODUCT_r1_RTP01/1>`_).
+
+* **Data Download - EOBrowser**
+
+Next, we can proceed with the outline presented in :numref:`4.2.1.1`.
+
+Let us go to the `EOBrowser <https://apps.sentinel-hub.com/eo-browser/?zoom=13&lat=40.82128&lng=14.60667&themeId=DEFAULT-THEME>`_ platform to retrieve the Sentinel-2 optical satellite imagery for the AOI. Once that you have accessed your credentials you will have access not only to visualizing the Sentinel-Hub catalogue in the browser, but also the possibility to download the datasets.
+
+.. warning::
+   
+   This part of the practice imply that you have followed the lectures on “Sentinel Hub EO Browser” (https://gis4schools-rs.readthedocs.io/en/latest/rs_satelliteimages.html#) and that you are a registered “Sentinel-hub” user.
+
+Now, we can define the querying parameters for our datasets of interest for the pre- and post-event of the flood event (see :numref:`4.2.1.5`):
+
+   * Use the search bar located at the top-right of you screen and search for ``Vercelli, VC, Italia`` **(1)**. Alternatively, you can move within the map canvas if you are familiar with the location, or you can upload a KML or GEOJSON file with the area of interest to identify the AOI.
+   * Data Source: ``Sentinel-2`` **(2)**
+
+      * ``Advanced Search:`` **(3)** → ``L2A (atmospherically corrected)`` **(4)**
+   * Time Range:
+
+      * Start date: 2020-09-20 **(5)**
+      * End date: 2020-10-03 **(6)**
+
+After completely fill in the fields, click on the ``search`` **(7)** button to retrive the imagery.
+
+.. note::
+
+   The Top of Atmosphere (TOA) corrections aim at separating the reflectance emitted for objects on the Earth’s surface from atmospheric disturbances that are part of the reflected energy recorded by the sensor. (https://www.un-spider.org/node/10958)
+
+.. _4.2.1.5:
+.. figure:: /img/4/4.2.1.5.png
+   :align: center
+
+   EOBrowser viewer. CEMS Rapid Mapping activation EMRS468 Flood Event AOI.
+
+On the left-side of the viewer, select the image for the September 28, 2020 by clicking on the ``visualize`` (1) button in :numref:`4.2.1.6`. Notice that while hovering over the different available imagery the polygon representing the image coverage will change of color. This polygons visualization enables the possibility to observe that the imagery encloses the AOI.
+
+.. _4.2.1.6:
+.. figure:: /img/4/4.2.1.6.png
+   :align: center
+
+   EOBrowser viewer. Available imagery fulfilling the parameters.
+
+Having selected the image, you will enable multiple functionalities to interact with the map and the dataset (see :numref:`4.2.1.7`). Let us proceed to download the imagery. Click on the download function **(4)** to open the download window. Then, access the ``analytical`` tab to define the data format and typology of your preference for downloading the data. In this case, input the following parameters to donload the data:
+
+   * Image format: ``TIFF (32-bit float)`` **(8)**
+   * Image resolution: ``HIGH`` **(9)**
+   * Coordinate system: ``WGS 84 (EPSG:4326)`` **(10)**
+   * Layers: ``True Color`` **(11)**
+
+Then, click the ``Download`` **(12)** button, that will execute the download of the requested datasets. Each of the selected layer(s) are compressed into a ZIP file. By default the files are downloaded by the name of ``EO_Browser_images.zip``.
+Rename the file as ``EO_Browser_images_pre.zip``. Move the file under the ``Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR468 - Flood Scenario\EOBrowser-Scihub``.
+
+.. important::
+
+   The downloaded images are relative to the current extent of the map viewer. When retrieving the data for a certain extent, avoid dragging or zooming the map view as it will change extent covered by the images. 
+   
+   Alternatively, you can draw within the map canvas if you are familiar with the location, or you can upload a KML or GEOJSON file with the area of interest to identify the AOI.
+
+.. _4.2.1.7:
+.. figure:: /img/4/4.2.1.7.png
+   :align: center
+
+   EOBrowser viewer. Flood event area of interest data download.
+
+.. note::
+
+   For more information about the functionalities provided by the satellite imagery viewer seen in :numref:`4.2.1.7`, such as ``define an AOI`` **(1)**, ``Mark a point of interest`` **(2)**, ``Measure`` **(3)**, ``Download image`` **(4)**, ``Create time lapse animation`` **(5)** and ``Visualize terrain in 3d`` **(6)**, visit the `EOBrowser user-guide <https://www.sentinel-hub.com/explore/eobrowser/user-guide/>`_. 
+
+:numref:`4.2.1.8` present the pre- and post event imagery (atmospherically corrected) for the true colors of the imagery. Having imagery in different phases of the emergency allow to identify which is the hydrography of the AOI in normalcy with respect to the flooded areas. To query different images in time, EOBrowser provide two options to reach the imagery contained within the time span defined in previous steps. The first option is to return to the ``Discover`` **(1)** tab to reach the list of images and visualize a different image. And the second option, is to use the arrows presented next to the date to move backwards/forwards **(2)** in time to visualize the available imagery. Here, you will have the possibility to search suitable, cloud-free, imagery of your AOI for the later processing.
+
+.. _4.2.1.8:
+.. figure:: /img/4/4.2.1.8.png
+   :align: center
+
+   EOBrowser viewer. Flood event pre- (2020-09-28) and post-event (2020-10-03) view.
 
 Fire Mapping
 ------------
@@ -271,7 +347,6 @@ The `Global Human Settlement Layer (GHSL) <https://ghsl.jrc.ec.europa.eu/>`_ pro
 
 .. _4.2.3.1:
 .. figure:: /img/4/4.2.3.1.png
-   :scale: 100%
    :align: center
    
    --Global Human Settlement Layer website, https://ghsl.jrc.ec.europa.eu/
@@ -292,7 +367,6 @@ After following the steps as presented in :numref:`4.2.3.1`, you will find a web
 
 .. _4.2.3.2:
 .. figure:: /img/4/4.2.3.2.png
-   :scale: 100%
    :align: center
    
    --Global Human Settlement Layer Population Tiles Web Viewer, https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php
