@@ -217,6 +217,19 @@ Rename the file as ``EO_Browser_images_pre.zip``. Move the file under the ``Chap
 
    EOBrowser viewer. Flood event pre- (2020-09-28) and post-event (2020-10-03) view.
 
+Proceed to change the date until reaching October 3, 2020 (``2020-10-03``) to find the post event imagery. Repeat the previous steps presented in :numref:`4.2.1.7` to download the post-event dataset. Rename the downloaded ZIP file as ``EO_Browser_images_post.zip`` and move the file to the folder ``C:\Users\user\OneDrive - Politecnico di Milano\GIS4Schools_Fernando\Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR468 - Flood Scenario\EOBrowser-Scihub``.
+
+* **GHSL-POP**
+
+In this section, you will download the population datasets which will support the assessment of the exposure of the inhabitants of the AOI with respect to the flood event.
+
+.. _4.2.1.9:
+.. figure:: /img/4/4.2.1.9.png
+   :align: center
+
+   GHSL-POP 2015 dataset. Tile 18_3 data download.
+
+
 Fire Mapping
 ------------
 
