@@ -4,42 +4,6 @@ Hazard Mapping
 =======================================
 In this section we will revisit some of the contents and tools introduced in previous chapters presenting two different scenarios to perform a hazard assessment.
 
-This is a new paragraph.
-
-**This is some random test meant to be bold**
-
-The following statemens present the syntax for creating different type of boxes to add comments to the documentation.
-
-.. code-block:: php
-
-   $a = 'b';
-
-`result = (1 + x) * 32`
-
-``:literal:`␠abc```
-
-This is a math expression :math:`\alpha > \beta`
-
-.. math::
-
-    n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
-
-.. note::
-
-    To continue with the lecture, you are requested to `download and install QGIS <https://qgis.org/en/site/forusers/download.html>`_ on your computer (QGIS LTR version is suggested)
-
-.. important::
-
-    To continue with the lecture, you are requested to `download and install QGIS <https://qgis.org/en/site/forusers/download.html>`_ on your computer (QGIS LTR version is suggested)
-
-.. warning::
-
-    To continue with the lecture, you are requested to `download and install QGIS <https://qgis.org/en/site/forusers/download.html>`_ on your computer (QGIS LTR version is suggested)
-
-Here there is a new citation [1]_:
-
-.. [1] Bolstad, P. (2016). GIS fundamentals: A first text on geographic information systems. Eider (PressMinnesota).
-
 Layout of the AOI with the flood/fire event of that has been analysed in the exercise, classify buildings and roads by the impact. The layout should include the table with the number of affected buildings and length of the closed roads as well as all elements required by a complete map. 
 
 :numref:`4.2.1` presents the files structure to be used for both of the exercises to manage the different inputs and outputs.
@@ -50,6 +14,8 @@ Layout of the AOI with the flood/fire event of that has been analysed in the exe
    :align: center
 
    QGIS project folders and layers structure
+
+.. _4.2.1s:
 
 Flood Mapping
 -------------
@@ -65,29 +31,20 @@ The purpose of this practice is to guide you on assessing the exposure of a huma
    *  Disaster type: Flood
    *	Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response
 
-* **Test Site**
-
-   **TODO**: Add a Figure of the location
-
 * **Context**
 
 *“Since the first hours of the 3rd of October 2020 an intense weather perturbation affected the North of Italy, with heavy rain and strong winds. Both red and orange alerts were issued by the regional and National Civil Protection. The greatest damages are reported in the Liguria region, and in the northern and western part of Piedmont region where the amount of the precipitation recorded exceeds the historical rate since 1958. The heavy rainfall has caused the overflow of several rivers and flooding of many areas. The overflow of the Sesia river in the Piedmont region caused interruption of roads, the collapse of a bridge and the flooding of several areas. Two deaths have also been reported.”* (CEMS Rapid Mapping Activation: `EMRS-468 <https://emergency.copernicus.eu/mapping/list-of-components/EMSR468>`_)
 
-* **Applicability**
+.. note::
 
-   **TODO**:
+   Evidence of the flood event:
 
-* **Methodology**
-   
-   **TODO**:
+   * `Reference video 1 <https://www.youtube.com/watch?v=wAMNAItfhUk&ab_channel=VercelliNotizie>`_
+   * `Reference video 2 <https://www.youtube.com/watch?v=JYx-yEbjBdo&ab_channel=VercelliNotizie>`_
 
 * **Sentinel-2 Imagery**
 
    * True colors band for the pre- and post event of the AOI.
-
-* **Strenghts and Limitations:**
-
-   **TODO**: Add strenghts and Limitations
 
 * **Workflow** 
 
@@ -183,7 +140,7 @@ On the left-side of the viewer, select the image for the September 28, 2020 by c
 
    EOBrowser viewer. Available imagery fulfilling the parameters.
 
-Having selected the image, you will enable multiple functionalities to interact with the map and the dataset (see :numref:`4.2.1.7`). Let us proceed to download the imagery. Click on the download function **(4)** to open the download window. Then, access the ``analytical`` tab to define the data format and typology of your preference for downloading the data. In this case, input the following parameters to donload the data:
+Having selected the image, you will enable multiple functionalities to interact with the map and the dataset (see :numref:`4.2.1.7`). Let us proceed to download the imagery. Click on the download function **(4)** to open the download window. Then, access the ``analytical`` **(7)** tab to define the data format and typology of your preference for downloading the data. In this case, input the following parameters to download the data:
 
    * Image format: ``TIFF (32-bit float)`` **(8)**
    * Image resolution: ``HIGH`` **(9)**
@@ -191,7 +148,7 @@ Having selected the image, you will enable multiple functionalities to interact 
    * Layers: ``True Color`` **(11)**
 
 Then, click the ``Download`` **(12)** button, that will execute the download of the requested datasets. Each of the selected layer(s) are compressed into a ZIP file. By default the files are downloaded by the name of ``EO_Browser_images.zip``.
-Rename the file as ``EO_Browser_images_pre.zip``. Move the file under the ``Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR468 - Flood Scenario\EOBrowser-Scihub``.
+Rename the file as ``EO_Browser_images_pre.zip``. Move the file under the ``.\Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR468 - Flood Scenario\EOBrowser-Scihub``.
 
 .. important::
 
@@ -217,7 +174,7 @@ Rename the file as ``EO_Browser_images_pre.zip``. Move the file under the ``Chap
 
    EOBrowser viewer. Flood event pre- (2020-09-28) and post-event (2020-10-03) view.
 
-Proceed to change the date until reaching October 3, 2020 (``2020-10-03``) to find the post event imagery. Repeat the previous steps presented in :numref:`4.2.1.7` to download the post-event dataset. Rename the downloaded ZIP file as ``EO_Browser_images_post.zip`` and move the file to the folder ``C:\Users\user\OneDrive - Politecnico di Milano\GIS4Schools_Fernando\Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR468 - Flood Scenario\EOBrowser-Scihub``.
+Proceed to change the date until reaching October 3, 2020 (``2020-10-03``) to find the post event imagery. Repeat the previous steps presented in :numref:`4.2.1.7` to download the post-event dataset. Rename the downloaded ZIP file as ``EO_Browser_images_post.zip`` and move the file to the folder ``.\Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR468 - Flood Scenario\EOBrowser-Scihub``.
 
 * **GHSL-POP**
 
@@ -227,8 +184,252 @@ In this section, you will download the population datasets which will support th
 .. figure:: /img/4/4.2.1.9.png
    :align: center
 
-   GHSL-POP 2015 dataset. Tile 18_3 data download.
+   GHSL-POP 2015 dataset. Tile 18_3 data download. https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php
 
+Here we will download the tiles of the GHSL-POP product detailed in section :ref:`Other Useful Resources <4.2.3s>`. :numref:`4.2.1.9` presents the steps required to download the population tile for the AOI. Select the following parameters relative to the population layer: 
+   
+   * Product:``GHS-POP`` layer **(1)**
+   * Epoch: ``2015`` layer **(2)**
+   * Resolution: ``9_arcsec`` layer **(3)**
+   * Coord. system:   ``WGS84`` layer **(4)**
+
+After defining the parameters the tiles layer, click on the tile ``18_3`` **(5)** on the map viewer. The downloaded file will have the name ``GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3``. The naming of the file summarize the set of parameters and the selected tile of the population layer. 
+
+Now, we can move to our desktop GIS to perform the hazard assessment by overlaying the different datasets retrived until this point.
+
+.. warning::
+
+   The upcoming steps require to have followed:
+   
+   * Sections :ref:`1.4. <1.4>` - :ref:`1.9. <1.9>` in chapter :ref:`1. Data visualization with QGIS <part1>`.
+   * Section :ref:`2.3. Extending QGIS functionalitites <2.3>`
+   * Section :ref:`2.5.5. Clip raster with a mask <2.5.5>`
+
+* **Hazard Assessment**
+
+This exercise will devote its attention to identifying the infrastructure (buildings) and population (GHS-POP layer) exposed within the flooded area.
+
+In the next steps we will:
+
+   1. Add the sentinel-2 pre- and post-event imagery
+   2. Add the vector file concerning the AOI for the CEMS activation
+   3. Add the GHSL-POP dataset
+   4. Clip the the GHSL-POP enclosed within the AOI
+   5. Extract the building features within the AOI from OSM using the *QuickOSM* plugin
+   6. Build the hazard map by combining the layers and defining different symbologies
+   7. Prepare a map composition of the hazard assessment
+
+1. Add the two images for the pre- and post-event from the paths and file names as specified below.  
+
+   * Pre-event:
+      * Path: ``./EMSR468 - Flood Scenario/EOBrowser-Scihub/EO_Browser_images_pre.zip``
+      * File name:``2020-09-28-00_00_2020-09-28-23_59_Sentinel-2_L1C_True_color.tiff``      
+
+   * Post-event:
+      * Path: ``./EMSR468 - Flood Scenario/EOBrowser-Scihub/EO_Browser_images_post.zip``
+      * File name: ``2020-10-03-00_00_2020-10-03-23_59_Sentinel-2_L1C_True_color.tiff``.
+
+.. _4.2.1.10:
+.. figure:: /img/4/4.2.1.10.png
+   :align: center
+
+   EMSR468 Flood Event in Piedmont Region. Pre- and post event imagery.
+
+Notice from :numref:`4.2.1.10` that the event imagery are represented with a different symbology. The symbology for both layers is assigned according to the ranges of values for each of the bands composing the true image colors. In this case, the presence of clouds in the post-event imagery force a wider range of values on the RGB bands which leads such contrast between the images symbology. Then, to compose the true colors in an equivalent way, we must set the same ranges of values of the RGB bands from the multiband symbology. To do so, first we must review the ranges of values for the RGB bands from each multiband image as presented in :numref:`4.2.1.11`.
+
+.. _4.2.1.11:
+.. figure:: /img/4/4.2.1.11.png
+   :align: center
+
+   Edit the RGB symbology for a multiband image. 
+
+To modify the values from the multiband symbology follow the steps in :numref:`4.2.1.11`. Right-click on the layer to edit **(1)** → ``Properties...`` **(2)** → ``Symbology`` **(3)**. Then, assign the values to the minimum and maximum values to the RGB bands presented in :numref:`4.2.1.1t` **(4)**. Finally, click on ``OK`` **(5)**.
+
+The values in the table comprise the minumum and maximum values contrasting the two images.
+
+Follow the previous steps for both of the pre- and post event imagery.
+
+.. _4.2.1.1t:
+.. table:: RGB bands ranges of values for the pre- and post event imagery
+   :align: center
+
+   +----------+-----------------------+-------------------------+
+   |   Band   |         Min           |           Max           |
+   +==========+=======================+=========================+
+   |  Red     |      0,0909977        |         0,986626        |
+   +----------+-----------------------+-------------------------+
+   |  Green   |      0,143751         |      	0,975588        |
+   +----------+-----------------------+-------------------------+
+   |  Blue    |      0,193248         |      	0,980108        |
+   +----------+-----------------------+-------------------------+
+
+Once the images share the same ranges of values for the RGB bands, the images should be displayed as seen in :numref:`4.2.1.12`
+
+.. _4.2.1.12:
+.. figure:: /img/4/4.2.1.12.png
+   :align: center
+
+   Pre-event(top) and post-event(bottom) images sharing the same multiband symbology. 
+
+2. Now, we will add the AOI layer provided within the delineation products downloaded from the CEMS service. 
+
+To add the new layer, on QGIS Browser, locate the path to the activation delineation products and expand the compressed file. The location and file to be added are:
+
+   * Path: ``\Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR468 - Flood Scenario\Delineation Products``
+   * File: ``EMSR468_AOI05_DEL_PRODUCT_areaOfInterestA_r1_v1.json``
+
+After locating the file drag and drop the file inside the layer group for the flood activation **(1)** (see :numref:`4.2.1.13`).
+
+.. _4.2.1.13:
+.. figure:: /img/4/4.2.1.13.png
+   :align: center
+
+   EMSR468 activation - Flood event AOI. 
+
+.. note::
+
+   In the delineation products you will find different files and multiple formats for each. Each of the products is provided in KMZ, JSON, and SHP formats. In this case, the available products for the delineation activities for the flood are:
+
+   * Area of Interest: Identified area for assessing the flood extent.
+   * Hydrography: "Permanent" water bodies within the AOI.
+   * Image footprint: Polygon displaying the extent of the imagery used for the assessment.
+   * Observed event: Identified flooded area by the Rapid Mapping service.
+   * Transportation: Roads network within the AOI.
+
+To contrast the flood extent delineated by the rapid mapping services, add inside your map the files of "hydrography" and "observed event".
+
+   * ``EMSR468_AOI05_DEL_PRODUCT_observedEventA_r1_v1.json``
+   * ``EMSR468_AOI05_DEL_PRODUCT_hydrographyA_r1_v1.json``
+
+.. _4.2.1.14:
+.. figure:: /img/4/4.2.1.14.png
+   :align: center
+
+   EMSR468 activation - Delineated flood extent in the AOI. 
+
+Up to this point, with the current layers it is possible to compose a hazard map (provided that we have the delineation products for this specific event). However, there are other different resources which can allow to carry out more complete analysis on the risk assessment for the flooded area. Next, it is detailed another key component on hazard analysis that information with respect to the assets or human settlements with respect the hazard.
+
+3. The next step is to add the currently available information concerning the population. For this purpose we will add the previously downloaded population tile from GHS-POP.
+
+On your QGIS browser panel search for the following path:
+
+   * Path: ``.\Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR468 - Flood Scenario\GHSL``
+
+Inside the folder you will find a compressed file with the name ``GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3.zip``. Within the QGIS, expand the compressed file to find the GHS-POP raster file of the downloaded data.
+
+   * File Name: ``GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3.tif``
+
+Click on the GHS-POP file **(1)** and drag and drop the dataset inside the group of the flood scenario **(2)** (see :numref:``4.2.1.15``).
+
+.. _4.2.1.15:
+.. figure:: /img/4/4.2.1.15.png
+   :align: center
+
+   EMSR468 activation - add GHS-POP 2015 layer tile 18_3.
+
+4. Extract the population data enclosed by the area of interest.
+
+The next step is then to narrow down the information we have with respect to the population for the AOI. To achieve this, we will make use of the "clip raster with mask" processing tool. In :numref:`4.2.1.16` are detailed the steps to crop the GHS-POP raster. On the menu bar, select ``Raster`` **(1)** → ``Extraction`` **(2)** → ``Clip Raster by Mask Layer`` **(3)**. On the "Clip Raster by Mask Layer" window, input the following parameters:
+
+   * Input Layer: ``GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3 [EPSG:4326]`` **(4)**
+   * Mask Layer: ``EMSR468_AOI05_DEL_PRODUCT_areaOfInterestA_r1_v1`` **(5)**
+
+Scroll-down on the window **(6)** until finding the "Clip (mask)" option  →  ``...`` **(7)** → ``Save to File ...`` **(8)** . Reach the path to the location of your GHS-POP dataset and save the clipped file as ``GHS_POP_E2015_GLOBE_R2019A_4326_CLIP``. Activate the ``Open output file after running algorithm`` **(9)** to add the layer in your project after executing the command by clicking on ``Run`` **(10)**.
+
+.. _4.2.1.16:
+.. figure:: /img/4/4.2.1.16.png
+   :align: center
+
+   EMSR468 activation - clip GHS-POP 2015 within the AOI.
+
+:numref:`4.2.1.17` display the output of the cropped layer of the GHS-POP tile.
+
+.. _4.2.1.17:
+.. figure:: /img/4/4.2.1.17.png
+   :align: center
+
+   EMSR468 activation - clipped GHS-POP 2015 within the AOI.
+
+Apart from the data acquisition, an important part of hazard mapping (which is normally disregarded). The maps should be as clear and insightfull as possible. For this, assigning proper symbologies to the layers is a must. :numref:`4.2.1.17`, details the procedure to create a symbology which highlights the human settlements and defines suitable labels to represent the count of people per pixel in the layer.
+
+To modify the symbology from the clipped layer, right-click on the ``GHS_POP_E2015_GLOBE_R2019A_4326_CLIP`` layer **(1)** → ``Properties ...`` and in the ``Symbology`` tab select the following parameters:
+
+   * Render type: ``Singleband pseudocolor`` **(3)**
+   * Interpolation: ``Discrete`` **(4)**
+   * Color ramp: Choose a fitting color ramp **(5)**
+   * Label precision: ``0`` **(6)**
+   * Mode: ``Continuous`` **(7)**
+
+Apply the symbology by clickin on ``Classify`` **(9)** → ``OK``. The layer should be now visualized as seen in :numref:``4.2.1.19``. 
+
+.. _4.2.1.18:
+.. figure:: /img/4/4.2.1.18.png
+   :align: center
+
+   EMSR468 activation - modify clipped GHS-POP 2015 symbology.
+
+.. _4.2.1.19:
+.. figure:: /img/4/4.2.1.19.png
+   :align: center
+
+   EMSR468 activation - GHS-POP 2015 for the AOI.
+
+.. important::
+   The population exposure may as well be performed by using more detailed datasets from local census or other sources.
+
+5. Query the OSM buildings features using the QuickOSM plugin.
+
+ For the extraction of the OSM features follow the instruction in :numref:`4.2.1.19`. On the menu bar, select ``Vector`` **(1)** → ``QuickOSM`` **(2)** → ``QuickOSM...`` **(3)**, and enter the ``Symbology`` tab:
+
+   * Key: ``building`` **(4)**
+   * Value: ``yes`` **(5)**
+   * In: ``Layer Extent`` **(6)** → ``EMSR468_AOI05_DEL_PRODUCT_areaOfInterestA_r1_v1`` **(7)**
+
+Here, we will open the ``Advanced`` **(8)** option to define a folder to store the data. Here, click on ``...`` **(9)** and select the location:
+
+   * Path: ``.\Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR468 - Flood Scenario\QuickOSM_Buildings``
+
+And proceed to ``Run query`` **(10)**. After the process is executed, the OSM features with the key-value pairs, building-yes, have been added to the map (See :numref:`4.2.1.20`).
+
+.. _4.2.1.20:
+.. figure:: /img/4/4.2.1.20.png
+   :align: center
+
+   EMSR468 activation - QuickOSM building features (yes) query.
+
+.. _4.2.1.21:
+.. figure:: /img/4/4.2.1.21.png
+   :align: center
+
+   EMSR468 activation - QuickOSM building features.
+
+6. Build the hazard map by combining the layers and defining different symbologies
+
+As stated previously, crucial asset for hazard mapping is the representation of information. In :numref:`4.2.1.21`, the layers symbology has been modified to provided a more intuitive layout with respect to the flood event. First by distinguishing the permanent water bodies with respect to the flood plain. Second, by providing contrasting colors to the buildings and population. Another point which can improve the layout of your map is to add transparency and overlay to the layers.
+
+.. _4.2.1.22:
+.. figure:: /img/4/4.2.1.22.png
+   :align: center
+
+   EMSR468 activation - Editing of the layers visualization.
+
+7. Prepare a map composition of the hazard assessment
+
+To set up your map composition, start by creating a new layout (see :numref:`4.2.1.22`). On the menu bar select ``File`` → ``New Print Layout...``. Give a name to your layout. 
+
+.. _4.2.1.23:
+.. figure:: /img/4/4.2.1.23.png
+   :align: center
+
+   EMSR468 activation - Layout for the hazard event.
+
+.. _4.2.1.24:
+.. figure:: /img/4/4.2.1.24.png
+   :align: center
+
+   EMSR468 activation - Hazard map.
+
+.. _4.2.2s:
 
 Fire Mapping
 ------------
@@ -301,9 +502,9 @@ When the NBR value is high it indicates a healthy vegetation. While low NBR valu
 
 The difference between the pre-fire and post-fire NBR can be used to estimate the severity of the burnt area. This measurement is known as the Burn Severity. Higher values of this estimation indicate more severely damaged vegetation.
 
-Burn Severity values can vary from case to case, and so, if possible, interpretation in specific instances should also be carried out through field assessment; in order to obtain the best results. However, the United States Geological Survey (USGS) proposed a classification table to interpret the burn severity presented in :numref:`4.2.1.t`.
+Burn Severity values can vary from case to case, and so, if possible, interpretation in specific instances should also be carried out through field assessment; in order to obtain the best results. However, the United States Geological Survey (USGS) proposed a classification table to interpret the burn severity presented in :numref:`4.2.2.1t`.
 
-.. _4.2.1.t:
+.. _4.2.2.1t:
 .. table:: USGS burn severity ranges classification
    :align: center
 
@@ -350,6 +551,8 @@ Limitations:
    :align: center
    
    --Fire mapping exercise workflow
+
+.. _4.2.3s:
 
 Other Useful Resources
 ----------------------

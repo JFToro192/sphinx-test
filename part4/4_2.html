@@ -33,7 +33,6 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -135,8 +134,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_3.html">2.3. Extending QGIS functionalities</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id1">2.3.1. Processing toolbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id3">2.3.2. Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id2">2.3.1. Processing toolbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../part2/2_3.html#id4">2.3.2. Plugins</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../part2/2_4.html">2.4. Vector processing</a><ul>
@@ -249,44 +248,14 @@
   <div class="section" id="hazard-mapping">
 <span id="id1"></span><h1><span class="section-number">4.2. </span>Hazard Mapping<a class="headerlink" href="#hazard-mapping" title="Permalink to this headline">¶</a></h1>
 <p>In this section we will revisit some of the contents and tools introduced in previous chapters presenting two different scenarios to perform a hazard assessment.</p>
-<p>This is a new paragraph.</p>
-<p><strong>This is some random test meant to be bold</strong></p>
-<p>The following statemens present the syntax for creating different type of boxes to add comments to the documentation.</p>
-<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$a = &#39;b&#39;;</span>
-</pre></div>
-</div>
-<p><cite>result = (1 + x) * 32</cite></p>
-<p><code class="docutils literal notranslate"><span class="pre">:literal:`␠abc`</span></code></p>
-<p>This is a math expression <span class="math notranslate nohighlight">\(\alpha &gt; \beta\)</span></p>
-<div class="math notranslate nohighlight">
-\[n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k\]</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
-</div>
-<div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">To continue with the lecture, you are requested to <a class="reference external" href="https://qgis.org/en/site/forusers/download.html" rel="noopener noreferrer" target="_blank">download and install QGIS</a> on your computer (QGIS LTR version is suggested)</p>
-</div>
-<p>Here there is a new citation <a class="footnote-reference" href="#id5" id="id4">[1]</a>:</p>
-<table class="docutils footnote" frame="void" id="id5" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[1]</a></td><td>Bolstad, P. (2016). GIS fundamentals: A first text on geographic information systems. Eider (PressMinnesota).</td></tr>
-</tbody>
-</table>
 <p>Layout of the AOI with the flood/fire event of that has been analysed in the exercise, classify buildings and roads by the impact. The layout should include the table with the number of affected buildings and length of the closed roads as well as all elements required by a complete map.</p>
-<p><a class="reference internal" href="#id6"><span class="std std-numref">Fig. 4.2.1</span></a> presents the files structure to be used for both of the exercises to manage the different inputs and outputs.</p>
-<div class="figure align-center" id="id23">
-<span id="id6"></span><a class="reference internal image-reference" href="../_images/4.2.1.png"><img alt="../_images/4.2.1.png" src="../_images/4.2.1.png" style="width: 494.0px; height: 276.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.1 </span><span class="caption-text">QGIS project folders and layers structure</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<p><a class="reference internal" href="#id2"><span class="std std-numref">Fig. 4.2.1</span></a> presents the files structure to be used for both of the exercises to manage the different inputs and outputs.</p>
+<div class="figure align-center" id="id37">
+<span id="id2"></span><a class="reference internal image-reference" href="../_images/4.2.1.png"><img alt="../_images/4.2.1.png" src="../_images/4.2.1.png" style="width: 494.0px; height: 276.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.1 </span><span class="caption-text">QGIS project folders and layers structure</span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="flood-mapping">
-<h2><span class="section-number">4.2.1. </span>Flood Mapping<a class="headerlink" href="#flood-mapping" title="Permalink to this headline">¶</a></h2>
+<span id="s"></span><h2><span class="section-number">4.2.1. </span>Flood Mapping<a class="headerlink" href="#flood-mapping" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><strong>Overview</strong></li>
 </ul>
@@ -301,27 +270,19 @@
 <li>Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response</li>
 </ul>
 </div></blockquote>
-<ul>
-<li><p class="first"><strong>Test Site</strong></p>
-<blockquote>
-<div><p><strong>TODO</strong>: Add a Figure of the location</p>
-</div></blockquote>
-</li>
-<li><p class="first"><strong>Context</strong></p>
-</li>
+<ul class="simple">
+<li><strong>Context</strong></li>
 </ul>
 <p><em>“Since the first hours of the 3rd of October 2020 an intense weather perturbation affected the North of Italy, with heavy rain and strong winds. Both red and orange alerts were issued by the regional and National Civil Protection. The greatest damages are reported in the Liguria region, and in the northern and western part of Piedmont region where the amount of the precipitation recorded exceeds the historical rate since 1958. The heavy rainfall has caused the overflow of several rivers and flooding of many areas. The overflow of the Sesia river in the Piedmont region caused interruption of roads, the collapse of a bridge and the flooding of several areas. Two deaths have also been reported.”</em> (CEMS Rapid Mapping Activation: <a class="reference external" href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR468" rel="noopener noreferrer" target="_blank">EMRS-468</a>)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Evidence of the flood event:</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://www.youtube.com/watch?v=wAMNAItfhUk&amp;ab_channel=VercelliNotizie" rel="noopener noreferrer" target="_blank">Reference video 1</a></li>
+<li><a class="reference external" href="https://www.youtube.com/watch?v=JYx-yEbjBdo&amp;ab_channel=VercelliNotizie" rel="noopener noreferrer" target="_blank">Reference video 2</a></li>
+</ul>
+</div>
 <ul>
-<li><p class="first"><strong>Applicability</strong></p>
-<blockquote>
-<div><p><strong>TODO</strong>:</p>
-</div></blockquote>
-</li>
-<li><p class="first"><strong>Methodology</strong></p>
-<blockquote>
-<div><p><strong>TODO</strong>:</p>
-</div></blockquote>
-</li>
 <li><p class="first"><strong>Sentinel-2 Imagery</strong></p>
 <blockquote>
 <div><ul class="simple">
@@ -329,25 +290,20 @@
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>Strenghts and Limitations:</strong></p>
-<blockquote>
-<div><p><strong>TODO</strong>: Add strenghts and Limitations</p>
-</div></blockquote>
-</li>
 <li><p class="first"><strong>Workflow</strong></p>
 </li>
 </ul>
-<div class="figure align-center" id="id24">
-<span id="id7"></span><a class="reference internal image-reference" href="../_images/4.2.1.1.png"><img alt="../_images/4.2.1.1.png" src="../_images/4.2.1.1.png" style="width: 552.0px; height: 544.1999999999999px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.1.1 </span><span class="caption-text">Flood mapping exercise workflow</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id38">
+<span id="id3"></span><a class="reference internal image-reference" href="../_images/4.2.1.1.png"><img alt="../_images/4.2.1.1.png" src="../_images/4.2.1.1.png" style="width: 552.0px; height: 544.1999999999999px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.1.1 </span><span class="caption-text">Flood mapping exercise workflow</span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><strong>Copernicus EMS - Rapid Mapping</strong></li>
 </ul>
-<p>Before starting to do the exercise, it is worth to mention how it was possible to identify the study case and the Area of Interest (AOI). For this purpose, we reviewed the Rapid Maping list of activations published byt the Copernicus Emergency Management Service (CEMS) available in this <a class="reference external" href="https://emergency.copernicus.eu/mapping/list-of-activations-rapid" rel="noopener noreferrer" target="_blank">link</a>. In <a class="reference internal" href="#id8"><span class="std std-numref">Fig. 4.2.1.2</span></a>, you can find the different parameters set to query the activation of interest. Here, select <code class="docutils literal notranslate"><span class="pre">Flood</span></code> as event type <strong>(1)</strong> and <code class="docutils literal notranslate"><span class="pre">Italy</span></code> as the affected country <strong>(2)</strong>. After the list of activations is upated with the defined parameters select the activation with the code EMSR468 (named <em>Flood in Piedmont region, Italy</em>) by clicking on its title <strong>(3)</strong>.</p>
-<div class="figure align-center" id="id25">
-<span id="id8"></span><img alt="../_images/4.2.1.2.png" src="../_images/4.2.1.2.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.1.2 </span><span class="caption-text">Copernicus Rapid Mapping List of Activations - Flood events in Italy.</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+<p>Before starting to do the exercise, it is worth to mention how it was possible to identify the study case and the Area of Interest (AOI). For this purpose, we reviewed the Rapid Maping list of activations published byt the Copernicus Emergency Management Service (CEMS) available in this <a class="reference external" href="https://emergency.copernicus.eu/mapping/list-of-activations-rapid" rel="noopener noreferrer" target="_blank">link</a>. In <a class="reference internal" href="#id4"><span class="std std-numref">Fig. 4.2.1.2</span></a>, you can find the different parameters set to query the activation of interest. Here, select <code class="docutils literal notranslate"><span class="pre">Flood</span></code> as event type <strong>(1)</strong> and <code class="docutils literal notranslate"><span class="pre">Italy</span></code> as the affected country <strong>(2)</strong>. After the list of activations is upated with the defined parameters select the activation with the code EMSR468 (named <em>Flood in Piedmont region, Italy</em>) by clicking on its title <strong>(3)</strong>.</p>
+<div class="figure align-center" id="id39">
+<span id="id4"></span><img alt="../_images/4.2.1.2.png" src="../_images/4.2.1.2.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.2 </span><span class="caption-text">Copernicus Rapid Mapping List of Activations - Flood events in Italy.</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -362,12 +318,12 @@
 <p class="last">Once introduced the parameters the website execute the query for the matching activations. If for any reason the table do not update, click on the apply button.
 For more information about the rapid mapping activities refer to the <a class="reference external" href="https://emergency.copernicus.eu/mapping/ems/online-manual-rapid-mapping-products" rel="noopener noreferrer" target="_blank">Online Manual for Rapid Mapping Products</a>.</p>
 </div>
-<p>At this point, you should have reached the activation summary with details of the characteristics of the activation and the different products delivered for the activation (see <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 4.2.1.3</span></a>). In this case, the activation involved multiple locations but for the exercise we will dedicate our attention to the delineation products in Vercelli. Here, there is the possibility to filter the products according to the typology and the AOI. Select <code class="docutils literal notranslate"><span class="pre">Vercelli</span></code> <strong>(1)</strong> as your AOI and <code class="docutils literal notranslate"><span class="pre">[EMSR468]</span> <span class="pre">Vercelli:</span> <span class="pre">Delineation</span> <span class="pre">Product,</span> <span class="pre">version</span> <span class="pre">1,</span> <span class="pre">release</span> <span class="pre">1,</span> <span class="pre">RTP</span></code> <strong>(2)</strong> as your product of interest.</p>
-<div class="figure align-center" id="id26">
-<span id="id9"></span><img alt="../_images/4.2.1.3.png" src="../_images/4.2.1.3.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.1.3 </span><span class="caption-text">Copernicus EMS Rapid Mapping Flood in Piedmont Region, Italy (<a class="reference external" href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR468" rel="noopener noreferrer" target="_blank">EMRS468</a>).</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<p>At this point, you should have reached the activation summary with details of the characteristics of the activation and the different products delivered for the activation (see <a class="reference internal" href="#id5"><span class="std std-numref">Fig. 4.2.1.3</span></a>). In this case, the activation involved multiple locations but for the exercise we will dedicate our attention to the delineation products in Vercelli. Here, there is the possibility to filter the products according to the typology and the AOI. Select <code class="docutils literal notranslate"><span class="pre">Vercelli</span></code> <strong>(1)</strong> as your AOI and <code class="docutils literal notranslate"><span class="pre">[EMSR468]</span> <span class="pre">Vercelli:</span> <span class="pre">Delineation</span> <span class="pre">Product,</span> <span class="pre">version</span> <span class="pre">1,</span> <span class="pre">release</span> <span class="pre">1,</span> <span class="pre">RTP</span></code> <strong>(2)</strong> as your product of interest.</p>
+<div class="figure align-center" id="id40">
+<span id="id5"></span><img alt="../_images/4.2.1.3.png" src="../_images/4.2.1.3.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.3 </span><span class="caption-text">Copernicus EMS Rapid Mapping Flood in Piedmont Region, Italy (<a class="reference external" href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR468" rel="noopener noreferrer" target="_blank">EMRS468</a>).</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
 </div>
-<p>Inside the product page, as seen in <a class="reference internal" href="#id10"><span class="std std-numref">Fig. 4.2.1.4</span></a>, you will have the option for:</p>
+<p>Inside the product page, as seen in <a class="reference internal" href="#id6"><span class="std std-numref">Fig. 4.2.1.4</span></a>, you will have the option for:</p>
 <blockquote>
 <div><ul class="simple">
 <li>selecting the maps delivered by CEMS in <strong>PDF (1)</strong> and <strong>JPEG</strong> format</li>
@@ -375,20 +331,20 @@ For more information about the rapid mapping activities refer to the <a class="r
 </ul>
 </div></blockquote>
 <p>Now, you can make use of the different layers produced for de AOI delineating the flooded area.</p>
-<div class="figure align-center" id="id27">
-<span id="id10"></span><img alt="../_images/4.2.1.4.png" src="../_images/4.2.1.4.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.1.4 </span><span class="caption-text">Copernicus EMS Rapid Mapping, Delineation product, Flood in Piedmont Region, Italy. Vector Package Download (<a class="reference external" href="https://emergency.copernicus.eu/mapping/ems-product-component/EMSR468_AOI05_DEL_PRODUCT_r1_RTP01/1" rel="noopener noreferrer" target="_blank">Delineation EMRS468</a>).</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id41">
+<span id="id6"></span><img alt="../_images/4.2.1.4.png" src="../_images/4.2.1.4.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.4 </span><span class="caption-text">Copernicus EMS Rapid Mapping, Delineation product, Flood in Piedmont Region, Italy. Vector Package Download (<a class="reference external" href="https://emergency.copernicus.eu/mapping/ems-product-component/EMSR468_AOI05_DEL_PRODUCT_r1_RTP01/1" rel="noopener noreferrer" target="_blank">Delineation EMRS468</a>).</span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><strong>Data Download - EOBrowser</strong></li>
 </ul>
-<p>Next, we can proceed with the outline presented in <a class="reference internal" href="#id7"><span class="std std-numref">Fig. 4.2.1.1</span></a>.</p>
+<p>Next, we can proceed with the outline presented in <a class="reference internal" href="#id3"><span class="std std-numref">Fig. 4.2.1.1</span></a>.</p>
 <p>Let us go to the <a class="reference external" href="https://apps.sentinel-hub.com/eo-browser/?zoom=13&amp;lat=40.82128&amp;lng=14.60667&amp;themeId=DEFAULT-THEME" rel="noopener noreferrer" target="_blank">EOBrowser</a> platform to retrieve the Sentinel-2 optical satellite imagery for the AOI. Once that you have accessed your credentials you will have access not only to visualizing the Sentinel-Hub catalogue in the browser, but also the possibility to download the datasets.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This part of the practice imply that you have followed the lectures on “Sentinel Hub EO Browser” (<a class="reference external" href="https://gis4schools-rs.readthedocs.io/en/latest/rs_satelliteimages" rel="noopener noreferrer" target="_blank">https://gis4schools-rs.readthedocs.io/en/latest/rs_satelliteimages</a>.html#) and that you are a registered “Sentinel-hub” user.</p>
 </div>
-<p>Now, we can define the querying parameters for our datasets of interest for the pre- and post-event of the flood event (see <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 4.2.1.5</span></a>):</p>
+<p>Now, we can define the querying parameters for our datasets of interest for the pre- and post-event of the flood event (see <a class="reference internal" href="#id7"><span class="std std-numref">Fig. 4.2.1.5</span></a>):</p>
 <blockquote>
 <div><ul>
 <li><p class="first">Use the search bar located at the top-right of you screen and search for <code class="docutils literal notranslate"><span class="pre">Vercelli,</span> <span class="pre">VC,</span> <span class="pre">Italia</span></code> <strong>(1)</strong>. Alternatively, you can move within the map canvas if you are familiar with the location, or you can upload a KML or GEOJSON file with the area of interest to identify the AOI.</p>
@@ -415,16 +371,16 @@ For more information about the rapid mapping activities refer to the <a class="r
 <p class="first admonition-title">Note</p>
 <p class="last">The Top of Atmosphere (TOA) corrections aim at separating the reflectance emitted for objects on the Earth’s surface from atmospheric disturbances that are part of the reflected energy recorded by the sensor. (<a class="reference external" href="https://www.un-spider.org/node/10958" rel="noopener noreferrer" target="_blank">https://www.un-spider.org/node/10958</a>)</p>
 </div>
-<div class="figure align-center" id="id28">
-<span id="id11"></span><img alt="../_images/4.2.1.5.png" src="../_images/4.2.1.5.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.1.5 </span><span class="caption-text">EOBrowser viewer. CEMS Rapid Mapping activation EMRS468 Flood Event AOI.</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id42">
+<span id="id7"></span><img alt="../_images/4.2.1.5.png" src="../_images/4.2.1.5.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.5 </span><span class="caption-text">EOBrowser viewer. CEMS Rapid Mapping activation EMRS468 Flood Event AOI.</span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
 </div>
-<p>On the left-side of the viewer, select the image for the September 28, 2020 by clicking on the <code class="docutils literal notranslate"><span class="pre">visualize</span></code> (1) button in <a class="reference internal" href="#id12"><span class="std std-numref">Fig. 4.2.1.6</span></a>. Notice that while hovering over the different available imagery the polygon representing the image coverage will change of color. This polygons visualization enables the possibility to observe that the imagery encloses the AOI.</p>
-<div class="figure align-center" id="id29">
-<span id="id12"></span><img alt="../_images/4.2.1.6.png" src="../_images/4.2.1.6.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.1.6 </span><span class="caption-text">EOBrowser viewer. Available imagery fulfilling the parameters.</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+<p>On the left-side of the viewer, select the image for the September 28, 2020 by clicking on the <code class="docutils literal notranslate"><span class="pre">visualize</span></code> (1) button in <a class="reference internal" href="#id8"><span class="std std-numref">Fig. 4.2.1.6</span></a>. Notice that while hovering over the different available imagery the polygon representing the image coverage will change of color. This polygons visualization enables the possibility to observe that the imagery encloses the AOI.</p>
+<div class="figure align-center" id="id43">
+<span id="id8"></span><img alt="../_images/4.2.1.6.png" src="../_images/4.2.1.6.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.6 </span><span class="caption-text">EOBrowser viewer. Available imagery fulfilling the parameters.</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
 </div>
-<p>Having selected the image, you will enable multiple functionalities to interact with the map and the dataset (see <a class="reference internal" href="#id13"><span class="std std-numref">Fig. 4.2.1.7</span></a>). Let us proceed to download the imagery. Click on the download function <strong>(4)</strong> to open the download window. Then, access the <code class="docutils literal notranslate"><span class="pre">analytical</span></code> tab to define the data format and typology of your preference for downloading the data. In this case, input the following parameters to donload the data:</p>
+<p>Having selected the image, you will enable multiple functionalities to interact with the map and the dataset (see <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 4.2.1.7</span></a>). Let us proceed to download the imagery. Click on the download function <strong>(4)</strong> to open the download window. Then, access the <code class="docutils literal notranslate"><span class="pre">analytical</span></code> <strong>(7)</strong> tab to define the data format and typology of your preference for downloading the data. In this case, input the following parameters to download the data:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Image format: <code class="docutils literal notranslate"><span class="pre">TIFF</span> <span class="pre">(32-bit</span> <span class="pre">float)</span></code> <strong>(8)</strong></li>
@@ -434,37 +390,289 @@ For more information about the rapid mapping activities refer to the <a class="r
 </ul>
 </div></blockquote>
 <p>Then, click the <code class="docutils literal notranslate"><span class="pre">Download</span></code> <strong>(12)</strong> button, that will execute the download of the requested datasets. Each of the selected layer(s) are compressed into a ZIP file. By default the files are downloaded by the name of <code class="docutils literal notranslate"><span class="pre">EO_Browser_images.zip</span></code>.
-Rename the file as <code class="docutils literal notranslate"><span class="pre">EO_Browser_images_pre.zip</span></code>. Move the file under the <code class="docutils literal notranslate"><span class="pre">Chapter</span> <span class="pre">4\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR468</span> <span class="pre">-</span> <span class="pre">Flood</span> <span class="pre">Scenario\EOBrowser-Scihub</span></code>.</p>
+Rename the file as <code class="docutils literal notranslate"><span class="pre">EO_Browser_images_pre.zip</span></code>. Move the file under the <code class="docutils literal notranslate"><span class="pre">.\Chapter</span> <span class="pre">4\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR468</span> <span class="pre">-</span> <span class="pre">Flood</span> <span class="pre">Scenario\EOBrowser-Scihub</span></code>.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p>The downloaded images are relative to the current extent of the map viewer. When retrieving the data for a certain extent, avoid dragging or zooming the map view as it will change extent covered by the images.</p>
 <p class="last">Alternatively, you can draw within the map canvas if you are familiar with the location, or you can upload a KML or GEOJSON file with the area of interest to identify the AOI.</p>
 </div>
-<div class="figure align-center" id="id30">
-<span id="id13"></span><img alt="../_images/4.2.1.7.png" src="../_images/4.2.1.7.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.1.7 </span><span class="caption-text">EOBrowser viewer. Flood event area of interest data download.</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id44">
+<span id="id9"></span><img alt="../_images/4.2.1.7.png" src="../_images/4.2.1.7.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.7 </span><span class="caption-text">EOBrowser viewer. Flood event area of interest data download.</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">For more information about the functionalities provided by the satellite imagery viewer seen in <a class="reference internal" href="#id13"><span class="std std-numref">Fig. 4.2.1.7</span></a>, such as <code class="docutils literal notranslate"><span class="pre">define</span> <span class="pre">an</span> <span class="pre">AOI</span></code> <strong>(1)</strong>, <code class="docutils literal notranslate"><span class="pre">Mark</span> <span class="pre">a</span> <span class="pre">point</span> <span class="pre">of</span> <span class="pre">interest</span></code> <strong>(2)</strong>, <code class="docutils literal notranslate"><span class="pre">Measure</span></code> <strong>(3)</strong>, <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">image</span></code> <strong>(4)</strong>, <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">time</span> <span class="pre">lapse</span> <span class="pre">animation</span></code> <strong>(5)</strong> and <code class="docutils literal notranslate"><span class="pre">Visualize</span> <span class="pre">terrain</span> <span class="pre">in</span> <span class="pre">3d</span></code> <strong>(6)</strong>, visit the <a class="reference external" href="https://www.sentinel-hub.com/explore/eobrowser/user-guide/" rel="noopener noreferrer" target="_blank">EOBrowser user-guide</a>.</p>
+<p class="last">For more information about the functionalities provided by the satellite imagery viewer seen in <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 4.2.1.7</span></a>, such as <code class="docutils literal notranslate"><span class="pre">define</span> <span class="pre">an</span> <span class="pre">AOI</span></code> <strong>(1)</strong>, <code class="docutils literal notranslate"><span class="pre">Mark</span> <span class="pre">a</span> <span class="pre">point</span> <span class="pre">of</span> <span class="pre">interest</span></code> <strong>(2)</strong>, <code class="docutils literal notranslate"><span class="pre">Measure</span></code> <strong>(3)</strong>, <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">image</span></code> <strong>(4)</strong>, <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">time</span> <span class="pre">lapse</span> <span class="pre">animation</span></code> <strong>(5)</strong> and <code class="docutils literal notranslate"><span class="pre">Visualize</span> <span class="pre">terrain</span> <span class="pre">in</span> <span class="pre">3d</span></code> <strong>(6)</strong>, visit the <a class="reference external" href="https://www.sentinel-hub.com/explore/eobrowser/user-guide/" rel="noopener noreferrer" target="_blank">EOBrowser user-guide</a>.</p>
 </div>
-<p><a class="reference internal" href="#id14"><span class="std std-numref">Fig. 4.2.1.8</span></a> present the pre- and post event imagery (atmospherically corrected) for the true colors of the imagery. Having imagery in different phases of the emergency allow to identify which is the hydrography of the AOI in normalcy with respect to the flooded areas. To query different images in time, EOBrowser provide two options to reach the imagery contained within the time span defined in previous steps. The first option is to return to the <code class="docutils literal notranslate"><span class="pre">Discover</span></code> <strong>(1)</strong> tab to reach the list of images and visualize a different image. And the second option, is to use the arrows presented next to the date to move backwards/forwards <strong>(2)</strong> in time to visualize the available imagery. Here, you will have the possibility to search suitable, cloud-free, imagery of your AOI for the later processing.</p>
-<div class="figure align-center" id="id31">
-<span id="id14"></span><img alt="../_images/4.2.1.8.png" src="../_images/4.2.1.8.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.1.8 </span><span class="caption-text">EOBrowser viewer. Flood event pre- (2020-09-28) and post-event (2020-10-03) view.</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+<p><a class="reference internal" href="#id10"><span class="std std-numref">Fig. 4.2.1.8</span></a> present the pre- and post event imagery (atmospherically corrected) for the true colors of the imagery. Having imagery in different phases of the emergency allow to identify which is the hydrography of the AOI in normalcy with respect to the flooded areas. To query different images in time, EOBrowser provide two options to reach the imagery contained within the time span defined in previous steps. The first option is to return to the <code class="docutils literal notranslate"><span class="pre">Discover</span></code> <strong>(1)</strong> tab to reach the list of images and visualize a different image. And the second option, is to use the arrows presented next to the date to move backwards/forwards <strong>(2)</strong> in time to visualize the available imagery. Here, you will have the possibility to search suitable, cloud-free, imagery of your AOI for the later processing.</p>
+<div class="figure align-center" id="id45">
+<span id="id10"></span><img alt="../_images/4.2.1.8.png" src="../_images/4.2.1.8.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.8 </span><span class="caption-text">EOBrowser viewer. Flood event pre- (2020-09-28) and post-event (2020-10-03) view.</span><a class="headerlink" href="#id45" title="Permalink to this image">¶</a></p>
 </div>
-<p>Proceed to change the date until reaching October 3, 2020 (<code class="docutils literal notranslate"><span class="pre">2020-10-03</span></code>) to find the post event imagery. Repeat the previous steps presented in <a class="reference internal" href="#id13"><span class="std std-numref">Fig. 4.2.1.7</span></a> to download the post-event dataset. Rename the downloaded ZIP file as <code class="docutils literal notranslate"><span class="pre">EO_Browser_images_post.zip</span></code> and move the file to the folder <code class="docutils literal notranslate"><span class="pre">C:\Users\user\OneDrive</span> <span class="pre">-</span> <span class="pre">Politecnico</span> <span class="pre">di</span> <span class="pre">Milano\GIS4Schools_Fernando\Chapter</span> <span class="pre">4\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR468</span> <span class="pre">-</span> <span class="pre">Flood</span> <span class="pre">Scenario\EOBrowser-Scihub</span></code>.</p>
+<p>Proceed to change the date until reaching October 3, 2020 (<code class="docutils literal notranslate"><span class="pre">2020-10-03</span></code>) to find the post event imagery. Repeat the previous steps presented in <a class="reference internal" href="#id9"><span class="std std-numref">Fig. 4.2.1.7</span></a> to download the post-event dataset. Rename the downloaded ZIP file as <code class="docutils literal notranslate"><span class="pre">EO_Browser_images_post.zip</span></code> and move the file to the folder <code class="docutils literal notranslate"><span class="pre">.\Chapter</span> <span class="pre">4\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR468</span> <span class="pre">-</span> <span class="pre">Flood</span> <span class="pre">Scenario\EOBrowser-Scihub</span></code>.</p>
 <ul class="simple">
 <li><strong>GHSL-POP</strong></li>
 </ul>
 <p>In this section, you will download the population datasets which will support the assessment of the exposure of the inhabitants of the AOI with respect to the flood event.</p>
-<div class="figure align-center" id="id32">
-<span id="id15"></span><img alt="../_images/4.2.1.9.png" src="../_images/4.2.1.9.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.1.9 </span><span class="caption-text">GHSL-POP 2015 dataset. Tile 18_3 data download.</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id46">
+<span id="id11"></span><img alt="../_images/4.2.1.9.png" src="../_images/4.2.1.9.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.9 </span><span class="caption-text">GHSL-POP 2015 dataset. Tile 18_3 data download. <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php</a></span><a class="headerlink" href="#id46" title="Permalink to this image">¶</a></p>
+</div>
+<p>Here we will download the tiles of the GHSL-POP product detailed in section <a class="reference internal" href="#id32"><span class="std std-ref">Other Useful Resources</span></a>. <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 4.2.1.9</span></a> presents the steps required to download the population tile for the AOI. Select the following parameters relative to the population layer:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Product:<code class="docutils literal notranslate"><span class="pre">GHS-POP</span></code> layer <strong>(1)</strong></li>
+<li>Epoch: <code class="docutils literal notranslate"><span class="pre">2015</span></code> layer <strong>(2)</strong></li>
+<li>Resolution: <code class="docutils literal notranslate"><span class="pre">9_arcsec</span></code> layer <strong>(3)</strong></li>
+<li>Coord. system:   <code class="docutils literal notranslate"><span class="pre">WGS84</span></code> layer <strong>(4)</strong></li>
+</ul>
+</div></blockquote>
+<p>After defining the parameters the tiles layer, click on the tile <code class="docutils literal notranslate"><span class="pre">18_3</span></code> <strong>(5)</strong> on the map viewer. The downloaded file will have the name <code class="docutils literal notranslate"><span class="pre">GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3</span></code>. The naming of the file summarize the set of parameters and the selected tile of the population layer.</p>
+<p>Now, we can move to our desktop GIS to perform the hazard assessment by overlaying the different datasets retrived until this point.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The upcoming steps require to have followed:</p>
+<ul class="last simple">
+<li>Sections <a class="reference internal" href="../part1/1_4.html#id1"><span class="std std-ref">1.4.</span></a> - <a class="reference internal" href="../part1/1_9.html#id1"><span class="std std-ref">1.9.</span></a> in chapter <a class="reference internal" href="../part1/part1.html#part1"><span class="std std-ref">1. Data visualization with QGIS</span></a>.</li>
+<li>Section <a class="reference internal" href="../part2/2_3.html#id1"><span class="std std-ref">2.3. Extending QGIS functionalitites</span></a></li>
+<li>Section <a class="reference internal" href="../part2/2_5.html#id7"><span class="std std-ref">2.5.5. Clip raster with a mask</span></a></li>
+</ul>
+</div>
+<ul class="simple">
+<li><strong>Hazard Assessment</strong></li>
+</ul>
+<p>This exercise will devote its attention to identifying the infrastructure (buildings) and population (GHS-POP layer) exposed within the flooded area.</p>
+<p>In the next steps we will:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Add the sentinel-2 pre- and post-event imagery</li>
+<li>Add the vector file concerning the AOI for the CEMS activation</li>
+<li>Add the GHSL-POP dataset</li>
+<li>Clip the the GHSL-POP enclosed within the AOI</li>
+<li>Extract the building features within the AOI from OSM using the <em>QuickOSM</em> plugin</li>
+<li>Build the hazard map by combining the layers and defining different symbologies</li>
+<li>Prepare a map composition of the hazard assessment</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple">
+<li>Add the two images for the pre- and post-event from the paths and file names as specified below.<ul>
+<li><dl class="first docutils">
+<dt>Pre-event:</dt><dd><ul>
+<li>Path: <code class="docutils literal notranslate"><span class="pre">./EMSR468</span> <span class="pre">-</span> <span class="pre">Flood</span> <span class="pre">Scenario/EOBrowser-Scihub/EO_Browser_images_pre.zip</span></code></li>
+<li>File name:<code class="docutils literal notranslate"><span class="pre">2020-09-28-00_00_2020-09-28-23_59_Sentinel-2_L1C_True_color.tiff</span></code></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Post-event:</dt><dd><ul>
+<li>Path: <code class="docutils literal notranslate"><span class="pre">./EMSR468</span> <span class="pre">-</span> <span class="pre">Flood</span> <span class="pre">Scenario/EOBrowser-Scihub/EO_Browser_images_post.zip</span></code></li>
+<li>File name: <code class="docutils literal notranslate"><span class="pre">2020-10-03-00_00_2020-10-03-23_59_Sentinel-2_L1C_True_color.tiff</span></code>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ol>
+<div class="figure align-center" id="id47">
+<span id="id12"></span><img alt="../_images/4.2.1.10.png" src="../_images/4.2.1.10.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.10 </span><span class="caption-text">EMSR468 Flood Event in Piedmont Region. Pre- and post event imagery.</span><a class="headerlink" href="#id47" title="Permalink to this image">¶</a></p>
+</div>
+<p>Notice from <a class="reference internal" href="#id12"><span class="std std-numref">Fig. 4.2.1.10</span></a> that the event imagery are represented with a different symbology. The symbology for both layers is assigned according to the ranges of values for each of the bands composing the true image colors. In this case, the presence of clouds in the post-event imagery force a wider range of values on the RGB bands which leads such contrast between the images symbology. Then, to compose the true colors in an equivalent way, we must set the same ranges of values of the RGB bands from the multiband symbology. To do so, first we must review the ranges of values for the RGB bands from each multiband image as presented in <a class="reference internal" href="#id13"><span class="std std-numref">Fig. 4.2.1.11</span></a>.</p>
+<div class="figure align-center" id="id48">
+<span id="id13"></span><img alt="../_images/4.2.1.11.png" src="../_images/4.2.1.11.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.11 </span><span class="caption-text">Edit the RGB symbology for a multiband image.</span><a class="headerlink" href="#id48" title="Permalink to this image">¶</a></p>
+</div>
+<p>To modify the values from the multiband symbology follow the steps in <a class="reference internal" href="#id13"><span class="std std-numref">Fig. 4.2.1.11</span></a>. Right-click on the layer to edit <strong>(1)</strong> → <code class="docutils literal notranslate"><span class="pre">Properties...</span></code> <strong>(2)</strong> → <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> <strong>(3)</strong>. Then, assign the values to the minimum and maximum values to the RGB bands presented in <a class="reference internal" href="#t"><span class="std std-numref">Table 4.2.1.1</span></a> <strong>(4)</strong>. Finally, click on <code class="docutils literal notranslate"><span class="pre">OK</span></code> <strong>(5)</strong>.</p>
+<p>The values in the table comprise the minumum and maximum values contrasting the two images.</p>
+<p>Follow the previous steps for both of the pre- and post event imagery.</p>
+<span id="t"></span><table border="1" class="docutils align-center" id="id49">
+<caption><span class="caption-number">Table 4.2.1.1 </span><span class="caption-text">RGB bands ranges of values for the pre- and post event imagery</span><a class="headerlink" href="#id49" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="17%" />
+<col width="40%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Band</th>
+<th class="head">Min</th>
+<th class="head">Max</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Red</td>
+<td>0,0909977</td>
+<td>0,986626</td>
+</tr>
+<tr class="row-odd"><td>Green</td>
+<td>0,143751</td>
+<td>0,975588</td>
+</tr>
+<tr class="row-even"><td>Blue</td>
+<td>0,193248</td>
+<td>0,980108</td>
+</tr>
+</tbody>
+</table>
+<p>Once the images share the same ranges of values for the RGB bands, the images should be displayed as seen in <a class="reference internal" href="#id14"><span class="std std-numref">Fig. 4.2.1.12</span></a></p>
+<div class="figure align-center" id="id50">
+<span id="id14"></span><img alt="../_images/4.2.1.12.png" src="../_images/4.2.1.12.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.12 </span><span class="caption-text">Pre-event(top) and post-event(bottom) images sharing the same multiband symbology.</span><a class="headerlink" href="#id50" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Now, we will add the AOI layer provided within the delineation products downloaded from the CEMS service.</li>
+</ol>
+<p>To add the new layer, on QGIS Browser, locate the path to the activation delineation products and expand the compressed file. The location and file to be added are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Path: <code class="docutils literal notranslate"><span class="pre">\Chapter</span> <span class="pre">4\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR468</span> <span class="pre">-</span> <span class="pre">Flood</span> <span class="pre">Scenario\Delineation</span> <span class="pre">Products</span></code></li>
+<li>File: <code class="docutils literal notranslate"><span class="pre">EMSR468_AOI05_DEL_PRODUCT_areaOfInterestA_r1_v1.json</span></code></li>
+</ul>
+</div></blockquote>
+<p>After locating the file drag and drop the file inside the layer group for the flood activation <strong>(1)</strong> (see <a class="reference internal" href="#id15"><span class="std std-numref">Fig. 4.2.1.13</span></a>).</p>
+<div class="figure align-center" id="id51">
+<span id="id15"></span><img alt="../_images/4.2.1.13.png" src="../_images/4.2.1.13.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.13 </span><span class="caption-text">EMSR468 activation - Flood event AOI.</span><a class="headerlink" href="#id51" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In the delineation products you will find different files and multiple formats for each. Each of the products is provided in KMZ, JSON, and SHP formats. In this case, the available products for the delineation activities for the flood are:</p>
+<ul class="last simple">
+<li>Area of Interest: Identified area for assessing the flood extent.</li>
+<li>Hydrography: “Permanent” water bodies within the AOI.</li>
+<li>Image footprint: Polygon displaying the extent of the imagery used for the assessment.</li>
+<li>Observed event: Identified flooded area by the Rapid Mapping service.</li>
+<li>Transportation: Roads network within the AOI.</li>
+</ul>
+</div>
+<p>To contrast the flood extent delineated by the rapid mapping services, add inside your map the files of “hydrography” and “observed event”.</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">EMSR468_AOI05_DEL_PRODUCT_observedEventA_r1_v1.json</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">EMSR468_AOI05_DEL_PRODUCT_hydrographyA_r1_v1.json</span></code></li>
+</ul>
+</div></blockquote>
+<div class="figure align-center" id="id52">
+<span id="id16"></span><img alt="../_images/4.2.1.14.png" src="../_images/4.2.1.14.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.14 </span><span class="caption-text">EMSR468 activation - Delineated flood extent in the AOI.</span><a class="headerlink" href="#id52" title="Permalink to this image">¶</a></p>
+</div>
+<p>Up to this point, with the current layers it is possible to compose a hazard map (provided that we have the delineation products for this specific event). However, there are other different resources which can allow to carry out more complete analysis on the risk assessment for the flooded area. Next, it is detailed another key component on hazard analysis that information with respect to the assets or human settlements with respect the hazard.</p>
+<ol class="arabic simple" start="3">
+<li>The next step is to add the currently available information concerning the population. For this purpose we will add the previously downloaded population tile from GHS-POP.</li>
+</ol>
+<p>On your QGIS browser panel search for the following path:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Path: <code class="docutils literal notranslate"><span class="pre">.\Chapter</span> <span class="pre">4\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR468</span> <span class="pre">-</span> <span class="pre">Flood</span> <span class="pre">Scenario\GHSL</span></code></li>
+</ul>
+</div></blockquote>
+<p>Inside the folder you will find a compressed file with the name <code class="docutils literal notranslate"><span class="pre">GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3.zip</span></code>. Within the QGIS, expand the compressed file to find the GHS-POP raster file of the downloaded data.</p>
+<blockquote>
+<div><ul class="simple">
+<li>File Name: <code class="docutils literal notranslate"><span class="pre">GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3.tif</span></code></li>
+</ul>
+</div></blockquote>
+<p>Click on the GHS-POP file <strong>(1)</strong> and drag and drop the dataset inside the group of the flood scenario <strong>(2)</strong> (see :numref:<code class="docutils literal notranslate"><span class="pre">4.2.1.15</span></code>).</p>
+<div class="figure align-center" id="id53">
+<span id="id17"></span><img alt="../_images/4.2.1.15.png" src="../_images/4.2.1.15.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.15 </span><span class="caption-text">EMSR468 activation - add GHS-POP 2015 layer tile 18_3.</span><a class="headerlink" href="#id53" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="4">
+<li>Extract the population data enclosed by the area of interest.</li>
+</ol>
+<p>The next step is then to narrow down the information we have with respect to the population for the AOI. To achieve this, we will make use of the “clip raster with mask” processing tool. In <a class="reference internal" href="#id18"><span class="std std-numref">Fig. 4.2.1.16</span></a> are detailed the steps to crop the GHS-POP raster. On the menu bar, select <code class="docutils literal notranslate"><span class="pre">Raster</span></code> <strong>(1)</strong> → <code class="docutils literal notranslate"><span class="pre">Extraction</span></code> <strong>(2)</strong> → <code class="docutils literal notranslate"><span class="pre">Clip</span> <span class="pre">Raster</span> <span class="pre">by</span> <span class="pre">Mask</span> <span class="pre">Layer</span></code> <strong>(3)</strong>. On the “Clip Raster by Mask Layer” window, input the following parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Input Layer: <code class="docutils literal notranslate"><span class="pre">GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3</span> <span class="pre">[EPSG:4326]</span></code> <strong>(4)</strong></li>
+<li>Mask Layer: <code class="docutils literal notranslate"><span class="pre">EMSR468_AOI05_DEL_PRODUCT_areaOfInterestA_r1_v1</span></code> <strong>(5)</strong></li>
+</ul>
+</div></blockquote>
+<p>Scroll-down on the window <strong>(6)</strong> until finding the “Clip (mask)” option  →  <code class="docutils literal notranslate"><span class="pre">...</span></code> <strong>(7)</strong> → <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span> <span class="pre">...</span></code> <strong>(8)</strong> . Reach the path to the location of your GHS-POP dataset and save the clipped file as <code class="docutils literal notranslate"><span class="pre">GHS_POP_E2015_GLOBE_R2019A_4326_CLIP</span></code>. Activate the <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">output</span> <span class="pre">file</span> <span class="pre">after</span> <span class="pre">running</span> <span class="pre">algorithm</span></code> <strong>(9)</strong> to add the layer in your project after executing the command by clicking on <code class="docutils literal notranslate"><span class="pre">Run</span></code> <strong>(10)</strong>.</p>
+<div class="figure align-center" id="id54">
+<span id="id18"></span><img alt="../_images/4.2.1.16.png" src="../_images/4.2.1.16.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.16 </span><span class="caption-text">EMSR468 activation - clip GHS-POP 2015 within the AOI.</span><a class="headerlink" href="#id54" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference internal" href="#id19"><span class="std std-numref">Fig. 4.2.1.17</span></a> display the output of the cropped layer of the GHS-POP tile.</p>
+<div class="figure align-center" id="id55">
+<span id="id19"></span><img alt="../_images/4.2.1.17.png" src="../_images/4.2.1.17.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.17 </span><span class="caption-text">EMSR468 activation - clipped GHS-POP 2015 within the AOI.</span><a class="headerlink" href="#id55" title="Permalink to this image">¶</a></p>
+</div>
+<p>Apart from the data acquisition, an important part of hazard mapping (which is normally disregarded). The maps should be as clear and insightfull as possible. For this, assigning proper symbologies to the layers is a must. <a class="reference internal" href="#id19"><span class="std std-numref">Fig. 4.2.1.17</span></a>, details the procedure to create a symbology which highlights the human settlements and defines suitable labels to represent the count of people per pixel in the layer.</p>
+<p>To modify the symbology from the clipped layer, right-click on the <code class="docutils literal notranslate"><span class="pre">GHS_POP_E2015_GLOBE_R2019A_4326_CLIP</span></code> layer <strong>(1)</strong> → <code class="docutils literal notranslate"><span class="pre">Properties</span> <span class="pre">...</span></code> and in the <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> tab select the following parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Render type: <code class="docutils literal notranslate"><span class="pre">Singleband</span> <span class="pre">pseudocolor</span></code> <strong>(3)</strong></li>
+<li>Interpolation: <code class="docutils literal notranslate"><span class="pre">Discrete</span></code> <strong>(4)</strong></li>
+<li>Color ramp: Choose a fitting color ramp <strong>(5)</strong></li>
+<li>Label precision: <code class="docutils literal notranslate"><span class="pre">0</span></code> <strong>(6)</strong></li>
+<li>Mode: <code class="docutils literal notranslate"><span class="pre">Continuous</span></code> <strong>(7)</strong></li>
+</ul>
+</div></blockquote>
+<p>Apply the symbology by clickin on <code class="docutils literal notranslate"><span class="pre">Classify</span></code> <strong>(9)</strong> → <code class="docutils literal notranslate"><span class="pre">OK</span></code>. The layer should be now visualized as seen in :numref:<code class="docutils literal notranslate"><span class="pre">4.2.1.19</span></code>.</p>
+<div class="figure align-center" id="id56">
+<span id="id20"></span><img alt="../_images/4.2.1.18.png" src="../_images/4.2.1.18.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.18 </span><span class="caption-text">EMSR468 activation - modify clipped GHS-POP 2015 symbology.</span><a class="headerlink" href="#id56" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id57">
+<span id="id21"></span><img alt="../_images/4.2.1.19.png" src="../_images/4.2.1.19.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.19 </span><span class="caption-text">EMSR468 activation - GHS-POP 2015 for the AOI.</span><a class="headerlink" href="#id57" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The population exposure may as well be performed by using more detailed datasets from local census or other sources.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li>Query the OSM buildings features using the QuickOSM plugin.</li>
+</ol>
+<blockquote>
+<div><p>For the extraction of the OSM features follow the instruction in <a class="reference internal" href="#id21"><span class="std std-numref">Fig. 4.2.1.19</span></a>. On the menu bar, select <code class="docutils literal notranslate"><span class="pre">Vector</span></code> <strong>(1)</strong> → <code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code> <strong>(2)</strong> → <code class="docutils literal notranslate"><span class="pre">QuickOSM...</span></code> <strong>(3)</strong>, and enter the <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> tab:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Key: <code class="docutils literal notranslate"><span class="pre">building</span></code> <strong>(4)</strong></li>
+<li>Value: <code class="docutils literal notranslate"><span class="pre">yes</span></code> <strong>(5)</strong></li>
+<li>In: <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Extent</span></code> <strong>(6)</strong> → <code class="docutils literal notranslate"><span class="pre">EMSR468_AOI05_DEL_PRODUCT_areaOfInterestA_r1_v1</span></code> <strong>(7)</strong></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>Here, we will open the <code class="docutils literal notranslate"><span class="pre">Advanced</span></code> <strong>(8)</strong> option to define a folder to store the data. Here, click on <code class="docutils literal notranslate"><span class="pre">...</span></code> <strong>(9)</strong> and select the location:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Path: <code class="docutils literal notranslate"><span class="pre">.\Chapter</span> <span class="pre">4\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR468</span> <span class="pre">-</span> <span class="pre">Flood</span> <span class="pre">Scenario\QuickOSM_Buildings</span></code></li>
+</ul>
+</div></blockquote>
+<p>And proceed to <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">query</span></code> <strong>(10)</strong>. After the process is executed, the OSM features with the key-value pairs, building-yes, have been added to the map (See <a class="reference internal" href="#id22"><span class="std std-numref">Fig. 4.2.1.20</span></a>).</p>
+<div class="figure align-center" id="id58">
+<span id="id22"></span><img alt="../_images/4.2.1.20.png" src="../_images/4.2.1.20.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.20 </span><span class="caption-text">EMSR468 activation - QuickOSM building features (yes) query.</span><a class="headerlink" href="#id58" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id59">
+<span id="id23"></span><img alt="../_images/4.2.1.21.png" src="../_images/4.2.1.21.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.21 </span><span class="caption-text">EMSR468 activation - QuickOSM building features.</span><a class="headerlink" href="#id59" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="6">
+<li>Build the hazard map by combining the layers and defining different symbologies</li>
+</ol>
+<p>As stated previously, crucial asset for hazard mapping is the representation of information. In <a class="reference internal" href="#id23"><span class="std std-numref">Fig. 4.2.1.21</span></a>, the layers symbology has been modified to provided a more intuitive layout with respect to the flood event. First by distinguishing the permanent water bodies with respect to the flood plain. Second, by providing contrasting colors to the buildings and population. Another point which can improve the layout of your map is to add transparency and overlay to the layers.</p>
+<div class="figure align-center" id="id60">
+<span id="id24"></span><img alt="../_images/4.2.1.22.png" src="../_images/4.2.1.22.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.22 </span><span class="caption-text">EMSR468 activation - Editing of the layers visualization.</span><a class="headerlink" href="#id60" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="7">
+<li>Prepare a map composition of the hazard assessment</li>
+</ol>
+<p>To set up your map composition, start by creating a new layout (see <a class="reference internal" href="#id24"><span class="std std-numref">Fig. 4.2.1.22</span></a>). On the menu bar select <code class="docutils literal notranslate"><span class="pre">File</span></code> → <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Print</span> <span class="pre">Layout...</span></code>. Give a name to your layout.</p>
+<div class="figure align-center" id="id61">
+<span id="id25"></span><img alt="../_images/4.2.1.23.png" src="../_images/4.2.1.23.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.23 </span><span class="caption-text">EMSR468 activation - Layout for the hazard event.</span><a class="headerlink" href="#id61" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id62">
+<span id="id26"></span><img alt="../_images/4.2.1.24.png" src="../_images/4.2.1.24.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1.24 </span><span class="caption-text">EMSR468 activation - Hazard map.</span><a class="headerlink" href="#id62" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="fire-mapping">
-<h2><span class="section-number">4.2.2. </span>Fire Mapping<a class="headerlink" href="#fire-mapping" title="Permalink to this headline">¶</a></h2>
+<span id="id27"></span><h2><span class="section-number">4.2.2. </span>Fire Mapping<a class="headerlink" href="#fire-mapping" title="Permalink to this headline">¶</a></h2>
 <p>In this section we will dedicate our attention on the processing of Sentinel-2 satellite imagery to build a hazard map assessing the damage from a fire event in the vicinity of an urban area.</p>
 <ul class="simple">
 <li><strong>Overview</strong></li>
@@ -513,21 +721,21 @@ Rename the file as <code class="docutils literal notranslate"><span class="pre">
 </ul>
 <p>The practice makes use of Sentinel-2 imagery.</p>
 <p>For burn severity monitoring we will make use of Sentinel-2 Near Infrared (NIR) and Shortwave Infrared (SWI) bands. These bands have a spatial resolution of 20m.</p>
-<div class="figure align-center" id="id33">
-<span id="id16"></span><a class="reference internal image-reference" href="../_images/4.2.2.1.png"><img alt="../_images/4.2.2.1.png" src="../_images/4.2.2.1.png" style="width: 423.0px; height: 191.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.2.1 </span><span class="caption-text">–Illustration of fire intensity versus burn severity (Source: US Forest Service)</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id63">
+<span id="id28"></span><a class="reference internal image-reference" href="../_images/4.2.2.1.png"><img alt="../_images/4.2.2.1.png" src="../_images/4.2.2.1.png" style="width: 423.0px; height: 191.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.1 </span><span class="caption-text">–Illustration of fire intensity versus burn severity (Source: US Forest Service)</span><a class="headerlink" href="#id63" title="Permalink to this image">¶</a></p>
 </div>
 <p>A measurement to highlight burnt areas is the Normalized Burnt Ratio (NBR), which tries to identify the effects of a fire in an area (after the combustion process). The NBR is an index designed to expose burnt areas in large fire zones.</p>
-<div class="figure align-center" id="id34">
-<span id="id17"></span><a class="reference internal image-reference" href="../_images/4.2.2.2.png"><img alt="../_images/4.2.2.2.png" src="../_images/4.2.2.2.png" style="width: 500.0px; height: 248.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.2.2 </span><span class="caption-text">–Comparison of the spectral response of healthy vegetation and burned areas (Source: US Forest Service)</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id64">
+<span id="id29"></span><a class="reference internal image-reference" href="../_images/4.2.2.2.png"><img alt="../_images/4.2.2.2.png" src="../_images/4.2.2.2.png" style="width: 500.0px; height: 248.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.2 </span><span class="caption-text">–Comparison of the spectral response of healthy vegetation and burned areas (Source: US Forest Service)</span><a class="headerlink" href="#id64" title="Permalink to this image">¶</a></p>
 </div>
 <p>The healthy vegetation shows a high reflectance in the NIR, and a low reflectance in the SWIR portion of the spectrum. On the other hand, there is the opposite behaviour in burnt areas. The NBR benefits from this difference in the spectrum to highlight a burnt area through the following relationship.</p>
 <p>When the NBR value is high it indicates a healthy vegetation. While low NBR values indicate bare ground and recently burnt areas. Non-burnt areas area generally attributed a value of zero.</p>
 <p>The difference between the pre-fire and post-fire NBR can be used to estimate the severity of the burnt area. This measurement is known as the Burn Severity. Higher values of this estimation indicate more severely damaged vegetation.</p>
-<p>Burn Severity values can vary from case to case, and so, if possible, interpretation in specific instances should also be carried out through field assessment; in order to obtain the best results. However, the United States Geological Survey (USGS) proposed a classification table to interpret the burn severity presented in <a class="reference internal" href="#t"><span class="std std-numref">Table 4.2.2.1</span></a>.</p>
-<span id="t"></span><table border="1" class="docutils align-center" id="id35">
-<caption><span class="caption-number">Table 4.2.2.1 </span><span class="caption-text">USGS burn severity ranges classification</span><a class="headerlink" href="#id35" title="Permalink to this table">¶</a></caption>
+<p>Burn Severity values can vary from case to case, and so, if possible, interpretation in specific instances should also be carried out through field assessment; in order to obtain the best results. However, the United States Geological Survey (USGS) proposed a classification table to interpret the burn severity presented in <a class="reference internal" href="#id30"><span class="std std-numref">Table 4.2.2.1</span></a>.</p>
+<span id="id30"></span><table border="1" class="docutils align-center" id="id65">
+<caption><span class="caption-number">Table 4.2.2.1 </span><span class="caption-text">USGS burn severity ranges classification</span><a class="headerlink" href="#id65" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="38%" />
 <col width="17%" />
@@ -601,25 +809,25 @@ Rename the file as <code class="docutils literal notranslate"><span class="pre">
 <ul class="simple">
 <li><strong>Workflow</strong></li>
 </ul>
-<div class="figure align-center" id="id36">
-<span id="id18"></span><a class="reference internal image-reference" href="../_images/4.2.2.3.png"><img alt="../_images/4.2.2.3.png" src="../_images/4.2.2.3.png" style="width: 420.0px; height: 743.4px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2.2.3 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id66">
+<span id="id31"></span><a class="reference internal image-reference" href="../_images/4.2.2.3.png"><img alt="../_images/4.2.2.3.png" src="../_images/4.2.2.3.png" style="width: 420.0px; height: 743.4px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.3 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id66" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="other-useful-resources">
-<h2><span class="section-number">4.2.3. </span>Other Useful Resources<a class="headerlink" href="#other-useful-resources" title="Permalink to this headline">¶</a></h2>
+<span id="id32"></span><h2><span class="section-number">4.2.3. </span>Other Useful Resources<a class="headerlink" href="#other-useful-resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><strong>Global Human Settlement Layer</strong></li>
 </ul>
 <p>The <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/" rel="noopener noreferrer" target="_blank">Global Human Settlement Layer (GHSL)</a> project produces timely geospatial information of human presence on the planet. Through the used of spatial data mining technologies, the project harvests information with evidence-based analytics and knowledge. The information is exposed as built-up maps, population density maps and settlement maps. The GHSL profits from the use of heterogeneous data such as satellite imagery, census data, and volunteered geographic information.</p>
-<div class="figure align-center" id="id37">
-<span id="id19"></span><img alt="../_images/4.2.3.1.png" src="../_images/4.2.3.1.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.3.1 </span><span class="caption-text">–Global Human Settlement Layer website, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/</a></span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id67">
+<span id="id33"></span><img alt="../_images/4.2.3.1.png" src="../_images/4.2.3.1.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.3.1 </span><span class="caption-text">–Global Human Settlement Layer website, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/</a></span><a class="headerlink" href="#id67" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><strong>Global Human Settlement Layer (GHSL) - Population</strong></li>
 </ul>
-<p>The <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">Global Human Settlement Layer Population layer (GHSL-POP )</a> <a class="footnote-reference" href="#id22" id="id20">[2]</a> is a spatial raster dataset depicting the distribution and density of the population expressed in number of people by cell. The production of this imagery is possible through the disaggregation of census or administrative spatial data into cells. Values are expressed as decimals (Float) and represent the absolute number of inhabitants of the cell. The residential population targets the years 1975, 1990, 2000 and 2015. The GHSL-POP datasets can be described by:</p>
+<p>The <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">Global Human Settlement Layer Population layer (GHSL-POP )</a> <a class="footnote-reference" href="#id36" id="id34">[2]</a> is a spatial raster dataset depicting the distribution and density of the population expressed in number of people by cell. The production of this imagery is possible through the disaggregation of census or administrative spatial data into cells. Values are expressed as decimals (Float) and represent the absolute number of inhabitants of the cell. The residential population targets the years 1975, 1990, 2000 and 2015. The GHSL-POP datasets can be described by:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Product name: GHS_POP_MT_GLOBE_R2019A</li>
@@ -632,15 +840,15 @@ Rename the file as <code class="docutils literal notranslate"><span class="pre">
 <p class="first admonition-title">Note</p>
 <p class="last"><code class="docutils literal notranslate"><span class="pre">NoData</span></code> cells are assigned -200 as value.</p>
 </div>
-<p>After following the steps as presented in <a class="reference internal" href="#id19"><span class="std std-numref">Fig. 4.2.3.1</span></a>, you will find a web viewer visualizing the tiles for the GHSL-POP products. At this point you can click on the tiles of enclosing your area of interest and execute the download of the raster dataset.</p>
-<div class="figure align-center" id="id38">
-<span id="id21"></span><img alt="../_images/4.2.3.2.png" src="../_images/4.2.3.2.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.3.2 </span><span class="caption-text">–Global Human Settlement Layer Population Tiles Web Viewer, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php</a></span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
+<p>After following the steps as presented in <a class="reference internal" href="#id33"><span class="std std-numref">Fig. 4.2.3.1</span></a>, you will find a web viewer visualizing the tiles for the GHSL-POP products. At this point you can click on the tiles of enclosing your area of interest and execute the download of the raster dataset.</p>
+<div class="figure align-center" id="id68">
+<span id="id35"></span><img alt="../_images/4.2.3.2.png" src="../_images/4.2.3.2.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.3.2 </span><span class="caption-text">–Global Human Settlement Layer Population Tiles Web Viewer, <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php</a></span><a class="headerlink" href="#id68" title="Permalink to this image">¶</a></p>
 </div>
-<table class="docutils footnote" frame="void" id="id22" rules="none">
+<table class="docutils footnote" frame="void" id="id36" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id20">[2]</a></td><td>Schiavina, Marcello; Freire, Sergio; MacManus, Kytt (2019): GHS population grid multitemporal (1975, 1990, 2000, 2015) R2019A. European Commission, Joint Research Centre (JRC) DOI: 10.2905/42E8BE89-54FF-464E-BE7B-BF9E64DA5218 PID: <a class="reference external" href="http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f" rel="noopener noreferrer" target="_blank">http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id34">[2]</a></td><td>Schiavina, Marcello; Freire, Sergio; MacManus, Kytt (2019): GHS population grid multitemporal (1975, 1990, 2000, 2015) R2019A. European Commission, Joint Research Centre (JRC) DOI: 10.2905/42E8BE89-54FF-464E-BE7B-BF9E64DA5218 PID: <a class="reference external" href="http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f" rel="noopener noreferrer" target="_blank">http://data.europa.eu/89h/0c6b9751-a71f-4062-830b-43c9f432370f</a>.</td></tr>
 </tbody>
 </table>
 <p>Eventually this can become a single note or important comment to mention additional material.</p>
