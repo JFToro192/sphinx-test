@@ -963,7 +963,7 @@ Now, we can define the querying parameters for our datasets of interest for the 
 </div>
 <div class="figure align-center" id="id101">
 <span id="id41"></span><img alt="../_images/4.2.2.13.png" src="../_images/4.2.2.13.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.13 </span><span class="caption-text">–EMSR394 Fire Event in Campania Region. SCP plugin.</span><a class="headerlink" href="#id101" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.13 </span><span class="caption-text">–EMSR394 Fire Event in Campania Region. SCP raster calculator.</span><a class="headerlink" href="#id101" title="Permalink to this image">¶</a></p>
 </div>
 <p>The band calculator, as the raster calculator, allows to execute operation in between multiple raster. Here, we are calculating the NBR for the pre- and post- event. This will then open the path to calculate the burn ratio. The burn severity, that is described as:</p>
 <div class="math notranslate nohighlight">
@@ -983,63 +983,141 @@ Now, we can define the querying parameters for our datasets of interest for the 
 <p><a class="reference internal" href="#id42"><span class="std std-numref">Fig. 4.2.2.14</span></a> shows the example for the computation of the NBR at the pre-event. Replicate the steps indicates to obtain the same layer for the post-event.</p>
 <div class="figure align-center" id="id102">
 <span id="id42"></span><img alt="../_images/4.2.2.14.png" src="../_images/4.2.2.14.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.14 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id102" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.14 </span><span class="caption-text">–EMSR394 Fire Event in Campania Region. Example NBR computation (pre-event).</span><a class="headerlink" href="#id102" title="Permalink to this image">¶</a></p>
 </div>
+<p>To build the expression displayed <a class="reference internal" href="#id42"><span class="std std-numref">Fig. 4.2.2.14</span></a>, you can refer to the layers by typing them in between quotation mark (“”), or by double-clicking on the layers in <strong>(1)</strong>. Replicate the expression as presented in <strong>(2)</strong>. Then, click on <code class="docutils literal notranslate"><span class="pre">Run</span></code> <strong>(3)</strong>. As the process is completely executed you will be prompted to input a path and name to the result of the expression. We will store the resulting dataset in the location and filename as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Path: <code class="docutils literal notranslate"><span class="pre">.\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\EOBrowser-Scihub</span></code></li>
+<li>Filename: <code class="docutils literal notranslate"><span class="pre">pre-event_NBR</span></code></li>
+</ul>
+</div></blockquote>
+<p>Repeat the previous procedure to obtain the NBR for the post-event. Use the following location and filename:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Path: <code class="docutils literal notranslate"><span class="pre">.\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\EOBrowser-Scihub</span></code></li>
+<li>Filename: <code class="docutils literal notranslate"><span class="pre">post-event_NBR</span></code></li>
+</ul>
+</div></blockquote>
 <div class="figure align-center" id="id103">
 <span id="id43"></span><img alt="../_images/4.2.2.15.png" src="../_images/4.2.2.15.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.15 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id103" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.15 </span><span class="caption-text">–EMSR394 Fire Event in Campania Region. Pre- and post event imagery.</span><a class="headerlink" href="#id103" title="Permalink to this image">¶</a></p>
 </div>
+<p>With the two NBR estimates, before and after the event, it is possible to calculate the burn severity. Open the “Semi-Automatic Classification” plugin raster calculator, on the menu bar select <code class="docutils literal notranslate"><span class="pre">SCP</span></code> → <code class="docutils literal notranslate"><span class="pre">Band</span> <span class="pre">Calc</span></code> to arrive to the window shown in <a class="reference internal" href="#id44"><span class="std std-numref">Fig. 4.2.2.16</span></a>. To determine the burn severity, write the expression:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">&quot;pre-event_NBR&quot;</span></code>-<code class="docutils literal notranslate"><span class="pre">&quot;post-event_NBR&quot;</span></code></div></blockquote>
+<p>Make sure to refresh the bands list if the layers are not available as shown in <strong>(1)</strong>. Write the expression in box <strong>(2)</strong> and proceed to <code class="docutils literal notranslate"><span class="pre">Run</span></code> <strong>(3)</strong> function.</p>
+<p>Following the same procedure as for the NBR, we will save the file under the path:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Path:<code class="docutils literal notranslate"><span class="pre">.\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\EOBrowser-Scihub</span></code></li>
+<li>Filename: <code class="docutils literal notranslate"><span class="pre">event_dNBR</span></code></li>
+</ul>
+</div></blockquote>
 <div class="figure align-center" id="id104">
 <span id="id44"></span><img alt="../_images/4.2.2.16.png" src="../_images/4.2.2.16.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.16 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id104" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.16 </span><span class="caption-text">–EMSR394 Fire Event in Campania Region. dNBR computation.</span><a class="headerlink" href="#id104" title="Permalink to this image">¶</a></p>
 </div>
+<p>Notice that the layer has been added to your project. Make sure to place the NBR layers inside the “Wildfire Scenario”.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">In general, the methodology would require applying a cloud mask to avoid that these elements are misclassified as fire. However, given that the imagery is cloud free for the AOI this step has been omitted.</p>
+</div>
+<p>Now we are going to limit the analysis area according to the AOI for the Copernicus EMS Rapid Mapping assessment. To add the shapefile you can either, find it on the browser panel on the upper-left part of the QGIS interface and doble-click on the layer, or retrieve it on the menu toolbar <strong>Layer</strong> → <strong>Add Layer</strong> → <strong>Add Vector Layer</strong>. In both cases, the layer can be found on the path:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Path:<code class="docutils literal notranslate"><span class="pre">\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\Grading</span> <span class="pre">Products</span></code></li>
+<li>Filename:<code class="docutils literal notranslate"><span class="pre">EMSR394_AOI01_GRA_PRODUCT_areaOfInterestA_r1_v1.json</span></code></li>
+</ul>
+</div></blockquote>
 <div class="figure align-center" id="id105">
 <span id="id45"></span><img alt="../_images/4.2.2.17.png" src="../_images/4.2.2.17.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.17 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id105" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.17 </span><span class="caption-text">–EMSR468 activation - Fire event AOI.</span><a class="headerlink" href="#id105" title="Permalink to this image">¶</a></p>
 </div>
+<p>After adding the AOI shapefile, it should be available in the current grouped layer as displayed in <a class="reference internal" href="#id45"><span class="std std-numref">Fig. 4.2.2.17</span></a>. The AOI layer defines the extent for cropping the dNBR layer. For clipping the GHSL population layer we will make use of the “Semi-Automatic Classification Plugin”. On the toolbar menu select <code class="docutils literal notranslate"><span class="pre">SCP</span></code> → <code class="docutils literal notranslate"><span class="pre">Preprocessing</span></code> → <code class="docutils literal notranslate"><span class="pre">Clip</span> <span class="pre">multiple</span> <span class="pre">rasters</span></code>, later you will find again the SCP window (see <a class="reference internal" href="#id46"><span class="std std-numref">Fig. 4.2.2.18</span></a>).</p>
+<p>The plugin enables the possibility to clip multiple raster bands at once by selecting them from the list of available layers (see <a class="reference internal" href="#id46"><span class="std std-numref">Fig. 4.2.2.18</span></a>). On the <code class="docutils literal notranslate"><span class="pre">Band</span> <span class="pre">set</span></code> tab <strong>(1)</strong> select the <code class="docutils literal notranslate"><span class="pre">event_dNBR</span></code> layer and add the layer into the list of layers to be clipped (either by double-clicking on the layer or selecting the layer and clickin on the <code class="docutils literal notranslate"><span class="pre">+</span></code> button <strong>(3)</strong>). Proceed to the tab <code class="docutils literal notranslate"><span class="pre">Clip</span> <span class="pre">multiple</span> <span class="pre">rasters</span></code> <strong>(4)</strong>. The raster of the burn severity that is the band 1. You can also set a value for the NoData values but here we will leave the default value. Define the output name prefix as <code class="docutils literal notranslate"><span class="pre">clip</span></code> (here, the output for the clipped layer will have the name <code class="docutils literal notranslate"><span class="pre">clip_event_dNBR</span></code>). Now, enable the <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">vector</span> <span class="pre">for</span> <span class="pre">clipping</span></code> <strong>(5)</strong> option and select the vector layer defining the extent to crop the raster imagery (<code class="docutils literal notranslate"><span class="pre">EMSR394_AOI01_GRA_PRODUCT_areaOfInterestA_r1_v1</span></code>) <strong>(6)</strong>. Finally, you can execute the command to obtain the clipped image. When the proccess finishes save the resulting file in the folder <code class="docutils literal notranslate"><span class="pre">Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\EOBrowser-Scihub</span></code>.</p>
 <div class="figure align-center" id="id106">
 <span id="id46"></span><img alt="../_images/4.2.2.18.png" src="../_images/4.2.2.18.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.18 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id106" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.18 </span><span class="caption-text">–EMSR394 activation - SPC multiraster clip.</span><a class="headerlink" href="#id106" title="Permalink to this image">¶</a></p>
 </div>
+<p>Search the resulting layer for the burn severity estimates (<code class="docutils literal notranslate"><span class="pre">clip_event_dNBR</span></code>) <strong>(1)</strong> and add it into the group of layers for the fire event <strong>(2)</strong> (see <a class="reference internal" href="#id47"><span class="std std-numref">Fig. 4.2.2.19</span></a>).</p>
 <div class="figure align-center" id="id107">
 <span id="id47"></span><img alt="../_images/4.2.2.19.png" src="../_images/4.2.2.19.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.19 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id107" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.19 </span><span class="caption-text">–EMSR394 activation - Clipped burn severity layer.</span><a class="headerlink" href="#id107" title="Permalink to this image">¶</a></p>
 </div>
+<p>Next, a symbology is provided to the burn severity Layer. To provide a better understanding of the layer through its view, we will proceed to define a symbology. According to the USGS standard for burn severity mapping the following set of ranges in <a class="reference internal" href="#id30"><span class="std std-numref">Table 4.2.2.1</span></a>. Access the symbology options for the layer by right-clicking on the layer name <code class="docutils literal notranslate"><span class="pre">clip_event_dNBR</span></code> → <code class="docutils literal notranslate"><span class="pre">Properties...</span></code> → <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> tab. Now, we are in the symbology properties window for the layer (see top box in <a class="reference internal" href="#id48"><span class="std std-numref">Fig. 4.2.2.20</span></a>). First, on the <strong>Render type</strong> select the <code class="docutils literal notranslate"><span class="pre">Singleband</span> <span class="pre">pseudocolor</span></code>. Then, open the drop-down menu for the color ramp and click on the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Color</span> <span class="pre">Ramp...</span></code> option <strong>(1)</strong>. In the new window, select the <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">Presets</span></code> options and click on ok <strong>(2)</strong>. At this point, we will define the colors composing custom the color ramp. Modify the exsting symbol by double clicking on it <strong>(3)</strong>. Now, you can define the color by to the symbol in this case through the HEX code of the colors at <strong>(4)</strong> (use the HEX coding in <a class="reference internal" href="#id30"><span class="std std-numref">Table 4.2.2.1</span></a>) and then confirm the color choice <code class="docutils literal notranslate"><span class="pre">OK</span></code> <strong>(5)</strong>. Change the label of the color providing an appropriate description of the color <strong>(6)</strong>. Continue to define the color ramp by adding new symbols <strong>(7)</strong> and editing them until including all the categories to represent the burn severity.</p>
 <div class="figure align-center" id="id108">
 <span id="id48"></span><img alt="../_images/4.2.2.20.png" src="../_images/4.2.2.20.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.20 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id108" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.20 </span><span class="caption-text">–EMSR394 activation - Burn severity symbology.</span><a class="headerlink" href="#id108" title="Permalink to this image">¶</a></p>
 </div>
+<p><a class="reference internal" href="#id49"><span class="std std-numref">Fig. 4.2.2.21</span></a> presents the complete customized color ramp. Once finished, click on <code class="docutils literal notranslate"><span class="pre">OK</span></code> to confirm the submission of the color ramp, <code class="docutils literal notranslate"><span class="pre">Classify</span></code> the layer according to the symbology and proceed to apply the changes to the layer by clicking on <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p>
 <div class="figure align-center" id="id109">
 <span id="id49"></span><img alt="../_images/4.2.2.21.png" src="../_images/4.2.2.21.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.21 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id109" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.21 </span><span class="caption-text">–EMSR394 activation - Burn severity classification.</span><a class="headerlink" href="#id109" title="Permalink to this image">¶</a></p>
 </div>
+<p>Alternatively, you can modify the layer symbology through a text file. This can be achieved in the symbology properties by selecting the folder icon next to the classify button. You may find the styling text file under the path:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Path: <code class="docutils literal notranslate"><span class="pre">\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\EOBrowser-Scihub\LayersStyles</span></code></li>
+<li>Filename: <code class="docutils literal notranslate"><span class="pre">dNBR_customized.txt</span></code></li>
+</ul>
+</div></blockquote>
+<p>The following step requires to include the GHS-POP raster in the group of layers. After this, clip the layer using the <code class="docutils literal notranslate"><span class="pre">Clip</span> <span class="pre">raster</span> <span class="pre">by</span> <span class="pre">mask</span> <span class="pre">layer</span></code> (see <a class="reference internal" href="#id50"><span class="std std-numref">Fig. 4.2.2.22</span></a>). If the processing toolbox is not available in the right hand of your QGIS user interface, select from the menu bar <code class="docutils literal notranslate"><span class="pre">Processing</span></code> <strong>(1)</strong> → <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> <strong>(2)</strong>. In the Processing Toolbox pane, type in the search bar <code class="docutils literal notranslate"><span class="pre">clip</span></code> <strong>(3)</strong> and select the <code class="docutils literal notranslate"><span class="pre">Clip</span> <span class="pre">raster</span> <span class="pre">by</span> <span class="pre">mask</span> <span class="pre">layer</span> <span class="pre">function</span></code> <strong>(4)</strong>. Then, define the following parameters to crop the raster:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Input layer: <code class="docutils literal notranslate"><span class="pre">GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_19_4</span> <span class="pre">[EPSG:4326]</span></code> <strong>(5)</strong></li>
+<li>Mask Layer: <code class="docutils literal notranslate"><span class="pre">EMSR394_AOI01_GRA_PRODUCT_areaOfInterestA_r1_v1</span> <span class="pre">[EPSG:4326]</span></code> <strong>(6)</strong></li>
+</ul>
+<p>Provide the path and naming for the output file:</p>
+<ul class="simple">
+<li>Clipped (mask): <code class="docutils literal notranslate"><span class="pre">.\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\GHSL\GHS_POP_E2015_GLOBE_R2019A_4326_CLIP.tif</span></code> <strong>(7)</strong></li>
+<li>Activate the option <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">output</span> <span class="pre">file</span> <span class="pre">after</span> <span class="pre">running</span> <span class="pre">algorithm</span></code></li>
+</ul>
+</div></blockquote>
 <div class="figure align-center" id="id110">
 <span id="id50"></span><img alt="../_images/4.2.2.22.png" src="../_images/4.2.2.22.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.22 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id110" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.22 </span><span class="caption-text">–EMSR394 activation - add and clip the GHS-POP 2015 layer tile 19_4.</span><a class="headerlink" href="#id110" title="Permalink to this image">¶</a></p>
 </div>
+<p>With the clipped AOI, now it is convenient ot define a symbology to the layers to highlight the presence of the population. Open the clipped GHSL-POP layer symbology properties (see <a class="reference internal" href="#id51"><span class="std std-numref">Fig. 4.2.2.23</span></a>). First, select the <code class="docutils literal notranslate"><span class="pre">Tranparency</span></code> <strong>(3)</strong> tab and define a transparency percentage <strong>(4)</strong> to the layer. Then, move to the <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> tab <strong>(5)</strong>, select the <code class="docutils literal notranslate"><span class="pre">Discrete</span></code> <strong>(6)</strong> as Interpolation and replace the color ramp highlighting concentration, smooth to strong colors, in this case of people <strong>(7)</strong>. Choose the categories mode as <code class="docutils literal notranslate"><span class="pre">Equal</span> <span class="pre">interval</span></code> <strong>(9)</strong> for <code class="docutils literal notranslate"><span class="pre">5</span></code> different classes <strong>(10)</strong>. Use <code class="docutils literal notranslate"><span class="pre">Classify</span></code> <strong>(11)</strong> button and then click on <code class="docutils literal notranslate"><span class="pre">OK</span></code> <strong>(12)</strong>.</p>
 <div class="figure align-center" id="id111">
 <span id="id51"></span><img alt="../_images/4.2.2.23.png" src="../_images/4.2.2.23.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.23 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id111" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.23 </span><span class="caption-text">–EMSR394 activation - Clipped GHS-POP tile 19_4 symbology.</span><a class="headerlink" href="#id111" title="Permalink to this image">¶</a></p>
 </div>
+<p>At this point we can import the last dataset to be used for this project that is the presence of built environment within the AOI. For this purpose, we will extract the features for the buildings in the AOI guided by the steps in <a class="reference internal" href="#id52"><span class="std std-numref">Fig. 4.2.2.24</span></a>. On the menu bar select <code class="docutils literal notranslate"><span class="pre">Vector</span></code> <strong>(1)**→ ``QuickOSM`` **(2)**→ ``QuickOSM…`` **(3)</strong>. As the querying parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li>key: <code class="docutils literal notranslate"><span class="pre">building</span></code></li>
+<li>value: <code class="docutils literal notranslate"><span class="pre">yes</span></code></li>
+</ul>
+</div></blockquote>
+<p>Open the advanced options for the plugin <strong>(7)</strong> and define the path to the folder to store the retrieved vector datasets <strong>(8)</strong>.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Path: <code class="docutils literal notranslate"><span class="pre">\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\QuickOSM_Buildings</span></code></li>
+</ul>
+</div></blockquote>
+<p>Finally, execute the plugin and click on <code class="docutils literal notranslate"><span class="pre">OK</span></code> <strong>(9)</strong></p>
 <div class="figure align-center" id="id112">
 <span id="id52"></span><img alt="../_images/4.2.2.24.png" src="../_images/4.2.2.24.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.24 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id112" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.24 </span><span class="caption-text">–EMSR394 activation - Query building features from OSM.</span><a class="headerlink" href="#id112" title="Permalink to this image">¶</a></p>
 </div>
+<p>If at completition of the execution of the <strong>QuickOSM</strong> plugin the layers were not added to the map, you can retrieve and add them through the browser panel as done previously for other layers (see <a class="reference internal" href="#id53"><span class="std std-numref">Fig. 4.2.2.25</span></a>).</p>
 <div class="figure align-center" id="id113">
 <span id="id53"></span><img alt="../_images/4.2.2.25.png" src="../_images/4.2.2.25.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.25 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id113" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.25 </span><span class="caption-text">–EMSR394 activation - Query building features from OSM.</span><a class="headerlink" href="#id113" title="Permalink to this image">¶</a></p>
 </div>
+<p>Create a new layout to present the results from the analysys.</p>
 <div class="figure align-center" id="id114">
 <span id="id54"></span><img alt="../_images/4.2.2.26.png" src="../_images/4.2.2.26.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.26 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id114" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.26 </span><span class="caption-text">–EMSR394 activation - Compose a new layout with the burn severity estimates.</span><a class="headerlink" href="#id114" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id115">
 <span id="id55"></span><img alt="../_images/4.2.2.27.png" src="../_images/4.2.2.27.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.27 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id115" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.27 </span><span class="caption-text">–EMSR394 activation - Burn severity compose layout.</span><a class="headerlink" href="#id115" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id116">
 <span id="id56"></span><img alt="../_images/4.2.2.28.png" src="../_images/4.2.2.28.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.28 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id116" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.28 </span><span class="caption-text">–EMSR394 activation - Burn severity map.</span><a class="headerlink" href="#id116" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="other-useful-resources">
