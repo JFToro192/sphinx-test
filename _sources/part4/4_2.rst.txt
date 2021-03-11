@@ -320,7 +320,7 @@ Inside the folder you will find a compressed file with the name ``GHS_POP_E2015_
 
    * File Name: ``GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3.tif``
 
-Click on the GHS-POP file **(1)** and drag and drop the dataset inside the group of the flood scenario **(2)** (see :numref:``4.2.1.15``).
+Click on the GHS-POP file **(1)** and drag and drop the dataset inside the group of the flood scenario **(2)** (see :numref:`4.2.1.15`).
 
 .. _4.2.1.15:
 .. figure:: /img/4/4.2.1.15.png
@@ -748,7 +748,7 @@ Compute the NBR for both pre- and post-event imagery using the following stateme
 .. _4.2.2.15:
 .. figure:: /img/4/4.2.2.15.png
    :align: center
-   
+    
    --Fire mapping exercise workflow
 
 
