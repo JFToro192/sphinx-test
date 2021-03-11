@@ -33,6 +33,7 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -421,10 +422,10 @@ Rename the file as <code class="docutils literal notranslate"><span class="pre">
 <p>Here we will download the tiles of the GHSL-POP product detailed in section <a class="reference internal" href="#id57"><span class="std std-ref">Other Useful Resources</span></a>. <a class="reference internal" href="#id11"><span class="std std-numref">Fig. 4.2.1.9</span></a> presents the steps required to download the population tile for the AOI. Select the following parameters relative to the population layer:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Product:<code class="docutils literal notranslate"><span class="pre">GHS-POP</span></code> layer <strong>(1)</strong></li>
-<li>Epoch: <code class="docutils literal notranslate"><span class="pre">2015</span></code> layer <strong>(2)</strong></li>
-<li>Resolution: <code class="docutils literal notranslate"><span class="pre">9_arcsec</span></code> layer <strong>(3)</strong></li>
-<li>Coord. system:   <code class="docutils literal notranslate"><span class="pre">WGS84</span></code> layer <strong>(4)</strong></li>
+<li>Product: <code class="docutils literal notranslate"><span class="pre">GHS-POP</span></code> layer <strong>(1)</strong></li>
+<li>Epoch: <code class="docutils literal notranslate"><span class="pre">2015</span></code> <strong>(2)</strong></li>
+<li>Resolution: <code class="docutils literal notranslate"><span class="pre">9_arcsec</span></code> <strong>(3)</strong></li>
+<li>Coord. system:   <code class="docutils literal notranslate"><span class="pre">WGS84</span></code> <strong>(4)</strong></li>
 </ul>
 </div></blockquote>
 <p>After defining the parameters the tiles layer, click on the tile <code class="docutils literal notranslate"><span class="pre">18_3</span></code> <strong>(5)</strong> on the map viewer. The downloaded file will have the name <code class="docutils literal notranslate"><span class="pre">GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3</span></code>. The naming of the file summarize the set of parameters and the selected tile of the population layer.</p>
@@ -436,6 +437,7 @@ Rename the file as <code class="docutils literal notranslate"><span class="pre">
 <li>Sections <a class="reference internal" href="../part1/1_4.html#id1"><span class="std std-ref">1.4.</span></a> - <a class="reference internal" href="../part1/1_9.html#id1"><span class="std std-ref">1.9.</span></a> in chapter <a class="reference internal" href="../part1/part1.html#part1"><span class="std std-ref">1. Data visualization with QGIS</span></a>.</li>
 <li>Section <a class="reference internal" href="../part2/2_3.html#id1"><span class="std std-ref">2.3. Extending QGIS functionalitites</span></a></li>
 <li>Section <a class="reference internal" href="../part2/2_5.html#id7"><span class="std std-ref">2.5.5. Clip raster with a mask</span></a></li>
+<li>Section 3.4.1.8 <strong>TODO. Add reference</strong>. Semi-Automatic classification Plugin.</li>
 </ul>
 </div>
 <ul class="simple">
@@ -773,6 +775,14 @@ Rename the file as <code class="docutils literal notranslate"><span class="pre">
 </tr>
 </tbody>
 </table>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>For a better understanding on the topic of exploiting the spectral signature for Earth Observation and environmental monitoring, please refer to sections:</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#id1"><span class="std std-ref">3.2.1 The spectral signature</span></a> <strong>TODO. Add reference</strong></li>
+<li><a class="reference internal" href="#id1"><span class="std std-ref">3.2.2 Spectral indices for environmental monitoring</span></a> <strong>TODO. Add reference</strong></li>
+</ul>
+</div>
 <ul class="simple">
 <li><strong>Sentinel-2 Imagery</strong></li>
 </ul>
@@ -891,26 +901,92 @@ Now, we can define the querying parameters for our datasets of interest for the 
 </div>
 <div class="figure align-center" id="id98">
 <span id="id38"></span><img alt="../_images/4.2.2.10.png" src="../_images/4.2.2.10.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.10 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id98" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.10 </span><span class="caption-text">–EOBrowser viewer. Flood event pre- (2020-09-04) and post-event (2020-10-14) view.</span><a class="headerlink" href="#id98" title="Permalink to this image">¶</a></p>
 </div>
+<p>Now, for the post-event imagery in EOBrower, go back to the <code class="docutils literal notranslate"><span class="pre">Discovery</span></code> tab and select the imagery for <code class="docutils literal notranslate"><span class="pre">2020-09-14</span></code> by clicking in <code class="docutils literal notranslate"><span class="pre">visualize</span></code>. Repeat the procedure as presented in <a class="reference internal" href="#id37"><span class="std std-numref">Fig. 4.2.2.9</span></a> to download the post-event images.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Each of the pre- and post-event imagery are downloaded with a default naming that is <code class="docutils literal notranslate"><span class="pre">“EO_Browser_images”</span></code>. For the exercise, we will add to the files names “pre” and “post” depending on the phase of the event. The location of this files will be located under the path <code class="docutils literal notranslate"><span class="pre">.\Chapter</span> <span class="pre">4\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\EOBrowser-Scihub</span></code>.
+* <code class="docutils literal notranslate"><span class="pre">2020-09-04</span></code> products are renamed as <code class="docutils literal notranslate"><span class="pre">“EO_Browser_images_pre”</span></code>
+* <code class="docutils literal notranslate"><span class="pre">2020-09-14</span></code> products are renamed as <code class="docutils literal notranslate"><span class="pre">“EO_Browser_images_post”</span></code></p>
+</div>
+<ul class="simple">
+<li><strong>GHSL-POP</strong></li>
+</ul>
+<p>In this part, you will download the population datasets which will support the assessment of the exposure of the inhabitants of the AOI with respect to the flood event.</p>
 <div class="figure align-center" id="id99">
 <span id="id39"></span><img alt="../_images/4.2.2.11.png" src="../_images/4.2.2.11.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.11 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id99" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.11 </span><span class="caption-text">–GHSL-POP 2015 dataset. Tile 19_4 data download. <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php</a></span><a class="headerlink" href="#id99" title="Permalink to this image">¶</a></p>
 </div>
+<p>The GHS-POP product of interest corresponds to the tile 19_4. Access the <a class="reference external" href="https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php" rel="noopener noreferrer" target="_blank">GHSL</a> site. Select the parameters as detailed in <a class="reference internal" href="#id40"><span class="std std-numref">Fig. 4.2.2.12</span></a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Product:<code class="docutils literal notranslate"><span class="pre">GHS-POP</span></code> layer <strong>(1)</strong></li>
+<li>Epoch: <code class="docutils literal notranslate"><span class="pre">2015</span></code> <strong>(2)</strong></li>
+<li>Resolution: <code class="docutils literal notranslate"><span class="pre">9_arcsec</span></code> <strong>(3)</strong></li>
+<li>Coord. system: <code class="docutils literal notranslate"><span class="pre">WGS84</span></code> <strong>(4)</strong></li>
+</ul>
+</div></blockquote>
+<p>Once defined the parameters for the tiles layer, click on the tile <code class="docutils literal notranslate"><span class="pre">19_4</span></code> <strong>(5)</strong> on the map viewer. The downloaded file will be named as <code class="docutils literal notranslate"><span class="pre">GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_19_4</span></code>. Proceed to move the file into the dedicated folder of the activation for the GHSL located in <code class="docutils literal notranslate"><span class="pre">.\Chapter</span> <span class="pre">4\Copernicus_EMS_Exercise\study</span> <span class="pre">cases\EMSR394</span> <span class="pre">-</span> <span class="pre">Wildfire</span> <span class="pre">Scenario\GHSL</span></code>.</p>
+<p><strong>Hazard Assessment</strong></p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>The upcoming steps required to have followed:</p>
+<ul class="last simple">
+<li>Sections <a class="reference internal" href="../part1/1_4.html#id1"><span class="std std-ref">1.4.</span></a> - <a class="reference internal" href="../part1/1_9.html#id1"><span class="std std-ref">1.9.</span></a> in chapter <a class="reference internal" href="../part1/part1.html#part1"><span class="std std-ref">1. Data visualization with QGIS</span></a>.</li>
+<li>Section <a class="reference internal" href="../part2/2_3.html#id1"><span class="std std-ref">2.3. Extending QGIS functionalitites</span></a></li>
+<li>Section <a class="reference internal" href="../part2/2_5.html#id7"><span class="std std-ref">2.5.5. Clip raster with a mask</span></a></li>
+<li>Section <a class="reference internal" href="#id1"><span class="std std-ref">3.4.1.8-</span></a> <strong>TODO. Add reference</strong>. Semi-Automatic classification Plugin Install.</li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">In this case, we have retrieved the imagery which has already been atmospherically corrected. For this reason, it is not necessary to apply any additional preprocessing.</p>
+</div>
+<p>Now, we can move to our desktop GIS to perform the hazard assessment by overlaying the different datasets retrived until this point. In addition, the bands retrieved from the EOBrowser for the pre- and post-event will allow to model the damages on the vegetation due to the wildfire.</p>
+<p>Add the imagery for pre- and post-event for Bands 8A and 12 (inside the layer group for the fire mapping activation). If the layers are not assigned into the corresponding layer, it is possible to drag and drop them into the right one (see <a class="reference internal" href="#id40"><span class="std std-numref">Fig. 4.2.2.12</span></a>).</p>
 <div class="figure align-center" id="id100">
 <span id="id40"></span><img alt="../_images/4.2.2.12.png" src="../_images/4.2.2.12.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.12 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id100" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.12 </span><span class="caption-text">– EMSR394 Fire Event in Campania Region. Pre- and post event imagery.</span><a class="headerlink" href="#id100" title="Permalink to this image">¶</a></p>
+</div>
+<p>Let us recall that to compute the Normalized Burn Ratio (NBR), we must make use of Sentinel-2 NIR and SWIR bands as follows:</p>
+<div class="math notranslate nohighlight">
+\[NBR = \frac{(NIR - SWIR)}{(NIR + SWIR)} = \frac{(B8A - B12)}{(B8A + B12)}\]</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">It is recommended to have done the <a class="reference internal" href="#id1"><span class="std std-ref">3.4. Hands-on exercises</span></a> <strong>TODO. Add Reference</strong> and that you have installed the “Semi-Automatic Classification” (SCP) plugin.</p>
+</div>
+<p>Here, we can make use of the SCP plugin. Go to SCP (1)→ Band Calc(2). There should be a window as presented in <a class="reference internal" href="#id41"><span class="std std-numref">Fig. 4.2.2.13</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In case that the bands list does not match with the layers that you are currently using refresh the window (3) (<a class="reference internal" href="#id41"><span class="std std-numref">Fig. 4.2.2.13</span></a>).</p>
 </div>
 <div class="figure align-center" id="id101">
 <span id="id41"></span><img alt="../_images/4.2.2.13.png" src="../_images/4.2.2.13.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2.2.13 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id101" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2.2.13 </span><span class="caption-text">–EMSR394 Fire Event in Campania Region. SCP plugin.</span><a class="headerlink" href="#id101" title="Permalink to this image">¶</a></p>
 </div>
+<p>The band calculator, as the raster calculator, allows to execute operation in between multiple raster. Here, we are calculating the NBR for the pre- and post- event. This will then open the path to calculate the burn ratio. The burn severity, that is described as:</p>
+<div class="math notranslate nohighlight">
+\[dNBR = postNBR - preNBR\]</div>
+<p>In <a class="reference internal" href="#id42"><span class="std std-numref">Fig. 4.2.2.14</span></a> is displayed band calculator window. Here you can select the raster layers <strong>(1)</strong> and statements <strong>(2)</strong> to be executed within layers.</p>
+<p>Compute the NBR for both pre- and post-event imagery using the following statements:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Pre-event NBR</li>
+</ul>
+<p>(<code class="docutils literal notranslate"><span class="pre">&quot;2020-09-04-00:00_2020-09-04-23:59_Sentinel-2_L2A_B8A_(Raw)&quot;</span></code>-<code class="docutils literal notranslate"><span class="pre">&quot;2020-09-04-00:00_2020-09-04-23:59_Sentinel-2_L2A_B12_(Raw)&quot;</span></code>)/ (<code class="docutils literal notranslate"><span class="pre">&quot;2020-09-04-00:00_2020-09-04-23:59_Sentinel-2_L2A_B8A_(Raw)&quot;</span></code> + <code class="docutils literal notranslate"><span class="pre">&quot;2020-09-04-00:00_2020-09-04-23:59_Sentinel-2_L2A_B12_(Raw)&quot;</span></code>)</p>
+<ul class="simple">
+<li>Post-event NBR</li>
+</ul>
+<p>(<code class="docutils literal notranslate"><span class="pre">&quot;2020-09-14-00:00_2020-09-14-23:59_Sentinel-2_L2A_B8A_(Raw)&quot;</span></code>-<code class="docutils literal notranslate"><span class="pre">&quot;2020-09-14-00:00_2020-09-14-23:59_Sentinel-2_L2A_B12_(Raw)&quot;</span></code>)/ (<code class="docutils literal notranslate"><span class="pre">&quot;2020-09-14-00:00_2020-09-14-23:59_Sentinel-2_L2A_B8A_(Raw)&quot;</span></code> + <code class="docutils literal notranslate"><span class="pre">&quot;2020-09-14-00:00_2020-09-14-23:59_Sentinel-2_L2A_B12_(Raw)&quot;</span></code>)</p>
+</div></blockquote>
+<p><a class="reference internal" href="#id42"><span class="std std-numref">Fig. 4.2.2.14</span></a> shows the example for the computation of the NBR at the pre-event. Replicate the steps indicates to obtain the same layer for the post-event.</p>
 <div class="figure align-center" id="id102">
 <span id="id42"></span><img alt="../_images/4.2.2.14.png" src="../_images/4.2.2.14.png" />
 <p class="caption"><span class="caption-number">Fig. 4.2.2.14 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id102" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id103">
-<span id="id43"></span><img alt="../_images/4.2.2.14.png" src="../_images/4.2.2.14.png" />
+<span id="id43"></span><img alt="../_images/4.2.2.15.png" src="../_images/4.2.2.15.png" />
 <p class="caption"><span class="caption-number">Fig. 4.2.2.15 </span><span class="caption-text">–Fire mapping exercise workflow</span><a class="headerlink" href="#id103" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id104">

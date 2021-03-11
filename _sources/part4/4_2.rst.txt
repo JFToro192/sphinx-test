@@ -188,10 +188,10 @@ In this section, you will download the population datasets which will support th
 
 Here we will download the tiles of the GHSL-POP product detailed in section :ref:`Other Useful Resources <4.2.3s>`. :numref:`4.2.1.9` presents the steps required to download the population tile for the AOI. Select the following parameters relative to the population layer: 
    
-   * Product:``GHS-POP`` layer **(1)**
-   * Epoch: ``2015`` layer **(2)**
-   * Resolution: ``9_arcsec`` layer **(3)**
-   * Coord. system:   ``WGS84`` layer **(4)**
+   * Product: ``GHS-POP`` layer **(1)**
+   * Epoch: ``2015`` **(2)**
+   * Resolution: ``9_arcsec`` **(3)**
+   * Coord. system:   ``WGS84`` **(4)**
 
 After defining the parameters the tiles layer, click on the tile ``18_3`` **(5)** on the map viewer. The downloaded file will have the name ``GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_18_3``. The naming of the file summarize the set of parameters and the selected tile of the population layer. 
 
@@ -204,6 +204,7 @@ Now, we can move to our desktop GIS to perform the hazard assessment by overlayi
    * Sections :ref:`1.4. <1.4>` - :ref:`1.9. <1.9>` in chapter :ref:`1. Data visualization with QGIS <part1>`.
    * Section :ref:`2.3. Extending QGIS functionalitites <2.3>`
    * Section :ref:`2.5.5. Clip raster with a mask <2.5.5>`
+   * Section 3.4.1.8 **TODO. Add reference**. Semi-Automatic classification Plugin.
 
 * **Hazard Assessment**
 
@@ -519,6 +520,13 @@ Burn Severity values can vary from case to case, and so, if possible, interpreta
    | 1.3                      | #9D00C4    |  ...  | High Severity          |
    +--------------------------+------------+-------+------------------------+
 
+.. important::
+   
+   For a better understanding on the topic of exploiting the spectral signature for Earth Observation and environmental monitoring, please refer to sections:
+
+   * :ref:`3.2.1 The spectral signature <4.2>` **TODO. Add reference**
+   * :ref:`3.2.2 Spectral indices for environmental monitoring <4.2>` **TODO. Add reference**
+
 * **Sentinel-2 Imagery**
 
 The Sentinel-2 imagery required to develop this practice is:
@@ -635,25 +643,101 @@ Then, proceed to download the imagery by clicking on the ``Download`` button **(
 .. figure:: /img/4/4.2.2.10.png
    :align: center
    
-   --Fire mapping exercise workflow
+   --EOBrowser viewer. Flood event pre- (2020-09-04) and post-event (2020-10-14) view.
+
+Now, for the post-event imagery in EOBrower, go back to the ``Discovery`` tab and select the imagery for ``2020-09-14`` by clicking in ``visualize``. Repeat the procedure as presented in :numref:`4.2.2.9` to download the post-event images.
+
+.. note::
+
+   Each of the pre- and post-event imagery are downloaded with a default naming that is ``“EO_Browser_images”``. For the exercise, we will add to the files names “pre” and “post” depending on the phase of the event. The location of this files will be located under the path ``.\Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR394 - Wildfire Scenario\EOBrowser-Scihub``.
+   * ``2020-09-04`` products are renamed as ``“EO_Browser_images_pre”``
+   * ``2020-09-14`` products are renamed as ``“EO_Browser_images_post”``
+
+* **GHSL-POP**
+
+In this part, you will download the population datasets which will support the assessment of the exposure of the inhabitants of the AOI with respect to the flood event.
 
 .. _4.2.2.11:
 .. figure:: /img/4/4.2.2.11.png
    :align: center
    
-   --Fire mapping exercise workflow
+   --GHSL-POP 2015 dataset. Tile 19_4 data download. https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php
+
+The GHS-POP product of interest corresponds to the tile 19_4. Access the `GHSL <https://ghsl.jrc.ec.europa.eu/ghs_pop2019.php>`_ site. Select the parameters as detailed in :numref:`4.2.2.12`:
+
+   * Product:``GHS-POP`` layer **(1)**
+   * Epoch: ``2015`` **(2)**
+   * Resolution: ``9_arcsec`` **(3)**
+   * Coord. system: ``WGS84`` **(4)**
+
+Once defined the parameters for the tiles layer, click on the tile ``19_4`` **(5)** on the map viewer. The downloaded file will be named as ``GHS_POP_E2015_GLOBE_R2019A_4326_9ss_V1_0_19_4``. Proceed to move the file into the dedicated folder of the activation for the GHSL located in ``.\Chapter 4\Copernicus_EMS_Exercise\study cases\EMSR394 - Wildfire Scenario\GHSL``.
+
+**Hazard Assessment**
+
+.. warning::
+
+   The upcoming steps required to have followed:
+
+   * Sections :ref:`1.4. <1.4>` - :ref:`1.9. <1.9>` in chapter :ref:`1. Data visualization with QGIS <part1>`.
+   * Section :ref:`2.3. Extending QGIS functionalitites <2.3>`
+   * Section :ref:`2.5.5. Clip raster with a mask <2.5.5>`
+   * Section :ref:`3.4.1.8- <4.2>` **TODO. Add reference**. Semi-Automatic classification Plugin Install.
+
+.. important::
+
+   In this case, we have retrieved the imagery which has already been atmospherically corrected. For this reason, it is not necessary to apply any additional preprocessing.
+
+Now, we can move to our desktop GIS to perform the hazard assessment by overlaying the different datasets retrived until this point. In addition, the bands retrieved from the EOBrowser for the pre- and post-event will allow to model the damages on the vegetation due to the wildfire.
+
+Add the imagery for pre- and post-event for Bands 8A and 12 (inside the layer group for the fire mapping activation). If the layers are not assigned into the corresponding layer, it is possible to drag and drop them into the right one (see :numref:`4.2.2.12`).
 
 .. _4.2.2.12:
 .. figure:: /img/4/4.2.2.12.png
    :align: center
    
-   --Fire mapping exercise workflow
+   -- EMSR394 Fire Event in Campania Region. Pre- and post event imagery.
+
+Let us recall that to compute the Normalized Burn Ratio (NBR), we must make use of Sentinel-2 NIR and SWIR bands as follows:
+
+.. math::
+
+   NBR = \frac{(NIR - SWIR)}{(NIR + SWIR)} = \frac{(B8A - B12)}{(B8A + B12)}
+
+.. warning::
+
+   It is recommended to have done the :ref:`3.4. Hands-on exercises <4.2>` **TODO. Add Reference** and that you have installed the “Semi-Automatic Classification” (SCP) plugin.
+
+Here, we can make use of the SCP plugin. Go to SCP (1)→ Band Calc(2). There should be a window as presented in :numref:`4.2.2.13`.
+
+.. note:: 
+
+   In case that the bands list does not match with the layers that you are currently using refresh the window (3) (:numref:`4.2.2.13`).
 
 .. _4.2.2.13:
 .. figure:: /img/4/4.2.2.13.png
    :align: center
    
-   --Fire mapping exercise workflow
+   --EMSR394 Fire Event in Campania Region. SCP plugin.
+
+The band calculator, as the raster calculator, allows to execute operation in between multiple raster. Here, we are calculating the NBR for the pre- and post- event. This will then open the path to calculate the burn ratio. The burn severity, that is described as:
+
+.. math::
+
+   dNBR = postNBR - preNBR
+
+In :numref:`4.2.2.14` is displayed band calculator window. Here you can select the raster layers **(1)** and statements **(2)** to be executed within layers.
+
+Compute the NBR for both pre- and post-event imagery using the following statements:
+
+   * Pre-event NBR
+
+   (``"2020-09-04-00:00_2020-09-04-23:59_Sentinel-2_L2A_B8A_(Raw)"``-``"2020-09-04-00:00_2020-09-04-23:59_Sentinel-2_L2A_B12_(Raw)"``)/ (``"2020-09-04-00:00_2020-09-04-23:59_Sentinel-2_L2A_B8A_(Raw)"`` + ``"2020-09-04-00:00_2020-09-04-23:59_Sentinel-2_L2A_B12_(Raw)"``)
+
+   * Post-event NBR
+
+   (``"2020-09-14-00:00_2020-09-14-23:59_Sentinel-2_L2A_B8A_(Raw)"``-``"2020-09-14-00:00_2020-09-14-23:59_Sentinel-2_L2A_B12_(Raw)"``)/ (``"2020-09-14-00:00_2020-09-14-23:59_Sentinel-2_L2A_B8A_(Raw)"`` + ``"2020-09-14-00:00_2020-09-14-23:59_Sentinel-2_L2A_B12_(Raw)"``)
+
+:numref:`4.2.2.14` shows the example for the computation of the NBR at the pre-event. Replicate the steps indicates to obtain the same layer for the post-event.
 
 .. _4.2.2.14:
 .. figure:: /img/4/4.2.2.14.png
@@ -662,10 +746,12 @@ Then, proceed to download the imagery by clicking on the ``Download`` button **(
    --Fire mapping exercise workflow
 
 .. _4.2.2.15:
-.. figure:: /img/4/4.2.2.14.png
+.. figure:: /img/4/4.2.2.15.png
    :align: center
    
    --Fire mapping exercise workflow
+
+
 
 .. _4.2.2.16:
 .. figure:: /img/4/4.2.2.16.png
@@ -690,6 +776,7 @@ Then, proceed to download the imagery by clicking on the ``Download`` button **(
    :align: center
    
    --Fire mapping exercise workflow
+
 
 .. _4.2.2.20:
 .. figure:: /img/4/4.2.2.20.png
