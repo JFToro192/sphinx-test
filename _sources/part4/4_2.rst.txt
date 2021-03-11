@@ -449,10 +449,6 @@ The purpose of this practice is to guide you on assessing the post-fire burnt se
    * Disaster type: Wildfire
    * Disaster Cycle Phase: Recovery and Reconstruction, Relief and Response
 
-* **Test Site**
-
-   **TODO**: Add a Figure of the location
-
 * **Context**
 
 *“On 15/09/2019, a forest fire affected the municipality of Sarno (Salerno) in Italy, in the area of the Monte Saretto. The fire spread over the mountain behind the town of Sarno and for this reason almost 200 people have been evacuated. After a first analysis of the event, over 90% of the Sarno pine forest has been affected.”* (CEMS Rapid Mapping Activation: `EMRS-394 <https://emergency.copernicus.eu/mapping/list-of-components/EMSR394>`_)
@@ -531,23 +527,220 @@ The Sentinel-2 imagery required to develop this practice is:
    * The pre-event imagery was retrieved for the 03/09/2020.
    * The post-event imagery was retrieved for the 14/09/2020.
 
-
-* **Strenghts and Limitations:**
-
-Strenghts:
-   
-   * The recommended workflow can be easily applied to different areas.
-
-Limitations:
-   
-   * Accuracy of the assessment can be determined through field assessment.
-   * The methodology is suitable to assess large areas.
-
 * **Workflow** 
 
 .. _4.2.2.3:
 .. figure:: /img/4/4.2.2.3.png
    :scale: 60%
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+* **Copernicus EMS - Rapid Mapping**
+
+This exercise dedicates its attention to a wildfire event in Italy that took place in the vicinity of the city of Sarno (Campania Region).
+
+The first step for this exercise is to identify a study case and an AOI involving a fire event. For this, we will make use of the Copernicus list of Emergency Mapping Service Rapid Mapping activities. Here, we are going to refer to the activation EMRS-394. This activation was a fire in the vicinity of the Sarno town, in the Campania Region of Italy. 
+
+Go to the `CEMS - Rapid Mapping list of activations <https://emergency.copernicus.eu/mapping/list-of-activations-rapid>`_ and input the querying parameters as defined in :numref:`4.2.2.4`. Select the event type `Wildfire` **(1)** and `Italy` **(2)** as the affected country. When the table of activations has updated with the defined parameters search for the activation `EMSR394`. Click on the title of the activation to reach the page of the activation summary. 
+
+.. _4.2.2.4:
+.. figure:: /img/4/4.2.2.4.png
+   :align: center
+   
+   --Copernicus Rapid Mapping List of Activations - Wildfire events in Italy
+
+In the activation page, see :numref:4.2.2.5`, select the grading product with naming ``Sarno: Grading Product, version 1, release 1, RTP Map #01`` **(1)**.
+
+.. _4.2.2.5:
+.. figure:: /img/4/4.2.2.5.png
+   :align: center
+   
+   --Copernicus EMS Rapid Mapping Forest Fire in Campania, Italy (`EMSR394 <https://emergency.copernicus.eu/mapping/list-of-components/EMSR394>`_).
+
+Inside the product page you will fing the preview for the delivered maps and vector datasets for the AOI for the activation. Here, download the vector package of the datasets delivered by the rapid mapping activities. Click on ZIP **(1)**. In the following page, check the disclaimer box on the data use and proceed to ``Download file`` **(2)**.
+
+.. _4.2.2.6:
+.. figure:: /img/4/4.2.2.6.png
+   :align: center
+   
+   --Copernicus EMS Rapid Mapping, Delineation product, Forest Fire in Campania, Italy. Vector Package Download (`Gradiing EMSR394 <https://emergency.copernicus.eu/mapping/ems-product-component/EMSR394_AOI01_GRA_PRODUCT_r1_RTP01/1>`_)
+
+.. note::
+
+   In the workflow (:numref:`4.2.2.3`), there is no mention to the first step previously mentioned. In this case, the Copernicus EMS list supported the selection of a reference case. However, the methodology presented is not bounded to the cases list of cases.
+
+* **Data Download - EOBrowser**
+
+Now that we have identified the AOI for the emergency, it is possible to follow the workflow as seen in :numref:`4.2.2.3`.
+
+Proceed to access the EOBrowser and Login with you user credentials.
+
+.. Warning::
+   This part of the practice imply that you have followed the lectures on “Sentinel Hub EO Browser” and that you are a registered “Sentinel-hub” user.
+
+.. _4.2.2.7:
+.. figure:: /img/4/4.2.2.7.png
+   :align: center
+   
+   --EOBrowser viewer. CEMS Rapid Mapping activation EMRS396 WildFire Event AOI.
+
+Once that you have accessed your credentials you will have access not only to visualizing the Sentinel-Hub catalogue in the browser, but also the possibility to download the datasets.
+Now, we can define the querying parameters for our datasets of interest for the pre- and post-event of the fire (see :numref:`4.2.2.7`):
+   
+   * Use the search bar located at the top-right of you screen and search for ``Sarno, SA, Italia`` **(1)**. Alternatively, you can move within the map canvas if you are familiar with the location, or you can upload a KML or GEOJSON file with the area of interest to identify the AOI.
+   * Data Source: ``Sentinel-2`` **(2)**
+
+      *  ``Advanced Search`` → ``L2A (atmospherically corrected)`` **(3)**
+   * Time range:
+
+      * Start Date:`` 2020-09-01`` **(4)**
+      * End Date:``2020-09-30`` **(5)**
+
+After successfully defining the query parameters, click on the ``Search`` button **(6)**.
+
+.. _4.2.2.8:
+.. figure:: /img/4/4.2.2.8.png
+   :align: center
+   
+   --EOBrowser viewer. Available imagery fulfilling the parameters. EMSR394
+
+Then, you will find the different imagery available for the current map view, which are intersecting or enclosing it. Here, from the list of available imagery matching the query parameters select the one for ``2020-09-04`` by clicking on visualize (1) as seen in :numref:`4.2.2.8` for the pre-event imagery. 
+
+At this point, the true colors imagery must be visible in the EO browser map viewer. In :numref:`4.2.2.9`, click on the ``Download Image`` icon **(1)**. A pop-up will provide the options to define which products are of our interest and the type of file of the downloaded datasets. For the exercise, we will make use of the Near Infrared (NIR) and Shortwave Infrared (SWIR) Bands (i.e., B08A and B12, correspondingly). Select the ``Analytical`` tab **(2)** and complete the download form as follows:
+
+   * Image format: ``TIFF (32-bit float)`` **(3)**
+   * Image resolution: ``HIGH`` **(4)**
+   * Coordinate system: ``WGS 84 (EPSG:4236``) **(5)**
+   * Layers: **(6)**
+
+      * Visualized: ``True Color`` 
+      * Raw: ``B08A``, ``B12`` 
+
+Then, proceed to download the imagery by clicking on the ``Download`` button **(7)**.
+
+.. _4.2.2.9:
+.. figure:: /img/4/4.2.2.9.png
+   :align: center
+   
+   --EOBrowser viewer. Wildfire event area of interest data download.
+
+.. note::
+   This procedure requires that the map view completely enclose the AOI. The map extent will define the extent of the imagery retrieved from EOBrowser.
+
+.. warning::
+   Do not toggle on the map canvas until having downloaded the datasets for pre- and post-event. In this case, the imagery retrieved depend on the map view.
+
+.. _4.2.2.10:
+.. figure:: /img/4/4.2.2.10.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.11:
+.. figure:: /img/4/4.2.2.11.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.12:
+.. figure:: /img/4/4.2.2.12.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.13:
+.. figure:: /img/4/4.2.2.13.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.14:
+.. figure:: /img/4/4.2.2.14.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.15:
+.. figure:: /img/4/4.2.2.14.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.16:
+.. figure:: /img/4/4.2.2.16.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.17:
+.. figure:: /img/4/4.2.2.17.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.18:
+.. figure:: /img/4/4.2.2.18.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.19:
+.. figure:: /img/4/4.2.2.19.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.20:
+.. figure:: /img/4/4.2.2.20.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.21:
+.. figure:: /img/4/4.2.2.21.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.22:
+.. figure:: /img/4/4.2.2.22.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.23:
+.. figure:: /img/4/4.2.2.23.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.24:
+.. figure:: /img/4/4.2.2.24.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.25:
+.. figure:: /img/4/4.2.2.25.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.26:
+.. figure:: /img/4/4.2.2.26.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.27:
+.. figure:: /img/4/4.2.2.27.png
+   :align: center
+   
+   --Fire mapping exercise workflow
+
+.. _4.2.2.28:
+.. figure:: /img/4/4.2.2.28.png
    :align: center
    
    --Fire mapping exercise workflow
