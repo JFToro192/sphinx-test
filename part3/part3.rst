@@ -1,3 +1,5 @@
+.. _3:
+
 Earth Observation & Imagery Analysis
 ====================================
 
@@ -5,4 +7,7 @@ Earth Observation & Imagery Analysis
    :maxdepth: 2
    :glob:
    
-   3_1
+   rs_fundamentals.rst
+   rs_imageanalysis.rst
+   rs_satelliteimages.rst
+   rs_casestudies.rst
